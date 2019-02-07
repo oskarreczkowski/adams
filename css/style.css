@@ -11,6 +11,9 @@ body {
   font-family: LeagueSpartan;
   src: url(../fonts/LeagueSpartan-Bold.otf);
 }
+.homepage {
+    display:none;
+}
 .icon-1 {
     background-image: url(../img/designer@2x.png);
     background-repeat: no-repeat;
@@ -40,7 +43,7 @@ body {
 .container {
     display: block;
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
     right: 0;
     height: 600px;
@@ -66,9 +69,10 @@ body {
     z-index: -1;
     content: "";
     position: absolute;
-    background: #fdd91d;
+    background-image: url(../img/ms-bg-01.png);
     top: 6px;
     left: 6px;
+    background-size: contain;
 }
 .text-1 {
     font-family: "LeagueSpartan";
@@ -77,12 +81,13 @@ body {
     top: 160px;
     left: 20%;
     font-size: 30px;
+    opacity: 1;
 }
 .title-1 {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 220px;
+    top: 240px;
     left: 30%;
     font-size: 60px;
 }
@@ -90,7 +95,7 @@ body {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 390px;
+    top: 430px;
     left: 30%;
     font-size: 26px;
 }
@@ -100,9 +105,34 @@ body {
 }
 .view-more {
     position: absolute;
-    top: 470px;
+    top: 530px;
     left: 30%;
     font-family: "LeagueSpartan";
+    padding-left: 120px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.view-more .circle-arrow {
+    width: 88px;
+    height: 88px;
+    background-image: url(../img/bc-a-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+}
+.view-more .ca-bg{
+    width: 88px;
+    height: 88px;
+    background-image: url(../img/bc-bg-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
 }
 .menu-bg {
     position: fixed;
@@ -116,6 +146,32 @@ body {
     z-index: 100;
     opacity: 0;
 }
+.orange-circle {
+    display: block;
+    position: absolute;
+    top: 260px;
+}
+video.circle.anim {
+    width: 222px;
+}
+
+.pink-triangle {
+    position: absolute;
+    top: 0;
+    right: 320px;
+}
+video.triangle.anim {
+    width: 258px;
+}
+.blue-square {
+    position: absolute;
+    top: 190px;
+    right: -30px;
+}
+video.square.anim {
+    width: 278px;
+}
+
 
 
 
@@ -127,7 +183,7 @@ body {
     text-align: left;
     height: 600px;
     left: calc(50% - 300px);
-    top: 40px;
+    top: 220px;
     font-family: "LeagueSpartan";
     display: none;
 }
@@ -136,7 +192,7 @@ body {
     width: 100%;
     display: block;
     background: #000000;
-    margin: 0 50px 0  0;
+    margin: 0 50px 60px  0;
 }
 .line-2 {
     height: 5px;
@@ -152,4 +208,42 @@ body {
 }
 .email-info {
     margin: 20px 0 20px 30%;
+}
+.email-info a{
+    color:#449afc;
+}
+
+
+video.menu-character1.anim {
+    width: 330px;
+    position: absolute;
+    left: -230px;
+    top: 60px;
+    z-index: -1;
+}
+video.menu-character2.anim {
+    width: 330px;
+    position: absolute;
+    right: -270px;
+    top: 230px;
+    z-index: -1;
+}
+video.menu-character3.anim {
+    width: 330px;
+    position: absolute;
+    right: -300px;
+    top: -150px;
+    z-index: -1;
+}
+.bbar {
+    width: 0;
+    display: inline-block;
+    height: 5px;
+    background: #000000;
+    margin-bottom: 16px;
+    margin-right: 0;
+}
+.mitem:hover {
+    cursor: pointer;
+    color:#449afc;
 }
