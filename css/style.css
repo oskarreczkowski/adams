@@ -496,3 +496,10 @@ img {
     top: calc(50% - 36px);
     z-index: -1;
 }
+.about {
+    display: none;
+    color: #000000;
+    top: 100px;
+    position: absolute;
+    width: 100%;
+}

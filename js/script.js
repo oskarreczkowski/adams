@@ -289,18 +289,6 @@ $(document).ready(function () {
   tlhome.play();
   tlmenu1.play();
 
-  function showmenubg() {
-    menubg.animate({
-      left: -(0.5 * sideB)
-    });
-  }
-
-  function hidemenubg() {
-    menubg.animate({
-      left: -(2.5 * sideB)
-    });
-  }
-
   /*  MENU CLICK */
   $(menubcont).click(function () {
     if ($('body').hasClass('working')) {
@@ -313,7 +301,6 @@ $(document).ready(function () {
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
         hidemenuhome.add(showmenuitems.reverse(), "-=1");
-        //hidemenuhome.add( hidemenubg );      
         hidemenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
           left: -2.5 * sideB
@@ -337,7 +324,6 @@ $(document).ready(function () {
         console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
         showmenuhome.add(tlhome.reverse().timeScale(1.2));
-        //showmenuhome.add( showmenubg );
         showmenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
           left: -0.5 * sideB
@@ -363,7 +349,6 @@ $(document).ready(function () {
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
         hidemenuhome.add(showmenuitems.reverse(), "-=1");
-        //hidemenuhome.add( hidemenubg );
         hidemenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
           left: -2.5 * sideB
@@ -385,7 +370,52 @@ $(document).ready(function () {
         $("#menu").addClass('is-active');
         console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
-        //showmenuhome.add( showmenubg );      
+        showmenuhome.add(TweenLite.to(menubg, 1, {
+          ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
+          left: -0.5 * sideB
+        }), "+=0.2");
+        showmenuhome.add(TweenLite.to($(mwrap), 0.1, {
+          ease: Power3.easeOut,
+          display: "block"
+        }));
+        showmenuhome.add(showmenuitems.play());
+        showmenuhome.add(function () {
+          $(menubcont).addClass('is-active');
+        });
+        showmenuhome.add(function () {
+          $('body').removeClass('working');
+        });
+
+      }
+    } else if ($(this).data('page') == "about") {
+      if ($(this).hasClass("is-active")) {
+
+        console.log($(this).data('page'));
+        $('body').addClass('working');
+        $("#menu").removeClass('is-active');
+        var hidemenuhome = new TimelineLite();
+        hidemenuhome.add(showmenuitems.reverse(), "-=1");
+        hidemenuhome.add(TweenLite.to(menubg, 1, {
+          ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
+          left: -2.5 * sideB
+        }), "-=0.2");
+        hidemenuhome.add(TweenLite.to($(mwrap), 0.5, {
+          ease: Power3.easeOut,
+          display: "none"
+        }));
+        hidemenuhome.add(function () {
+          $(menubcont).removeClass('is-active');
+        });
+        hidemenuhome.add(function () {
+          $('body').removeClass('working');
+        });
+
+
+      } else {
+        $('body').addClass('working');
+        $("#menu").addClass('is-active');
+        console.log($(this).data('page'));
+        var showmenuhome = new TimelineLite();
         showmenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
           left: -0.5 * sideB
@@ -404,6 +434,64 @@ $(document).ready(function () {
 
       }
     }
+    if ( $(".detailedProject").length ) {
+      
+
+     $('.project-container').unbind('wheel');
+     var activeProjectId = $('.project-container.activeProject').data('projectid');
+     var activeProject = $('.project-container.activeProject');
+      var viewworkpage2 = new TimelineLite();
+
+      viewworkpage2.add(TweenLite.to($('.back'), 1, {
+        ease: Power3.easeOut,
+        opacity: 0,
+        top: "-250px",
+        right: "88px"
+      }), "0");
+      viewworkpage2.add(TweenLite.to(activeProject, 1, {
+        ease: Power3.easeOut,
+        top: "200px"
+      }), "0.5");
+      viewworkpage2.add(TweenLite.to($(this).parent().find('.roles'), 1, {
+        ease: Power3.easeOut,
+        opacity: 0,
+        display: "none",
+        top: "50px"
+      }), "-=1.5");
+      viewworkpage2.add(TweenLite.to($('.mb-cont'), 1, {
+        ease: Power3.easeOut,
+        left: "20px"
+      }), "-=1.5");
+      viewworkpage2.add(TweenLite.to($('.projects-indicator'), 1, {
+        ease: Power3.easeOut,
+        opacity: 1,
+        top: "80px"
+      }), "-=1.5");
+      viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
+        ease: Power3.easeOut,
+        opacity: 1,
+        top: "+=100px",
+        "display":"block"
+      }), "-=1.5");
+      viewworkpage2.add(TweenLite.to($('.navigation-left'), 1, {
+        ease: Power3.easeOut,
+        opacity: 1,
+        left: "0"
+      }), "-=1.5");
+      viewworkpage2.add(TweenLite.to($('.navigation-right'), 1, {
+        ease: Power3.easeOut,
+        opacity: 1,
+        right: "88px"
+      }), "-=1");
+      viewworkpage2.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
+        ease: Power3.easeOut,
+        width: "85%"
+      }), "-=2");
+
+     $(".activeProject").removeClass('activeProject');
+     $(".detailedProject").removeClass('detailedProject');
+
+    }
   });
 
   /* CLICK ON HOME MENU ITEM */
@@ -413,6 +501,9 @@ $(document).ready(function () {
     } else {
       $('body').addClass('working');
       $(menubcont).data("page", "home");
+      $('.about').hide();
+
+      $(pagebg).show();
       $("#menu").removeClass('is-active');
       var hidemenuhome = new TimelineLite();
       hidemenuhome.add(function () {
@@ -457,6 +548,17 @@ $(document).ready(function () {
       //$(menubg).css('left', -(0.5*sideB));
       $('body').addClass('working');
       $(menubcont).data("page", "projects");
+      $('.about').hide();
+      if ( $('.projects').data('currentproject') != 1) {
+        changeproject($('.projects').data('currentproject')-1, $('.projects').data('currentproject'));
+      } else {
+        changeproject(1,1);
+      }
+
+        
+      $('.project-container').hide();
+      $('.project-container.activeProject').hide();
+      $(pagebg).hide();
       $("#menu").removeClass('is-active');
       var hidemenuhome = new TimelineLite();
       hidemenuhome.add(showmenuitems.reverse(), "-=1");
@@ -464,7 +566,6 @@ $(document).ready(function () {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
         left: -2.5 * sideB
       }), "+=0.2");
-      //hidemenuhome.add( hidemenubg );
       hidemenuhome.add(TweenLite.to($('.projects'), 0, {
         ease: Power3.easeOut,
         display: "block"
@@ -473,8 +574,6 @@ $(document).ready(function () {
         ease: Power3.easeOut,
         display: 'block'
       }, '0'));
-
-      //hidemenuhome.add(tlhome.play(), "-=0.21");
       hidemenuhome.add(TweenLite.to($(mwrap), 0.5, {
         ease: Power3.easeOut,
         display: "none"
@@ -493,9 +592,64 @@ $(document).ready(function () {
 
 
       hidemenuhome.add(function () {
+        $(homepage).hide();
+      });
+      hidemenuhome.add(function () {
         $(menubcont).removeClass('is-active');
       });
       hidemenuhome.add(function () {
+        $('body').removeClass('working');
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+  });
+
+
+  /* CLICK ON ABOUT MENU ITEM */
+  $('.link-about').click(function () {
+    if ($('body').hasClass('working')) {
+
+    } else {
+      //$(menubg).css('left', -(0.5*sideB));
+      $('body').addClass('working');
+      $('.about').show();
+      $(menubcont).data("page", "about");
+      $("#menu").removeClass('is-active');
+      var aboutanimation = new TimelineLite();
+      aboutanimation.add(showmenuitems.reverse(), "-=1");
+      aboutanimation.add(TweenLite.to(menubg, 1, {
+        ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
+        left: -2.5 * sideB
+      }), "+=0.2");
+      //hidemenuhome.add( hidemenubg );
+      $('.projects').hide();
+      aboutanimation.add(TweenLite.to($('.about'), 0, {
+        ease: Power3.easeOut,
+        display: "block",
+        "z-index": 1
+      }, "0"));
+
+      //hidemenuhome.add(tlhome.play(), "-=0.21");
+      aboutanimation.add(TweenLite.to($(mwrap), 0.5, {
+        ease: Power3.easeOut,
+        display: "none"
+      }));
+
+      aboutanimation.add(function () {
+        $(menubcont).removeClass('is-active');
+      });
+      aboutanimation.add(function () {
         $('body').removeClass('working');
       });
     }
@@ -511,6 +665,11 @@ $(document).ready(function () {
       $('body').addClass('working');
       $(menubcont).data("page", "projects");
 
+      if ( $('.projects').data('currentproject') != 1) {
+        changeproject($('.projects').data('currentproject')-1, $('.projects').data('currentproject'));
+      } else {
+        changeproject(1,1);
+      }
       $('.project-container').hide();
       $('.project-container.activeProject').hide();
       $("#menu").removeClass('is-active');
@@ -617,12 +776,12 @@ $(document).ready(function () {
     function () {
       if (!$("body").hasClass('working')) {
         vphover.play();
-        TweenLite.to($(this).parent().find('.pimg'),0.5, { delay:0.2, width:"100%", ease: Power3.easeOut})
+        //TweenLite.to($(this).parent().find('.pimg'),0.5, { delay:0.2, width:"+=10%", ease: Power3.easeOut})
       }
     },
     function () {
       vphover.reverse();
-      TweenLite.to($(this).parent().find('.pimg'),0.5, { delay:0.2, width:"85%", ease: Power3.easeOut})
+      //TweenLite.to($(this).parent().find('.pimg'),0.2, {  width:"-=10%", ease: Power3.easeOut})
     }
   );
 
@@ -774,6 +933,7 @@ $(document).ready(function () {
 
       $('.project-container.activeProject').removeClass('activeProject');
       $('.project-container[data-projectid="' + pcnew + '"]').addClass('activeProject');
+      $('.projects').data('currentproject', pcnew);
     } else {
       var currentpc = $('.project-container[data-projectid="' + pccurrent + '"]');
       var newpc = $('.project-container[data-projectid="' + pcnew + '"]');
@@ -816,96 +976,7 @@ $(document).ready(function () {
     }
     $('.indicator.active').removeClass('active');
     $('.indicator[data-projectid="' + pcnew + '"]').addClass('active');
-
-  }
-  function changeproject1(pccurrent, pcnew) {
-
-    $('.project-container.activeProject').removeClass('activeProject');
-    $('.project-container[data-projectid="' + pcnew + '"]').addClass('activeProject');
-    if (pcnew > pccurrent) {
-      var currentpc = $('.project-container[data-projectid="' + pccurrent + '"]');
-      var newpc = $('.project-container[data-projectid="' + pcnew + '"]');
-
-      var changeprojectleft = new TimelineLite(); 
-      changeprojectleft.add(TweenLite.to(newpc, 0, {
-        x: 200,
-        y: 200,
-        ease: Power3.easeOut
-      }));
-      changeprojectleft.add(TweenLite.to(currentpc,1 , {
-        bezier: [{
-          x: 0,
-          y: 0
-        }, {
-          x: -150,
-          y: 50
-        }, {
-          x: -200,
-          y: 200
-        }],
-        opacity: 0,
-        "display": "none",
-        ease: Power3.easeOut
-      }));
-      changeprojectleft.add(TweenLite.to(newpc,1, {
-        bezier: [{
-          x: 200,
-          y: 200
-        }, {
-          x: 150,
-          y: 50
-        }, {
-          x: 0,
-          y: 0
-        }],
-        "display": "block",
-        opacity: 1,
-        ease: Power3.easeOut
-      }),"-=0.5");
-      changeprojectleft.progress(1).progress(0);
-    } else {
-      var currentpc = $('.project-container[data-projectid="' + pccurrent + '"]');
-      var newpc = $('.project-container[data-projectid="' + pcnew + '"]');
-      var changeprojectright = new TimelineLite(); 
-      changeprojectright.add(TweenLite.to(newpc, 0, {
-        x: -200,
-        y: 200,
-        ease: Power3.easeOut
-      }));
-      changeprojectright.add(TweenLite.to(currentpc, 1, {
-        bezier: [{
-          x: 0,
-          y: 0
-        }, {
-          x: 150,
-          y: 50
-        }, {
-          x: 200,
-          y: 200
-        }],
-        opacity: 0,
-        "display": "none",
-        ease: Power3.easeOut
-      }));
-      changeprojectright.add(TweenLite.to(newpc, 1, {
-        bezier: [{
-          x: -200,
-          y: 200
-        }, {
-          x: -150,
-          y: 50
-        }, {
-          x: 0,
-          y: 0
-        }],
-        opacity: 1,
-        "display": "block",
-        ease: Power3.easeOut
-      }),"-=0.5");
-    }
-    $('.indicator.active').removeClass('active');
-    $('.indicator[data-projectid="' + pcnew + '"]').addClass('active');
-
+    $('.projects').data('currentproject', pcnew);
   }
 
   $('.navigation-right').click(function () {
@@ -954,11 +1025,12 @@ $(document).ready(function () {
   });
 
 
-/* VIEW  PROJECT  DETAILS */
+/* VIEW PROJECT DETAILS */
 
   $('.vp-button-cont').click(function () {
 
     $(this).parent().addClass('activeProject');
+    $(this).parent().addClass('detailedProject');
     var viewproject = $(this).parent().data('projectid');
     //console.log(viewproject);
     var viewworkpage = new TimelineLite();
@@ -975,19 +1047,19 @@ $(document).ready(function () {
     viewworkpage.add(TweenLite.to($('.mb-cont'), 1, {
       ease: Power3.easeOut,
       left: "-20px"
-    }), "-=0.5");
+    }), "-=1");
     viewworkpage.add(TweenLite.to($(this), 1, {
       ease: Power3.easeOut,
       opacity: 0,
-      top: "-=100px"
-    }), "-=0.5");
+      top: "-=100px",
+      "display":"none"
+    }), "-=1");
     viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
       display: "block",
       top: "200px"
     }), "-=0.5");
-
     viewworkpage.add(TweenLite.to($('.navigation-left'), 1, {
       ease: Power3.easeOut,
       opacity: 0,
@@ -998,6 +1070,10 @@ $(document).ready(function () {
       opacity: 0,
       right: "-150px"
     }), "-=1.0");
+    viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
+      ease: Power3.easeOut,
+      width: "100%"
+    }), "-=2");
     viewworkpage.add(TweenLite.to($('.back'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
@@ -1012,7 +1088,10 @@ $(document).ready(function () {
     var thisproj = $(this).parent();
     var thispimg = $(this).parent().find(".pimg");
     var winheight = $(window).height();
-    $('.project-container[data-projectid="' + viewproject + '"]').bind('mousewheel', function (e) {
+
+
+
+    $('.project-container[data-projectid="' + viewproject + '"]').on('wheel', function (e) {
       if (e.originalEvent.wheelDelta / 120 > 0) {
         
         if (($(thispimg).offset().top) >= 419) {
@@ -1080,10 +1159,7 @@ $(document).ready(function () {
      var activeProjectId = $('.project-container.activeProject').data('projectid');
      var activeProject = $('.project-container.activeProject');
 
-     $('.project-container[data-projectid="' + activeProjectId + '"]').bind('mousedown.prev DOMMouseScroll.prev mousewheel.prev keydown.prev keyup.prev', function(e, d){  
-        e.preventDefault();
-      }); 
-
+     $('.project-container').unbind('wheel');
       var viewworkpage = new TimelineLite();
 
       viewworkpage.add(TweenLite.to($('.back'), 1, {
@@ -1105,28 +1181,35 @@ $(document).ready(function () {
       viewworkpage.add(TweenLite.to($('.mb-cont'), 1, {
         ease: Power3.easeOut,
         left: "20px"
-      }), "-=0.5");
+      }), "-=1.5");
       viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
         top: "80px"
-      }), "-=0.5");
+      }), "-=1.5");
       viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
-        top: "+=100px"
-      }), "-=0.5");
+        top: "+=100px",
+        "display":"block"
+      }), "-=1.5");
       viewworkpage.add(TweenLite.to($('.navigation-left'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
         left: "0"
-      }), "-=0.5");
+      }), "-=1.5");
       viewworkpage.add(TweenLite.to($('.navigation-right'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
         right: "88px"
       }), "-=1");
+      viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
+        ease: Power3.easeOut,
+        width: "85%"
+      }), "-=2");
 
+     $(".activeProject").removeClass('activeProject');
+     $(".detailedProject").removeClass('detailedProject');
 
   });
 
