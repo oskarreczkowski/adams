@@ -1,96 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  <!--  Meta  -->
-  <meta charset="UTF-8" />
-  <title>Adams</title>
-  
-  <!--  Styles  -->
-  <link rel="stylesheet" href="css/hamburgers.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  
-<div class="menu-bg"></div>
-<div class="menu-wrapper">
-	<div class="line-1"></div>
-	<div class="mitem link-home"><div class="bbar"></div>Home</div>
-	<div class="mitem link-projects"><div class="bbar"></div>Projects</div>
-	<div class="mitem link-about"><div class="bbar"></div>About Me</div>
-	<div class="email-info">Email:<br>
-		<a href="mailto:adamwchung@gmail.com">adamwchung@gmail.com</a>	
-	</div>
-	<video  class="menu-character1 anim" muted loop autoplay>
-	  <source src="vid/menu-character1.mp4" type="video/mp4">
-	  Your browser does not support the video tag.
-	</video>
-	<video  class="menu-character2 anim" muted loop autoplay>
-	  <source src="vid/menu-character2.mp4" type="video/mp4">
-	  Your browser does not support the video tag.
-	</video>
-	<video  class="menu-character3 anim" muted loop autoplay>
-	  <source src="vid/menu-character3.mp4" type="video/mp4">
-	  Your browser does not support the video tag.
-	</video>
-
-
-	<div class="line-2"></div>
-</div>  
-<div class="page-wrapper">
-	<div class="lockup-cont">
-		<div class="container">
-			<div class="mb-cont" data-page="home">
-				<button id="menu" class="hamburger hamburger--squeeze js-hamburger menu-button" type="button">
-				  <span class="hamburger-box">
-				    <span class="hamburger-inner"></span>
-				  </span>
-				</button>
-				<div class="mb-bg">	</div>
+	<head>
+		<!--  Meta  -->
+		<meta charset="UTF-8" />
+		<title>Adams</title>
+		<!--  Styles  -->
+		<link rel="stylesheet" href="css/hamburgers.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body class="working">
+		<div class="menu-bg"></div>
+		<div class="page-bg"></div>
+		<div class="menu-wrapper">
+			<div class="line-1"></div>
+			<div class="mitem link-home">
+				<div class="bbar"></div>
+				Home
 			</div>
-			<div class="homepage">
-				<div class="pink-triangle">
-					<video  class="triangle anim" muted loop autoplay>
-					  <source src="vid/triangle.mp4" type="video/mp4">
-					  Your browser does not support the video tag.
-					</video>
-				</div>
-				<div class="blue-square">
-					<video  class="square anim" muted loop autoplay>
-					  <source src="vid/square.mp4" type="video/mp4">
-					  Your browser does not support the video tag.
-					</video>
-				</div>
-				<div class="orange-circle">
-					<video  class="circle anim" muted loop autoplay>
-					  <source src="vid/circle.mp4" type="video/mp4">
-					  Your browser does not support the video tag.
-					</video>
-				</div>
-				<div class="text-1">the work of </div>
-				<div class="title-1">Adam <br>Chung</div>
-				<div class="text-2"><span class="icon-1">Designer</span><span class="icon-2">Illustrator</span><span class="icon-3">Rebel scum</span></div>
-				<div class="view-more"><div class="circle-arrow"></div><div class="ca-bg"></div>View Work</div>
+			<div class="mitem link-projects">
+				<div class="bbar"></div>
+				Projects
 			</div>
-			<div class="projects">
-				
+			<div class="mitem link-about">
+				<div class="bbar"></div>
+				About Me
+			</div>
+			<div class="email-info">Email:<br>
+				<a href="mailto:adamwchung@gmail.com">adamwchung@gmail.com</a>	
+			</div>
+			<video  class="menu-character1 anim" muted loop autoplay>
+				<source src="vid/menu-character1.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<video  class="menu-character2 anim" muted loop autoplay>
+				<source src="vid/menu-character2.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<video  class="menu-character3 anim" muted loop autoplay>
+				<source src="vid/menu-character3.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<div class="line-2"></div>
+		</div>
+		<div class="page-wrapper">
+			<div class="lockup-cont">
+				<div class="container">
+					<div class="mb-cont" data-page="home">
+						<button id="menu" class="hamburger hamburger--squeeze js-hamburger menu-button" type="button">
+						<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+						</span>
+						</button>
+						<div class="mb-bg">	</div>
+					</div>
+					<div class="back">
+							<div class="circle-x"></div>
+							<div class="btp-bg"></div>
+					</div>
+					<div class="homepage">
+						<div class="pink-triangle">
+							<video  class="triangle anim" muted loop autoplay>
+								<source src="vid/triangle.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="blue-square">
+							<video  class="square anim" muted loop autoplay>
+								<source src="vid/square.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="orange-circle">
+							<video  class="circle anim" muted loop autoplay>
+								<source src="vid/circle.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="text-1">the work of </div>
+						<div class="title-1">Adam <br>Chung</div>
+						<div class="text-2"><span class="icon-1">Designer</span><span class="icon-2">Illustrator</span><span class="icon-3">Rebel scum</span></div>
+						<div class="view-more">
+							<div class="circle-arrow"></div>
+							<div class="ca-bg"></div>
+							View Work
+						</div>
+					</div>
+					<div class="projects" data-currentproject="1">
+						<div class="projects-indicator">
+							<div class="indicator active" data-projectid="1"></div>
+							<div class="indicator" data-projectid="2"></div>
+							<div class="indicator" data-projectid="3"></div>
+							<div class="indicator" data-projectid="4"></div>
+							<div class="indicator" data-projectid="5"></div>
+							<div class="indicator" data-projectid="6"></div>
+							<div class="indicator" data-projectid="7"></div>
+							<div class="indicator" data-projectid="8"></div>
+							<div class="indicator" data-projectid="9"></div>
+							<div class="indicator" data-projectid="10"></div>
+						</div>
+						<div class="navigation-left">
+							<div class="line-left"></div>
+							<div class="left-arrow">
+								<div class="arrow"></div>
+								<div class="bg"></div>
+							</div>
+						</div>
+						<div class="navigation-right">
+							<div class="line-right"></div>
+							<div class="right-arrow">
+								<div class="arrow"></div>
+								<div class="bg"></div>
+							</div>
+						</div>
+						<div id="project1" class="project-container activeProject" data-projectid="1">
+							<div class="pn-cont"><span class="pnumber">01</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+								<section class="section">
+									<img src="portfolio/p1/s1.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s2.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s3.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s4.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s5.jpg" />
+								</section>
+							</div>
+							<div class="ender"></div>
+						</div>
+						<div id="project2" class="project-container" data-projectid="2">
+							<div class="pn-cont"><span class="pnumber">02</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+								<section class="section">
+									<img src="portfolio/p1/s1.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s2.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s4.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s5.jpg" />
+								</section>
+							</div>
+						</div>
+						<div id="project3" class="project-container" data-projectid="3">
+							<div class="pn-cont"><span class="pnumber">03</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+								<section class="section">
+									<img src="portfolio/p1/s1.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s2.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s3.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s4.jpg" />
+								</section>
+								<section class="section">
+									<img src="portfolio/p1/s5.jpg" />
+								</section>
+							</div>
+						</div>
+						<div  id="project4" class="project-container" data-projectid="4">
+							<div class="pn-cont"><span class="pnumber">04</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+							</div>
+						</div>
+						<div  id="project5" class="project-container" data-projectid="5">
+							<div class="pn-cont"><span class="pnumber">05</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+							</div>
+						</div>
+						<div  id="project6" class="project-container" data-projectid="6">
+							<div class="pn-cont"><span class="pnumber">06</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+							</div>
+						</div>
+						<div id="project7"  class="project-container" data-projectid="7">
+							<div class="pn-cont"><span class="pnumber">07</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+							</div>
+						</div>
+						<div  id="project8" class="project-container" data-projectid="8">
+							<div class="pn-cont"><span class="pnumber">08</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+							</div>
+						</div>
+						<div  id="project9" class="project-container" data-projectid="9">
+							<div class="pn-cont"><span class="pnumber">09</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+							</div>
+						</div>
+						<div  id="project10" class="project-container" data-projectid="10">
+							<div class="pn-cont"><span class="pnumber">10</span>  <span class="numberp">| 10</span></div>
+							<div class="ptitle">Kareo: Print Design</div>
+							<div class="pdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ipsum lorem, ultrices sit amet enim at, ultricies laoreet sem. Morbi vestibulum at nunc ac suscipit. Curabitur condimentum tortor eget purus lacinia, ac interdum neque elementum</div>
+							<div class="roles">
+								<span class="blue">ART DIRECTION</span>
+								<span class="orange">GRAPHIC DESIGN</span>
+								<span class="green">ILLUSTRATION</span>
+							</div>
+							<div class="vp-button-cont">
+								<div class="vp-button">View Project</div>
+								<div class="vp-bg"></div>
+							</div>
+							<div class="pimg">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-
-
-
-  <script src="js/jquery-migrate-3.0.0.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
-  <!--<script src="js/minified/TimelineMax.min.js"></script>-->
-  <script src="js/minified/easing/CustomEase.min.js"></script>
-  
-  <script src="js/script.js"></script>
-  
-</body>
+		<nav id="dot-nav"></nav>
+		<script src="js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+		<!--<script src="js/minified/TimelineMax.min.js"></script>-->
+		<script src="js/minified/easing/CustomEase.min.js"></script>
+		<script src="js/dot-nav-min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
 </html>
