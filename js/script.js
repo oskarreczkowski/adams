@@ -1,11 +1,12 @@
-/*ts 6 sroda + 3call??*/
+/*ts 6 sroda + 1call??*/
 /*ts 3 sroda */
 /*ts 6 czwartek */
 /*ts 3 piatek */
 /*ts 4 piatek*/
 /*ts 2 sobota*/
 /*ts 6 niedziela*/
-/*total 30 */
+/*ts 3 poniedzialek*/
+/*total 33 */
 
 /*  HOME SET OF TWEENS */
 var homepage = $(".homepage");
@@ -32,7 +33,7 @@ var projects = $('.projects');
 
 /*  MENU BG SIZE */
 var diag = Math.sqrt($(window).height() * $(window).height() + $(window).width() * $(window).width())
-console.log(diag);
+//console.log(diag);
 var sideA = $(window).height();
 var sideB = $(window).width();
 
@@ -296,7 +297,7 @@ $(document).ready(function () {
     } else if ($(this).data('page') == "home") {
       if ($(this).hasClass("is-active")) {
 
-        console.log($(this).data('page'));
+        //console.log($(this).data('page'));
         $('body').addClass('working');
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
@@ -321,7 +322,7 @@ $(document).ready(function () {
       } else {
         $('body').addClass('working');
         $("#menu").addClass('is-active');
-        console.log($(this).data('page'));
+        //console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
         showmenuhome.add(tlhome.reverse().timeScale(1.2));
         showmenuhome.add(TweenLite.to(menubg, 1, {
@@ -344,7 +345,7 @@ $(document).ready(function () {
     } else if ($(this).data('page') == "projects") {
       if ($(this).hasClass("is-active")) {
 
-        console.log($(this).data('page'));
+        //console.log($(this).data('page'));
         $('body').addClass('working');
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
@@ -368,7 +369,7 @@ $(document).ready(function () {
       } else {
         $('body').addClass('working');
         $("#menu").addClass('is-active');
-        console.log($(this).data('page'));
+        //console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
         showmenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
@@ -390,7 +391,7 @@ $(document).ready(function () {
     } else if ($(this).data('page') == "about") {
       if ($(this).hasClass("is-active")) {
 
-        console.log($(this).data('page'));
+        //console.log($(this).data('page'));
         $('body').addClass('working');
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
@@ -414,7 +415,7 @@ $(document).ready(function () {
       } else {
         $('body').addClass('working');
         $("#menu").addClass('is-active');
-        console.log($(this).data('page'));
+        //console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
         showmenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
@@ -434,12 +435,12 @@ $(document).ready(function () {
 
       }
     }
-    if ( $(".detailedProject").length ) {
-      
+    if ($(".detailedProject").length) {
 
-     $('.project-container').unbind('wheel');
-     var activeProjectId = $('.project-container.activeProject').data('projectid');
-     var activeProject = $('.project-container.activeProject');
+
+      $('.project-container').unbind('wheel');
+      var activeProjectId = $('.project-container.activeProject').data('projectid');
+      var activeProject = $('.project-container.activeProject');
       var viewworkpage2 = new TimelineLite();
 
       viewworkpage2.add(TweenLite.to($('.back'), 1, {
@@ -471,7 +472,7 @@ $(document).ready(function () {
         ease: Power3.easeOut,
         opacity: 1,
         top: "+=100px",
-        "display":"block"
+        "display": "block"
       }), "-=1.5");
       viewworkpage2.add(TweenLite.to($('.navigation-left'), 1, {
         ease: Power3.easeOut,
@@ -488,8 +489,8 @@ $(document).ready(function () {
         width: "85%"
       }), "-=2");
 
-     $(".activeProject").removeClass('activeProject');
-     $(".detailedProject").removeClass('detailedProject');
+      $(".activeProject").removeClass('activeProject');
+      $(".detailedProject").removeClass('detailedProject');
 
     }
   });
@@ -549,13 +550,13 @@ $(document).ready(function () {
       $('body').addClass('working');
       $(menubcont).data("page", "projects");
       $('.about').hide();
-      if ( $('.projects').data('currentproject') != 1) {
-        changeproject($('.projects').data('currentproject')-1, $('.projects').data('currentproject'));
+      if ($('.projects').data('currentproject') != 1) {
+        changeproject($('.projects').data('currentproject') - 1, $('.projects').data('currentproject'));
       } else {
-        changeproject(1,1);
+        changeproject(1, 1);
       }
 
-        
+
       $('.project-container').hide();
       $('.project-container.activeProject').hide();
       $(pagebg).hide();
@@ -600,17 +601,6 @@ $(document).ready(function () {
       hidemenuhome.add(function () {
         $('body').removeClass('working');
       });
-
-
-
-
-
-
-
-
-
-
-
 
     }
   });
@@ -665,10 +655,10 @@ $(document).ready(function () {
       $('body').addClass('working');
       $(menubcont).data("page", "projects");
 
-      if ( $('.projects').data('currentproject') != 1) {
-        changeproject($('.projects').data('currentproject')-1, $('.projects').data('currentproject'));
+      if ($('.projects').data('currentproject') != 1) {
+        changeproject($('.projects').data('currentproject') - 1, $('.projects').data('currentproject'));
       } else {
-        changeproject(1,1);
+        changeproject(1, 1);
       }
       $('.project-container').hide();
       $('.project-container.activeProject').hide();
@@ -900,7 +890,7 @@ $(document).ready(function () {
         y: 200,
         ease: Power3.easeOut
       });
-      TweenLite.to(currentpc,1.2 , {
+      TweenLite.to(currentpc, 1.2, {
         bezier: [{
           x: 0,
           y: 0
@@ -915,7 +905,7 @@ $(document).ready(function () {
         "display": "none",
         ease: Power3.easeOut
       });
-      TweenLite.to(newpc,1, {
+      TweenLite.to(newpc, 1, {
         bezier: [{
           x: 200,
           y: 200
@@ -990,7 +980,7 @@ $(document).ready(function () {
 
 
     $('.projects').data('currentproject', newproject);
-    console.log(newproject);
+    //console.log(newproject);
     changeproject(currentproject, newproject)
     //$('.project-container[data-projectid="'+currentproject+'"]').hide();
     //$('.project-container[data-projectid="'+newproject+'"]').show();
@@ -1007,7 +997,7 @@ $(document).ready(function () {
 
 
     $('.projects').data('currentproject', newproject);
-    console.log(newproject);
+    //console.log(newproject);
     changeproject(currentproject, newproject)
     //$('.project-container[data-projectid="'+currentproject+'"]').hide();
     //$('.project-container[data-projectid="'+newproject+'"]').show();
@@ -1018,14 +1008,14 @@ $(document).ready(function () {
     var currentproject = $('.projects').data('currentproject');
     var newproject = $(this).data('projectid');
     $('.projects').data('currentproject', newproject);
-    console.log(newproject);
+    //console.log(newproject);
     changeproject(currentproject, newproject)
     //$('.project-container[data-projectid="'+currentproject+'"]').hide();
     //$('.project-container[data-projectid="'+newproject+'"]').show();
   });
 
 
-/* VIEW PROJECT DETAILS */
+  /* VIEW PROJECT DETAILS */
 
   $('.vp-button-cont').click(function () {
 
@@ -1052,7 +1042,7 @@ $(document).ready(function () {
       ease: Power3.easeOut,
       opacity: 0,
       top: "-=100px",
-      "display":"none"
+      "display": "none"
     }), "-=1");
     viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
       ease: Power3.easeOut,
@@ -1090,13 +1080,12 @@ $(document).ready(function () {
     var winheight = $(window).height();
 
 
-
     $('.project-container[data-projectid="' + viewproject + '"]').on('wheel', function (e) {
       if (e.originalEvent.wheelDelta / 120 > 0) {
-        
+
         if (($(thispimg).offset().top) >= 419) {
-          console.log('poczatek' + pimgHeight + '   offset: ' + $(thispimg).offset().top)
-          console.log('poczatek');
+          //console.log('poczatek' + pimgHeight + '   offset: ' + $(thispimg).offset().top)
+          //console.log('poczatek');
           TweenLite.to(thisproj, 1, {
             top: 0,
             ease: Power3.easeOut
@@ -1113,27 +1102,26 @@ $(document).ready(function () {
               ease: Power3.easeOut
             });
             curHeight = curHeight - 200
-            console.log(curHeight + "scroll up");
-            console.log($(thispimg).offset().top);
+            //console.log(curHeight + "scroll up");
+            //console.log($(thispimg).offset().top);
           }
         }
       } else {
 
-        if (-($(thispimg).offset().top) > ($('#project'+viewproject).height() - $(window).height() ) -200)  {
+        if (-($(thispimg).offset().top) > ($('#project' + viewproject).height() - $(window).height()) - 200) {
 
-          console.log('koniec' + pimgHeight + '   offset: ' + $(thispimg).offset().top);
+          //console.log('koniec' + pimgHeight + '   offset: ' + $(thispimg).offset().top);
           TweenLite.to(thisproj, 1, {
-            top: -($('#project'+viewproject).height()  - winheight) ,
+            top: -($('#project' + viewproject).height() - winheight),
             ease: Power3.easeOut
           });
-          console.log('maxheight' + maxHeight + '   winheight: ' + winheight);
-
+          //console.log('maxheight' + maxHeight + '   winheight: ' + winheight);
 
 
         } else {
-          if (-($(thispimg).offset().top) > ($('#project'+viewproject).height() - $(window).height() -600))  {
+          if (-($(thispimg).offset().top) > ($('#project' + viewproject).height() - $(window).height() - 600)) {
             TweenLite.to(thisproj, 1, {
-              top: -($('#project'+viewproject).height()  - winheight) ,
+              top: -($('#project' + viewproject).height() - winheight),
               ease: Power3.easeOut
             });
           } else {
@@ -1143,11 +1131,10 @@ $(document).ready(function () {
               ease: Power3.easeOut
             });
             curHeight = curHeight + 200
-            console.log(curHeight + "scroll down");
-            console.log($(thispimg).offset().top);
-            console.log(pimgHeight - $(window).height() - (maxHeight - pimgHeight) + "asfdasfdn");
+            //console.log(curHeight + "scroll down");
+            //console.log($(thispimg).offset().top);
+            //console.log(pimgHeight - $(window).height() - (maxHeight - pimgHeight) + "asfdasfdn");
           }
-
 
 
         }
@@ -1155,79 +1142,64 @@ $(document).ready(function () {
     });
   });
 
- $('.back').click(function () {
-     var activeProjectId = $('.project-container.activeProject').data('projectid');
-     var activeProject = $('.project-container.activeProject');
+  $('.back').click(function () {
+    var activeProjectId = $('.project-container.activeProject').data('projectid');
+    var activeProject = $('.project-container.activeProject');
 
-     $('.project-container').unbind('wheel');
-      var viewworkpage = new TimelineLite();
+    $('.project-container').unbind('wheel');
+    var viewworkpage = new TimelineLite();
 
-      viewworkpage.add(TweenLite.to($('.back'), 1, {
-        ease: Power3.easeOut,
-        opacity: 0,
-        top: "-250px",
-        right: "88px"
-      }), "0");
-      viewworkpage.add(TweenLite.to(activeProject, 1, {
-        ease: Power3.easeOut,
-        top: "200px"
-      }), "0.5");
-      viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
-        ease: Power3.easeOut,
-        opacity: 0,
-        display: "none",
-        top: "50px"
-      }), "-=1.5");
-      viewworkpage.add(TweenLite.to($('.mb-cont'), 1, {
-        ease: Power3.easeOut,
-        left: "20px"
-      }), "-=1.5");
-      viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
-        ease: Power3.easeOut,
-        opacity: 1,
-        top: "80px"
-      }), "-=1.5");
-      viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
-        ease: Power3.easeOut,
-        opacity: 1,
-        top: "+=100px",
-        "display":"block"
-      }), "-=1.5");
-      viewworkpage.add(TweenLite.to($('.navigation-left'), 1, {
-        ease: Power3.easeOut,
-        opacity: 1,
-        left: "0"
-      }), "-=1.5");
-      viewworkpage.add(TweenLite.to($('.navigation-right'), 1, {
-        ease: Power3.easeOut,
-        opacity: 1,
-        right: "88px"
-      }), "-=1");
-      viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
-        ease: Power3.easeOut,
-        width: "85%"
-      }), "-=2");
+    viewworkpage.add(TweenLite.to($('.back'), 1, {
+      ease: Power3.easeOut,
+      opacity: 0,
+      top: "-250px",
+      right: "88px"
+    }), "0");
+    viewworkpage.add(TweenLite.to(activeProject, 1, {
+      ease: Power3.easeOut,
+      top: "200px"
+    }), "0.5");
+    viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
+      ease: Power3.easeOut,
+      opacity: 0,
+      display: "none",
+      top: "50px"
+    }), "-=1.5");
+    viewworkpage.add(TweenLite.to($('.mb-cont'), 1, {
+      ease: Power3.easeOut,
+      left: "20px"
+    }), "-=1.5");
+    viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
+      ease: Power3.easeOut,
+      opacity: 1,
+      top: "80px"
+    }), "-=1.5");
+    viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
+      ease: Power3.easeOut,
+      opacity: 1,
+      top: "+=100px",
+      "display": "block"
+    }), "-=1.5");
+    viewworkpage.add(TweenLite.to($('.navigation-left'), 1, {
+      ease: Power3.easeOut,
+      opacity: 1,
+      left: "0"
+    }), "-=1.5");
+    viewworkpage.add(TweenLite.to($('.navigation-right'), 1, {
+      ease: Power3.easeOut,
+      opacity: 1,
+      right: "88px"
+    }), "-=1");
+    viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
+      ease: Power3.easeOut,
+      width: "85%"
+    }), "-=2");
 
-     $(".activeProject").removeClass('activeProject');
-     $(".detailedProject").removeClass('detailedProject');
+    $(".activeProject").removeClass('activeProject');
+    $(".detailedProject").removeClass('detailedProject');
 
   });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* END ON LOAD */
+  /* END ON LOAD */
 })
