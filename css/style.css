@@ -81,25 +81,31 @@ body {
     display: block;
     position: absolute;
     top: 160px;
-    left: 20%;
+    left: calc(50% - 150px);
     font-size: 30px;
     opacity: 1;
+    width: 300px;
+    text-align: center;
 }
 .title-1 {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 240px;
-    left: 30%;
+    top: 230px;
+    left: calc(50% - 300px);
     font-size: 60px;
+    width: 600px;
+    text-align: center;
 }
 .text-2 {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 430px;
-    left: 30%;
+    top: 510px;
+    left: calc(50% - 300px);
     font-size: 26px;
+    text-align: center;
+    width: 600px;
 }
 .text-2 span {
     margin-right: 30px;
@@ -107,12 +113,13 @@ body {
 }
 .view-more {
     position: absolute;
-    top: 530px;
-    left: 30%;
+    top: 600px;
+    left: calc(50% - 125px);
     font-family: "LeagueSpartan";
     padding-left: 120px;
     font-size: 22px;
     cursor: pointer;
+    text-align: center;
 }
 .view-more .circle-arrow {
     width: 88px;
@@ -169,13 +176,15 @@ video.circle.anim {
     width: 222px;
 }
 
-.pink-triangle {
+.homepage-animation {
     position: absolute;
-    top: 0;
-    right: 320px;
+    top: 320px;
+    left: calc(50% - 300px);
+    width: 600px;
+    text-align: center;
 }
-video.triangle.anim {
-    width: 258px;
+video.homepage.anim {
+    width: 600px;
 }
 .blue-square {
     position: absolute;
@@ -303,7 +312,7 @@ video.menu-character3.anim {
     display: inline-block;
     height: 30px;
     position: absolute;
-    top: 80px;
+    top: 520px;
 }
 .projects-indicator .indicator {
     width: 50px;
@@ -317,7 +326,7 @@ video.menu-character3.anim {
 }
 .project-container {
     position: absolute;
-    top: 200px;
+    top: 80px;
     text-align: center;
     font-family: "LeagueSpartan";
     width: 100%;
@@ -326,9 +335,24 @@ video.menu-character3.anim {
 .pn-cont {
     font-size: 32px;
     margin-bottom: 30px;
+    font-family: "LeagueSpartan";
+    position: relative;
+}
+.pn-cont .pnumber.active {
+    display: inline-block;
+    position: relative;
+    top:0;
+    opacity: 1;
+}
+.pn-cont .pnumber.inactive {
+    display: none;
 }
 .pn-cont span.numberp {
     color: #c1c1c1;
+}
+.picon img {
+    max-width: 110px;
+    margin-bottom: 30px;
 }
 .ptitle {
     font-size: 38px;
@@ -452,9 +476,10 @@ video.menu-character3.anim {
 }
 
 .pimg {
-    width: 85%;
-    display: inline-block;
+    width: 100%;
+    display: none;
     margin: 120px 0 0 0;
+    opacity: 0;
 }
 img {
     width: 100%;
