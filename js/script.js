@@ -53,10 +53,10 @@ var tltxt1 = new TimelineLite({
 });
 tltxt1.add(TweenLite.from(txt1, 1, {
   opacity: 0,
-  ease: Power3.easeOut
+  ease: Power0.easeNone
 }));
 tltxt1.add(TweenLite.from(txt1, 1, {
-  ease: Power3.easeOut,
+  ease: CustomEase.create("custom", "M0,0 C0.246,0.36 0.156,0.562 0.268,0.698 0.3,0.736 0.504,1 1,1"),
   y: -50
 }), "-=0.8");
 
@@ -64,24 +64,24 @@ tltxt1.add(TweenLite.from(txt1, 1, {
 var tltit1 = new TimelineLite({
   paused: true
 });
-tltit1.add(TweenLite.from(tit1, 1.5, {
+tltit1.add(TweenLite.from(tit1, 1, {
   opacity: 0,
-  ease: Power3.easeOut
+  ease: Power0.easeNone
 }));
 tltit1.add(TweenLite.from(tit1, 1, {
   ease: CustomEase.create("custom", "M0,0 C0.246,0.36 0.156,0.562 0.268,0.698 0.3,0.736 0.504,1 1,1"),
   y: -70
-}), "-=0.8");
+}), "-=0.7");
 
 var tltxt2 = new TimelineLite({
   paused: true
 });
 tltxt2.add(TweenLite.from(txt2, 1, {
   opacity: 0,
-  ease: Power3.easeOut
+  ease: Power0.easeNone
 }));
 tltxt2.add(TweenLite.from(txt2, 1, {
-  ease: Power3.easeOut,
+  ease: CustomEase.create("custom", "M0,0 C0.246,0.36 0.156,0.562 0.268,0.698 0.3,0.736 0.504,1 1,1"),
   y: +50
 }), "-=0.8");
 
@@ -142,12 +142,12 @@ var tlvm1 = new TimelineLite({
 });
 tlvm1.add(TweenLite.from(vmore, 1, {
   opacity: 0,
-  ease: Power3.easeOut
+  ease: Power0.easeNone
 }));
 tlvm1.add(TweenLite.from(vmore, 1, {
-  ease: Power3.easeOut,
+  ease: CustomEase.create("custom", "M0,0 C0.246,0.36 0.156,0.562 0.268,0.698 0.3,0.736 0.504,1 1,1"),
   y: +50
-}), "-=0.8");
+}), "-=1");
 
 
 var tlmenu1 = new TimelineLite({
@@ -258,10 +258,10 @@ tlhome.add(TweenLite.to(homepage, 0, {
 }));
 
 tlhome.add(tltit1.play());
-tlhome.add(tltxt1.play(), "-=0.7");
+tlhome.add(tltxt1.play(), "-=0.9");
 tlhome.add(atriangle.play(), "-=0.7" );
-tlhome.add(tltxt2.play(), "-=0.7" );
-tlhome.add(tlvm1.play(), "-=0.7" );
+tlhome.add(tltxt2.play(), "-=1.6" );
+tlhome.add(tlvm1.play(), "-=1" );
 tlhome.add(function () {
   $('body').removeClass('working')
 });
@@ -796,13 +796,13 @@ $(document).ready(function () {
   $('.mitem').hover(
     function () {
       if (!$("body").hasClass('working')) TweenLite.to($(this).find('.bbar'), 1, {
-        color: "#449afc",
+        color: "#317bff",
         width: 100,
         'margin-right': 30,
         ease: Power3.easeOut
       });
       if (!$("body").hasClass('working')) TweenLite.to($(this), 1, {
-        color: "#449afc",
+        color: "#317bff",
         ease: Power3.easeOut
       });
     },

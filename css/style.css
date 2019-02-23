@@ -15,6 +15,7 @@ body {
     display:none;
     z-index: 2;
     position: relative;
+    top: -20px;
 }
 .icon-1 {
     background-image: url(../img/designer@2x.png);
@@ -102,7 +103,7 @@ body {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 485px;
+    top: 495px;
     left: calc(50% - 300px);
     font-size: 26px;
     text-align: center;
@@ -121,7 +122,16 @@ body {
     font-size: 24px;
     cursor: pointer;
     text-align: center;
+    transition-property: color;
+    transition-duration: .4s;
 }
+
+.view-more:hover {
+    color: #317bff;
+    
+}
+
+
 .view-more .circle-arrow {
     width: 80px;
     height: 80px;
@@ -179,13 +189,13 @@ video.circle.anim {
 
 .homepage-animation {
     position: absolute;
-    top: 280px;
-    left: calc(50% - 316px);
-    width: 640px;
+    top: 300px;
+    left: calc(50% - 346px);
+    width: 700px;
     text-align: center;
 }
 video.homepage.anim {
-    width: 640px;
+    width: 100%;
 }
 .blue-square {
     position: absolute;
@@ -384,6 +394,7 @@ video.menu-character3.anim {
     left: 0px;
     line-height: 56px;
 }
+
 .vp-bg {
     width: 186px;
     height: 56px;
