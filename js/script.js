@@ -154,12 +154,13 @@ var tlmenu1 = new TimelineLite({
   paused: true
 });
 tlmenu1.add(TweenLite.from(menubcont, 1, {
-  ease: Power3.easeOut,
-  y: -150
+  ease: CustomEase.create("custom", "M0,0 C0.246,0.36 0.156,0.562 0.268,0.698 0.3,0.736 0.504,1 1,1"),
+  y: -150,
+  delay:.5
 }));
 tlmenu1.add(TweenLite.from(menubcont, 1, {
   opacity: 0,
-  ease: Power3.easeOut
+  ease: Power0.easeNone
 }), "-=0.8");
 
 
@@ -325,7 +326,7 @@ $(document).ready(function () {
         var showmenuhome = new TimelineLite();
         //showmenuhome.add(tlhome.reverse().timeScale(1.2));
         showmenuhome.add(TweenLite.to(menubg, 1, {
-          ease: CustomEase.create("custom", "M0,0 C0.22,0.332 0.276,0.189 0.478,0.286 0.87,0.474 0.818,1 1,1"),
+          ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
           left: -0.5 * sideB
         }).timeScale(.8));
         showmenuhome.add(TweenLite.to($(mwrap), 0.1, {
