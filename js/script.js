@@ -269,7 +269,7 @@ tlhome.add(function () {
 
 $(document).ready(function () {
 
-  var angletmp = "skew(" + (angleB + 90) + "deg)";
+  var angletmp = "skew(" + (angleB + 100) + "deg)";
   //console.log(angletmp);
 
   $(menubg).css({
@@ -323,11 +323,11 @@ $(document).ready(function () {
         $("#menu").addClass('is-active');
         //console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
-        showmenuhome.add(tlhome.reverse().timeScale(1.2));
+        //showmenuhome.add(tlhome.reverse().timeScale(1.2));
         showmenuhome.add(TweenLite.to(menubg, 1, {
-          ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
+          ease: CustomEase.create("custom", "M0,0 C0.22,0.332 0.276,0.189 0.478,0.286 0.87,0.474 0.818,1 1,1"),
           left: -0.5 * sideB
-        }), "-=0.2");
+        }).timeScale(.8));
         showmenuhome.add(TweenLite.to($(mwrap), 0.1, {
           ease: Power3.easeOut,
           display: "block"

@@ -169,7 +169,7 @@ body {
 .menu-bg {
     position: fixed;
     background: #ffffff;
-    border-right: 5px solid #000000;
+    border-right: 18px solid #000000;
     box-shadow: 0 0 100px #cccccc;
     transform: skew(-45deg);
     top: 0;
