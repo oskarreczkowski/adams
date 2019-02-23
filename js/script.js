@@ -156,7 +156,7 @@ var tlmenu1 = new TimelineLite({
 tlmenu1.add(TweenLite.from(menubcont, 1, {
   ease: CustomEase.create("custom", "M0,0 C0.246,0.36 0.156,0.562 0.268,0.698 0.3,0.736 0.504,1 1,1"),
   y: -150,
-  delay:.5
+  delay:.55
 }));
 tlmenu1.add(TweenLite.from(menubcont, 1, {
   opacity: 0,
