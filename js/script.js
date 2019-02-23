@@ -64,13 +64,13 @@ tltxt1.add(TweenLite.from(txt1, 1, {
 var tltit1 = new TimelineLite({
   paused: true
 });
-tltit1.add(TweenLite.from(tit1, 1, {
+tltit1.add(TweenLite.from(tit1, 1.5, {
   opacity: 0,
   ease: Power3.easeOut
 }));
 tltit1.add(TweenLite.from(tit1, 1, {
-  ease: Power3.easeOut,
-  y: -50
+  ease: CustomEase.create("custom", "M0,0 C0.246,0.36 0.156,0.562 0.268,0.698 0.3,0.736 0.504,1 1,1"),
+  y: -70
 }), "-=0.8");
 
 var tltxt2 = new TimelineLite({
@@ -100,7 +100,6 @@ var atriangle = new TimelineLite({
 atriangle.add(TweenLite.from(triangle, 1, {
   opacity: 0,
   ease: Power3.easeOut,
-  y: -150
 }));
 
 var asquare = new TimelineLite({
@@ -257,13 +256,12 @@ var tlhome = new TimelineLite({
 tlhome.add(TweenLite.to(homepage, 0, {
   display: "block"
 }));
-tlhome.add(tltxt1.play());
-tlhome.add(tltit1.play(), "-=0.7");
+
+tlhome.add(tltit1.play());
+tlhome.add(tltxt1.play(), "-=0.7");
 tlhome.add(atriangle.play(), "-=0.7" );
 tlhome.add(tltxt2.play(), "-=0.7" );
 tlhome.add(tlvm1.play(), "-=0.7" );
-//tlhome.add(acircle.play() );
-//tlhome.add(asquare.play() );
 tlhome.add(function () {
   $('body').removeClass('working')
 });

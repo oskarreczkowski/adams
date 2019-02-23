@@ -80,9 +80,10 @@ body {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 160px;
+    top: 110px;
     left: calc(50% - 150px);
-    font-size: 30px;
+    font-size: 28px;
+    letter-spacing: .3px;
     opacity: 1;
     width: 300px;
     text-align: center;
@@ -91,9 +92,9 @@ body {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 230px;
+    top: 165px;
     left: calc(50% - 300px);
-    font-size: 60px;
+    font-size: 72px;
     width: 600px;
     text-align: center;
 }
@@ -101,7 +102,7 @@ body {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 510px;
+    top: 485px;
     left: calc(50% - 300px);
     font-size: 26px;
     text-align: center;
@@ -113,17 +114,17 @@ body {
 }
 .view-more {
     position: absolute;
-    top: 600px;
-    left: calc(50% - 125px);
+    top: 586px;
+    left: calc(50% - 145px);
     font-family: "LeagueSpartan";
-    padding-left: 120px;
-    font-size: 22px;
+    padding-left: 115px;
+    font-size: 24px;
     cursor: pointer;
     text-align: center;
 }
 .view-more .circle-arrow {
-    width: 88px;
-    height: 88px;
+    width: 80px;
+    height: 80px;
     background-image: url(../img/bc-ar-01.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -133,8 +134,8 @@ body {
     cursor: pointer;
 }
 .view-more .ca-bg{
-    width: 88px;
-    height: 88px;
+    width: 80px;
+    height: 80px;
     background-image: url(../img/bc-bg-01.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -178,13 +179,13 @@ video.circle.anim {
 
 .homepage-animation {
     position: absolute;
-    top: 320px;
-    left: calc(50% - 300px);
-    width: 600px;
+    top: 280px;
+    left: calc(50% - 316px);
+    width: 640px;
     text-align: center;
 }
 video.homepage.anim {
-    width: 600px;
+    width: 640px;
 }
 .blue-square {
     position: absolute;
