@@ -133,7 +133,7 @@ body {
     cursor: pointer;
     text-align: center;
     transition-property: color;
-    transition-duration: .4s;
+    transition-duration: .3s;
 }
 
 .view-more:hover {

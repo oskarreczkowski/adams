@@ -731,20 +731,20 @@ $(document).ready(function () {
   var vmhover = new TimelineLite({
     paused: true
   });
-  vmhover.add(TweenLite.to(vmca, 0.5, {
+  vmhover.add(TweenLite.to(vmca, 0.3, {
     width: "+=10",
     height: "+=10",
     y: "-=5px",
     x: "-=5px",
     ease: Power3.easeOut
   }));
-  vmhover.add(TweenLite.to(vmcabg, 0.5, {
+  vmhover.add(TweenLite.to(vmcabg, 0.3, {
     width: "+=10",
     height: "+=10",
     y: "-=5px",
     x: "-=5px",
     ease: Power3.easeOut
-  }), "-=0.3");
+  }), "-=0.1");
 
   var vphover = new TimelineLite({
     paused: true
@@ -822,21 +822,21 @@ $(document).ready(function () {
   var hovernavleft = new TimelineLite({
     paused: true
   });
-  hovernavleft.add(TweenLite.to($('.navigation-left').find('.arrow'), 0.2, {
-    width: 98,
-    height: 98,
+  hovernavleft.add(TweenLite.to($('.navigation-left').find('.arrow'), 0.3, {
+    width: "+=10",
+    height: "+=10",
     y: "-=5px",
     x: "-=5px",
     ease: Power3.easeOut
   }));
-  hovernavleft.add(TweenLite.to($('.navigation-left').find('.bg'), 0.2, {
-    width: 98,
-    height: 98,
+  hovernavleft.add(TweenLite.to($('.navigation-left').find('.bg'), 0.3, {
+    width: "+=10",
+    height: "+=10",
     y: "-=5px",
     x: "-=5px",
     ease: Power3.easeOut
-  }));
-  hovernavleft.add(TweenLite.to($('.navigation-left').find('.line-left'), 0.2, {
+  }),"-=0.1");
+  hovernavleft.add(TweenLite.to($('.navigation-left').find('.line-left'), 0.3, {
     x: "-=30px",
     ease: Power3.easeOut
   }), "-=0.4");
@@ -844,21 +844,21 @@ $(document).ready(function () {
   var hovernavright = new TimelineLite({
     paused: true
   });
-  hovernavright.add(TweenLite.to($('.navigation-right').find('.arrow'), 0.2, {
-    width: 98,
-    height: 98,
+  hovernavright.add(TweenLite.to($('.navigation-right').find('.arrow'), 0.3, {
+    width: "+=10",
+    height: "+=10",
     y: "-=5px",
     x: "-=5px",
     ease: Power3.easeOut
   }));
-  hovernavright.add(TweenLite.to($('.navigation-right').find('.bg'), 0.2, {
-    width: 98,
-    height: 98,
+  hovernavright.add(TweenLite.to($('.navigation-right').find('.bg'), 0.3, {
+    width: "+=10",
+    height: "+=10",
     y: "-=5px",
     x: "-=5px",
     ease: Power3.easeOut
-  }));
-  hovernavright.add(TweenLite.to($('.navigation-right').find('.line-right'), 0.2, {
+  }),"-=0.1");
+  hovernavright.add(TweenLite.to($('.navigation-right').find('.line-right'), 0.3, {
     x: "+=30px",
     ease: Power3.easeOut
   }), "-=0.4");
