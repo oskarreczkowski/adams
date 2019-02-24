@@ -7,10 +7,17 @@ body {
     padding: 0;
     position: relative;
 }
+
 @font-face {
   font-family: LeagueSpartan;
   src: url(../fonts/LeagueSpartan-Bold.otf);
 }
+
+@font-face {
+  font-family: SourceSansProRegular;
+  src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
 .homepage {
     display:none;
     z-index: 2;
@@ -20,22 +27,25 @@ body {
 .icon-1 {
     background-image: url(../img/designer@2x.png);
     background-repeat: no-repeat;
-    background-size: auto 32px;
-    background-position: right;
-    padding-right: 66px !important;
+    background-size: auto 34px;
+    background-position: right 1px;
+    padding-right: 74px !important;
+    padding: 4px 0 10px 0;
 }
 .icon-2 {
     background-image: url(../img/illustrator@2x.png);
     background-repeat: no-repeat;
-    background-size: auto 32px;
-    background-position: right;
-    padding-right: 46px !important;
+    background-size: auto 34px;
+    background-position: right 0px;
+    padding-right: 45px !important;
+    padding: 4px 0 10px 0;
 }
 .icon-3 {
     background-image: url(../img/rebel-scum@2x.png);
     background-repeat: no-repeat;
-    background-size: auto 32px;
-    background-position: right;
+    background-size: auto 34px;
+    background-position: right 1px;
+    padding: 4px 0 10px 0;
     padding-right: 46px !important;
 }
 .lockup-cont {
@@ -127,8 +137,7 @@ body {
 }
 
 .view-more:hover {
-    color: #317bff;
-    
+    color: #317bff;   
 }
 
 
@@ -252,7 +261,7 @@ video.square.anim {
     text-align: left;
     height: 600px;
     left: calc(50% - 226px);
-    top: 170px;
+    top: 150px;
     font-family: "LeagueSpartan";
     display: none;
 }
@@ -276,10 +285,12 @@ video.square.anim {
     margin: 20px 0 20px 14%;
 }
 .email-info {
-    margin: 20px 0 20px 30%;
+    margin: 20px 0 5px 17%;
+    font-size: 20px;
 }
 .email-info a{
-    color:#449afc;
+    color:#317bff;
+    text-decoration: none;
 }
 
 
@@ -287,7 +298,7 @@ video.menu-character1.anim {
     width: 330px;
     position: absolute;
     left: -320px;
-    top: 60px;
+    top: 90px;
     z-index: -1;
 }
 video.menu-character2.anim {
@@ -327,10 +338,10 @@ video.menu-character3.anim {
 }
 .projects-indicator .indicator {
     width: 50px;
-    height: 6px;
+    height: 8px;
     background: #e3e3e3;
     display: inline-block;
-    margin: 5px;
+    margin: 4px;
 }
 .projects-indicator .indicator.active {
     background: #000000;
@@ -366,15 +377,15 @@ video.menu-character3.anim {
     margin-bottom: 30px;
 }
 .ptitle {
-    font-size: 38px;
-    margin: 0 0 30px 0;
+    font-size: 40px;
+    margin: 0 0 22px 0;
 }
 .pdesc {
     max-width: 600px;
     margin: 0 auto;
     font-size: 16px;
     font-weight: 200;
-    font-family: Arial;
+    font-family: SourceSansProRegular;
     line-height: 24px;
     margin-bottom: 30px;
 }
@@ -386,7 +397,9 @@ video.menu-character3.anim {
     cursor: pointer;
 }
 .vp-button {
-    border: 3px solid #000000;
+    padding-top: 3px;
+    font-size:17px;
+    border: 5px solid #000000;
     width: 186px;
     height: 56px;
     position: absolute;

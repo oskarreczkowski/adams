@@ -117,7 +117,8 @@ var achar1 = new TimelineLite({
 achar1.add(TweenLite.from(character1, 1, {
   opacity: 0,
   ease: Power3.easeOut,
-  y: +50
+  y: +80,
+  x: -80
 }));
 var achar2 = new TimelineLite({
   paused: true
@@ -125,7 +126,8 @@ var achar2 = new TimelineLite({
 achar2.add(TweenLite.from(character2, 1, {
   opacity: 0,
   ease: Power3.easeOut,
-  y: +150
+  y: +150,
+  x: +150
 }));
 var achar3 = new TimelineLite({
   paused: true
@@ -133,7 +135,8 @@ var achar3 = new TimelineLite({
 achar3.add(TweenLite.from(character3, 1, {
   opacity: 0,
   ease: Power3.easeOut,
-  y: -150
+  y: -150,
+  x: +150
 }));
 
 
@@ -174,10 +177,6 @@ var mline1 = new TimelineLite({
   paused: true
 });
 mline1.add(TweenLite.to(line1, 1, {
-  opacity: 1,
-  ease: Power3.easeOut
-}));
-mline1.add(TweenLite.to(line1, 1, {
   ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
   left: -0.5 * sideB
 }), "-=0.8");
@@ -203,39 +202,37 @@ mbhover.add(TweenLite.to($('.mb-bg'), 0.5, {
 var showmenuitems = new TimelineLite({
   paused: true
 });
-showmenuitems.add(TweenLite.from(line1, 0.5, {
-  ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-  opacity: 0,
+showmenuitems.add(TweenLite.from(line1, 0.4, {
+  ease: CustomEase.create("custom", "M0,0 C0.446,0.442 0.33,0.751 0.558,0.918 0.656,0.99 0.752,1 1,1"),
   width: 0
 }));
-showmenuitems.add(TweenLite.from(line2, 0.5, {
-  ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-  opacity: 0,
+showmenuitems.add(TweenLite.from(line2, 0.4, {
+  ease: CustomEase.create("custom", "M0,0 C0.446,0.442 0.33,0.751 0.558,0.918 0.656,0.99 0.752,1 1,1"),
   width: 0
-}));
+}), "-=0.1");
 showmenuitems.add(TweenLite.from($('.link-home'), 0.5, {
   ease: Power3.easeOut,
   y: "-=50px",
   opacity: 0
-}));
+}), "-=0.25");
 showmenuitems.add(TweenLite.from($('.link-projects'), 0.5, {
   ease: Power3.easeOut,
   y: "-=50px",
   opacity: 0
-}), "-=0.2");
+}), "-=0.35");
 showmenuitems.add(TweenLite.from($('.link-about'), 0.5, {
   ease: Power3.easeOut,
   y: "-=50px",
   opacity: 0
-}), "-=0.3");
+}), "-=0.35");
 showmenuitems.add(TweenLite.from($('.email-info'), 0.5, {
   ease: Power3.easeOut,
   x: "-=50px",
   opacity: 0
-}));
-showmenuitems.add(achar1.play(), "-=0.8");
+}), "-=0.25");
+showmenuitems.add(achar1.play(), "-=0.92");
 showmenuitems.add(achar2.play(), "-=0.8");
-showmenuitems.add(achar3.play(), "-=0.8");
+showmenuitems.add(achar3.play(), "-=0.87");
 
 
 /*  PROJECTS MAIN TIMELINE */
@@ -693,16 +690,18 @@ $(document).ready(function () {
         display: "none"
       }));
 
-      viewworkpage.add(TweenLite.from($('.projects-indicator'), 1, {
-        ease: Power3.easeOut,
-        opacity: 0,
-        y: "-=150px"
-      }), "-=0.5");
       viewworkpage.add(TweenLite.from([$('.navigation-left'), $('.navigation-right')], 1, {
         ease: Power3.easeOut,
         opacity: 0,
-        y: "+=250px"
+        y: "-=50px"
+      }), "-=0.2");
+
+      viewworkpage.add(TweenLite.from($('.projects-indicator'), 1.5, {
+        ease: Power3.easeOut,
+        opacity: 0,
+        y: "+=50px"
       }), "-=0.5");
+      
 
 
       viewworkpage.add(function () {
