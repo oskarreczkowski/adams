@@ -155,14 +155,20 @@ body {
 .view-more .ca-bg{
     width: 80px;
     height: 80px;
-    background-image: url(../img/bc-bg-01.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     left: 8px;
     top: calc(50% - 36px);
     z-index: -1;
+    background: #31baff;
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%);
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%);
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 );
+    border-radius: 100px;
 }
+
 .page-bg {
     position: fixed;
     background: #ffffff;
@@ -282,10 +288,10 @@ video.square.anim {
 }
 .link-home, .link-projects, .link-about {
     font-size: 52px;
-    margin: 20px 0 20px 14%;
+    margin: 20px 0 20px 40px;
 }
 .email-info {
-    margin: 20px 0 5px 17%;
+    margin: 20px 0 5px 53px;
     font-size: 20px;
 }
 .email-info a{
@@ -322,6 +328,8 @@ video.menu-character3.anim {
     background: #000000;
     margin-bottom: 16px;
     margin-right: 0;
+    position: relative;
+    left: -40px;
 }
 .mitem:hover {
     cursor: pointer;
@@ -397,27 +405,31 @@ video.menu-character3.anim {
     cursor: pointer;
 }
 .vp-button {
-    padding-top: 3px;
+    padding-top: 2px;
     font-size:17px;
     border: 5px solid #000000;
-    width: 186px;
-    height: 56px;
+    width: 170px;
+    height: 54px;
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 6px;
     line-height: 56px;
 }
 
 .vp-bg {
-    width: 186px;
-    height: 56px;
+    height: 61px;
+    width: 175px;
     position: absolute;
-    top: 8px;
-    left: 8px;
-    background-image: url(../img/ms-bg-01.png);
+    top: 11px;
+    left: 17px;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+    background: #ffd673; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 ); /* IE6-9 */
 }
 .projects {
     display: none;
@@ -447,13 +459,18 @@ video.menu-character3.anim {
 .navigation-left .left-arrow .bg {
     width: 88px;
     height: 88px;
-    background-image: url(../img/bc-bg-01.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     left: 8px;
     top: calc(50% - 36px);
     z-index: -1;
+    border-radius: 100px;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .navigation-left .line-left {
     height: 6px;
@@ -484,13 +501,18 @@ video.menu-character3.anim {
 .navigation-right .right-arrow .bg {
     width: 88px;
     height: 88px;
-    background-image: url(../img/bc-bg-01.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     left: 8px;
     top: calc(50% - 36px);
     z-index: -1;
+    border-radius: 100px;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .navigation-right .line-right {
     height: 6px;

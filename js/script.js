@@ -743,27 +743,29 @@ $(document).ready(function () {
     height: "+=10",
     y: "-=5px",
     x: "-=5px",
+    opacity: 0.85,
     ease: Power3.easeOut
   }), "-=0.1");
 
   var vphover = new TimelineLite({
     paused: true
   });
-  vphover.add(TweenLite.to($('.vp-button'), 0.5, {
-    "line-height": 66,
-    width: "+=10",
-    height: "+=10",
-    y: "-=5px",
-    x: "-=5px",
+  vphover.add(TweenLite.to($('.vp-button'), 0.3, {
+    "line-height": 62,
+    width: "+=22",
+    height: "+=6",
+    y: "-=3px",
+    x: "-=11px",
     ease: Power3.easeOut
   }));
-  vphover.add(TweenLite.to($('.vp-bg'), 0.5, {
-    width: "+=10",
-    height: "+=10",
-    y: "-=5px",
-    x: "-=5px",
+  vphover.add(TweenLite.to($('.vp-bg'), 0.3, {
+    width: "+=22",
+    height: "+=6",
+    y: "-=3px",
+    x: "-=11px",
+    opacity: 0.85,
     ease: Power3.easeOut
-  }), "-=0.3");
+  }), "-=0.15");
 
 
   /*  VIEW PROJECTS HOVER */
@@ -795,26 +797,25 @@ $(document).ready(function () {
   /*  MENU BUTTON HOVER */
   $('.mitem').hover(
     function () {
-      if (!$("body").hasClass('working')) TweenLite.to($(this).find('.bbar'), 1, {
-        color: "#317bff",
+      if (!$("body").hasClass('working')) TweenLite.to($(this).find('.bbar'), .8, {
         width: 100,
-        'margin-right': 30,
-        ease: Power3.easeOut
+        'margin-right': 10,
+        ease: Power4.easeOut
       });
-      if (!$("body").hasClass('working')) TweenLite.to($(this), 1, {
+      if (!$("body").hasClass('working')) TweenLite.to($(this), .8, {
         color: "#317bff",
-        ease: Power3.easeOut
+        ease: Power4.easeOut
       });
     },
     function () {
-      TweenLite.to($(this).find('.bbar'), 1, {
+      TweenLite.to($(this).find('.bbar'), .8, {
         width: 0,
         'margin-right': 0,
-        ease: Power3.easeOut
+        ease: Power4.easeOut
       });
-      TweenLite.to($(this), 1, {
+      TweenLite.to($(this), .8, {
         color: "#000",
-        ease: Power3.easeOut
+        ease: Power4.easeOut
       });
     }
   );
@@ -834,6 +835,7 @@ $(document).ready(function () {
     height: "+=10",
     y: "-=5px",
     x: "-=5px",
+    opacity: .85,
     ease: Power3.easeOut
   }),"-=0.1");
   hovernavleft.add(TweenLite.to($('.navigation-left').find('.line-left'), 0.3, {
@@ -856,6 +858,7 @@ $(document).ready(function () {
     height: "+=10",
     y: "-=5px",
     x: "-=5px",
+    opacity: .85,
     ease: Power3.easeOut
   }),"-=0.1");
   hovernavright.add(TweenLite.to($('.navigation-right').find('.line-right'), 0.3, {
