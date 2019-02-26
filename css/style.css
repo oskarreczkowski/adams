@@ -342,7 +342,7 @@ video.menu-character3.anim {
     display: inline-block;
     height: 30px;
     position: absolute;
-    top: 520px;
+    top: 570px;
 }
 .projects-indicator .indicator {
     width: 50px;
@@ -356,7 +356,7 @@ video.menu-character3.anim {
 }
 .project-container {
     position: absolute;
-    top: 80px;
+    top: 70px;
     text-align: center;
     font-family: "LeagueSpartan";
     width: 100%;
@@ -381,21 +381,21 @@ video.menu-character3.anim {
     color: #c1c1c1;
 }
 .picon img {
-    max-width: 110px;
-    margin-bottom: 30px;
+    max-width: 142px;
+    margin-bottom: 25px;
 }
 .ptitle {
     font-size: 40px;
     margin: 0 0 22px 0;
 }
 .pdesc {
-    max-width: 600px;
+    max-width: 540px;
     margin: 0 auto;
     font-size: 16px;
     font-weight: 200;
     font-family: SourceSansProRegular;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 .vp-button-cont {
     margin: 0 auto;
@@ -440,7 +440,7 @@ video.menu-character3.anim {
 .navigation-left {
     position: absolute;
     top: 300px;
-    left:0;
+    left:50px;
     cursor:pointer;
     z-index: 10;
 }
@@ -482,7 +482,7 @@ video.menu-character3.anim {
 .navigation-right {
     position: absolute;
     top: 300px;
-    right: 88px;
+    right: 138px;
     cursor:pointer;
     z-index: 10;
 }

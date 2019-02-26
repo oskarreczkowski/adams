@@ -668,11 +668,13 @@ $(document).ready(function () {
       $("#menu").removeClass('is-active');
       var viewworkpage = new TimelineLite();
       //hidemenuhome.add(showmenuitems.reverse(), "-=1");
-      viewworkpage.add(tlhome.reverse().timeScale(2));
+      viewworkpage.add(tlhome.reverse().timeScale(1.8));
+      
       viewworkpage.add(TweenLite.to(pagebg, 1, {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
         left: -2.5 * sideB
       }), "+=0.2");
+      
       //hidemenuhome.add( TweenLite.to(menubg, 1, {ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"), left:-2.5*sideB}), "+=0.2"  );
       //hidemenuhome.add( hidemenubg );
       viewworkpage.add(TweenLite.to($('.projects'), 0, {
