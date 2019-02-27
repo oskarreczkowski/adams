@@ -1152,18 +1152,18 @@ $(document).ready(function () {
       top: "185px"
     }), "-=0.3");
     
-    viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
-      ease: Power3.easeOut,
+    viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 3, {
+      ease: Expo.easeOut,
       opacity: 1,
       margin: "0px 0 0 0",
       display: "block"
-    }), "-=0");
-    viewworkpage.add(TweenLite.to($('.back'), 1, {
-      ease: Power3.easeOut,
+    }), "-=0.3");
+    viewworkpage.add(TweenLite.to($('.back'), 1.5, {
+      ease: Power3.easeInOut,
       opacity: 1,
       top: "58px",
       right: "0px"
-    }), "-=0.5");
+    }), "-=3");
     var pimgHeight = $(this).parent().find('.pimg').height();
     var maxHeight = $(this).parent().height();
     var curHeight = 0;
@@ -1246,8 +1246,8 @@ $(document).ready(function () {
     viewworkpage.add(TweenLite.to($('.back'), 1, {
       ease: Power3.easeOut,
       opacity: 0,
-      top: "-250px",
-      right: "88px"
+      top: "-100px",
+      right: "0px"
     }), "0");
     viewworkpage.add(TweenLite.to(activeProject, 1, {
       ease: Power3.easeOut,

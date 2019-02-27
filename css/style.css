@@ -523,17 +523,31 @@ video.menu-character3.anim {
 }
 
 /* Portfolio Pages */
-.portfolio-sectionheader {
+.portfolio-category {
     color:#f49231;
     font-size:13px;
     text-transform: uppercase;
     letter-spacing: .7px;
 }
 
+.portfolio-sectionheader {
+    font-size: 25px;
+    margin: 15px 0 20px;
+}
+
+.portfolio-body {
+    max-width: 510px;
+    font-size: 15px;
+    color: #606668;
+    line-height: 25px;
+    margin: 0 auto 60px;
+    font-family: "SourceSansProRegular";
+}
+
 .pimg {
     width: 100%;
     display: none;
-    margin: 120px 0 0 0;
+    margin: 110px 0 0 0;
     opacity: 0;
 }
 
@@ -550,12 +564,12 @@ img {
 
 .back {
     position: absolute;
-    top: -200px;
-    right: 88px;
+    top: -100px;
+    right: 0px;
     cursor:pointer;
     z-index: 10;
     display: block;
-    opacity: 1;
+    opacity: 0;
 }
 
 .back .circle-x {
