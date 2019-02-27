@@ -467,7 +467,7 @@ $(document).ready(function () {
       viewworkpage2.add(TweenLite.to($('.projects-indicator'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
-        top: "520px"
+        y: "-=50px"
       }), "-=1.5");
       viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
         ease: Power3.easeOut,
@@ -582,17 +582,16 @@ $(document).ready(function () {
         ease: Power3.easeOut,
         display: "none"
       }));
-
-      hidemenuhome.add(TweenLite.from($('.projects-indicator'), 1, {
-        ease: Power3.easeOut,
-        opacity: 0,
-        y: "-=150px"
-      }), "-=0.5");
       hidemenuhome.add(TweenLite.from([$('.navigation-left'), $('.navigation-right')], 1, {
         ease: Power3.easeOut,
         opacity: 0,
-        y: "+=250px"
-      }), "-=0.5");
+        y: "-=50px"
+      }), "-=0.2");
+      hidemenuhome.add(TweenLite.from($('.projects-indicator'), 1, {
+        ease: Power3.easeOut,
+        opacity: 0,
+        y: "+=50px"
+      }), "-=0.7");
 
 
       hidemenuhome.add(function () {
@@ -698,11 +697,17 @@ $(document).ready(function () {
         y: "-=50px"
       }), "-=0.2");
 
-      viewworkpage.add(TweenLite.from($('.projects-indicator'), 1.5, {
+      viewworkpage.add(TweenLite.from($('.projects-indicator'), 1, {
         ease: Power3.easeOut,
         opacity: 0,
         y: "+=50px"
-      }), "-=0.5");
+      }), "-=0.8");
+
+      viewworkpage.add(TweenLite.from($('.picon'), 1.5, {
+        ease: Expo.easeInOut,
+        opacity: 0,
+        y: "-=50px"
+      }), "-=1.1");
       
 
 
@@ -922,9 +927,10 @@ $(document).ready(function () {
       TweenLite.to(newpc, 0, {
         x: 400,
         y: 0,
-        ease: Power3.easeOut
+        ease: Expo.easeInOut,
+        opacity: 0,
       });
-      TweenLite.to(currentpc, 1.2, {
+      TweenLite.to(currentpc, 1.3, {
         bezier: [{
           x: 0,
           y: 0
@@ -934,9 +940,9 @@ $(document).ready(function () {
         }],
         opacity: 0,
         "display": "none",
-        ease: Power3.easeOut
+        ease: Expo.easeInOut,
       });
-      TweenLite.to(newpc, 1, {
+      TweenLite.to(newpc, 1.3, {
         bezier: [{
           x: 400,
           y: 0
@@ -946,7 +952,7 @@ $(document).ready(function () {
         }],
         "display": "block",
         opacity: 1,
-        ease: Power3.easeOut
+        ease: Expo.easeInOut,
       });
       /*TweenLite.to(currentpc, 1.2, {
         bezier: [{
@@ -990,7 +996,7 @@ $(document).ready(function () {
       TweenLite.to(newpc, 0, {
         x: -400,
         y: 0,
-        ease: Power3.easeOut
+        ease: Expo.easeInOut,
       });
       TweenLite.to(currentpc, 1, {
         bezier: [{
@@ -1002,7 +1008,7 @@ $(document).ready(function () {
         }],
         opacity: 0,
         "display": "none",
-        ease: Power3.easeOut
+        ease: Expo.easeInOut,
       });
       TweenLite.to(newpc, 1, {
         bezier: [{
@@ -1014,7 +1020,7 @@ $(document).ready(function () {
         }],
         opacity: 1,
         "display": "block",
-        ease: Power3.easeOut
+        ease: Expo.easeInOut,
       });
       /*TweenLite.to(currentpc, 1, {
         bezier: [{
@@ -1113,8 +1119,11 @@ $(document).ready(function () {
     viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
       ease: Power3.easeOut,
       opacity: 0,
-      top: "-150px"
+      y: "+=50px"
     }), "-=0.5");
+
+
+
     viewworkpage.add(TweenLite.to($(this).parent(), 1, {
       ease: Power3.easeOut,
       top: "50px"
@@ -1267,7 +1276,7 @@ $(document).ready(function () {
     viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
-      top: "520px"
+      y: "-=50px"
     }), "-=1.5");
     viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
       ease: Power3.easeOut,
