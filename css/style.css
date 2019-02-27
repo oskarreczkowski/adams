@@ -172,8 +172,8 @@ body {
 .page-bg {
     position: fixed;
     background: #ffffff;
-    border-right: 5px solid #000000;
-    box-shadow: 0 0 100px #cccccc;
+    border-right: 16px solid #000000;
+    box-shadow: 0 0 400px #00000061;
     transform: skew(-45deg);
     top: 0;
     left: -200%;
@@ -227,7 +227,7 @@ video.square.anim {
     padding: 30px 0 0 0;
     display: block;
     position: absolute;
-    top:50px;
+    top:230px;
     opacity: 0;
 }
 .roles span {
@@ -240,21 +240,21 @@ video.square.anim {
     position: absolute;
     content: "";
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 20px;
     left: 8px;
-    top: 0px;
+    top: 2px;
 }
 
 .roles span.green:before {
-    background: green;
+    background: #619f21;
 }
 .roles span.orange:before {
-    background: orange;
+    background: #f18f31;
 }
 .roles span.blue:before {
-    background: blue;
+    background: #31b6ff;
 }
 
 
@@ -522,12 +522,24 @@ video.menu-character3.anim {
     left: 128px;
 }
 
+/* Portfolio Pages */
+.portfolio-sectionheader {
+    color:#f49231;
+    font-size:13px;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
 .pimg {
     width: 100%;
     display: none;
     margin: 120px 0 0 0;
     opacity: 0;
 }
+
+/* End Portfolio Pages */
+
+
 img {
     width: 100%;
 }

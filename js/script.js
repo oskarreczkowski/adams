@@ -454,7 +454,7 @@ $(document).ready(function () {
         ease: Power3.easeOut,
         opacity: 0,
         display: "none",
-        top: "50px"
+        top: "230px"
       }), "-=1.5");
       viewworkpage2.add(TweenLite.to($(this).parent().find('.pdesc'), 1, {
         ease: Power3.easeOut,
@@ -472,7 +472,7 @@ $(document).ready(function () {
       viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
-        top: "+=100px",
+        //top: "+=100px",
         "display": "block"
       }), "-=1.5");
       viewworkpage2.add(TweenLite.to($('.navigation-left'), 1, {
@@ -1117,53 +1117,47 @@ $(document).ready(function () {
     var viewworkpage = new TimelineLite();
 
     viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
-      ease: Power3.easeOut,
+      ease: Power3.easeInOut,
       opacity: 0,
       y: "+=50px"
-    }), "-=0.5");
-
-
-
-    viewworkpage.add(TweenLite.to($(this).parent(), 1, {
-      ease: Power3.easeOut,
-      top: "50px"
-    }), "-=0.5");
-    viewworkpage.add(TweenLite.to($('.mb-cont'), 1, {
-      ease: Power3.easeOut,
-      left: "-20px"
-    }), "-=1");
-    viewworkpage.add(TweenLite.to($(this), 1, {
-      ease: Power3.easeOut,
-      opacity: 0,
-      top: "-=100px",
-      "display": "none"
-    }), "-=1");
-    viewworkpage.add(TweenLite.to($(this).parent().find('.pdesc'), 1, {
-      ease: Power3.easeOut,
-      opacity: 0
-    }) );
-    viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
-      ease: Power3.easeOut,
-      opacity: 1,
-      display: "block",
-      top: "160px"
-    }), "-=0.5");
+    }), "+=0.1");
     viewworkpage.add(TweenLite.to($('.navigation-left'), 1, {
-      ease: Power3.easeOut,
+      ease: Power3.easeInOut,
       opacity: 0,
       left: "-150px"
     }), "-=0.5");
     viewworkpage.add(TweenLite.to($('.navigation-right'), 1, {
-      ease: Power3.easeOut,
+      ease: Power3.easeInOut,
       opacity: 0,
       right: "-150px"
     }), "-=1.0");
+    viewworkpage.add(TweenLite.to($(this).parent(), 1, {
+      ease: Power3.easeOut,
+      top: "0px"
+    }), "-=0.2");
+    viewworkpage.add(TweenLite.to($(this), 1, {
+      ease: Power3.easeInOut,
+      opacity: 0,
+      //top: "-=100px",
+      "display": "none"
+    }), "-=1");
+    viewworkpage.add(TweenLite.to($(this).parent().find('.pdesc'), 1, {
+      ease: Power3.easeInOut,
+      opacity: 0
+    }), "-=1");
+    viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
+      ease: Power3.easeInOut,
+      opacity: 1,
+      display: "block",
+      top: "185px"
+    }), "-=0.3");
+    
     viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
-      margin: "20px 0 0 0",
+      margin: "0px 0 0 0",
       display: "block"
-    }), "-=2");
+    }), "-=0");
     viewworkpage.add(TweenLite.to($('.back'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
@@ -1263,7 +1257,7 @@ $(document).ready(function () {
       ease: Power3.easeOut,
       opacity: 0,
       display: "none",
-      top: "50px"
+      top: "230px"
     }), "-=1.5");
     viewworkpage.add(TweenLite.to($(this).parent().find('.pdesc'), 1, {
       ease: Power3.easeOut,
@@ -1281,7 +1275,7 @@ $(document).ready(function () {
     viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
-      top: "+=100px",
+      //top: "+=100px",
       "display": "block"
     }), "-=1.5");
     viewworkpage.add(TweenLite.to($('.navigation-left'), 1, {
