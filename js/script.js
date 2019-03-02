@@ -184,19 +184,19 @@ mline1.add(TweenLite.to(line1, 1, {
 var mbhover = new TimelineLite({
   paused: true
 });
-mbhover.add(TweenLite.to(mbut, 0.5, {
-  padding: "15px 9px",
-  y: "-=5px",
-  x: "-=5px",
+mbhover.add(TweenLite.to(mbut, 0.35, {
+  padding: "15px 16px",
+  y: "-=6px",
+  x: "-=6px",
   ease: Power3.easeOut
 }));
-mbhover.add(TweenLite.to($('.mb-bg'), 0.5, {
-  width: "66px",
-  height: "66px",
-  y: "-=5px",
-  x: "-=5px",
+mbhover.add(TweenLite.to($('.mb-bg'), 0.35, {
+  width: "69px",
+  height: "70px",
+  y: "-=6px",
+  x: "-=6px",
   ease: Power3.easeOut
-}), "-=0.2");
+}), "-=0.15");
 
 
 var showmenuitems = new TimelineLite({
@@ -738,14 +738,14 @@ $(document).ready(function () {
   var vmhover = new TimelineLite({
     paused: true
   });
-  vmhover.add(TweenLite.to(vmca, 0.3, {
+  vmhover.add(TweenLite.to(vmca, 0.35, {
     width: "+=10",
     height: "+=10",
     y: "-=5px",
     x: "-=5px",
     ease: Power3.easeOut
   }));
-  vmhover.add(TweenLite.to(vmcabg, 0.3, {
+  vmhover.add(TweenLite.to(vmcabg, 0.35, {
     width: "+=10",
     height: "+=10",
     y: "-=5px",
@@ -757,7 +757,7 @@ $(document).ready(function () {
   var vphover = new TimelineLite({
     paused: true
   });
-  vphover.add(TweenLite.to($('.vp-button'), 0.3, {
+  vphover.add(TweenLite.to($('.vp-button'), 0.35, {
     "line-height": 62,
     width: "+=22",
     height: "+=6",
@@ -765,7 +765,7 @@ $(document).ready(function () {
     x: "-=11px",
     ease: Power3.easeOut
   }));
-  vphover.add(TweenLite.to($('.vp-bg'), 0.3, {
+  vphover.add(TweenLite.to($('.vp-bg'), 0.35, {
     width: "+=22",
     height: "+=6",
     y: "-=3px",
@@ -1195,7 +1195,7 @@ $(document).ready(function () {
               top: "+=200",
               ease: Power3.easeOut
             });
-            curHeight = curHeight - 200
+            curHeight = curHeight - 1
             //console.log(curHeight + "scroll up");
             //console.log($(thispimg).offset().top);
           }
@@ -1224,7 +1224,7 @@ $(document).ready(function () {
               top: "-=200",
               ease: Power3.easeOut
             });
-            curHeight = curHeight + 200
+            curHeight = curHeight + 1
             //console.log(curHeight + "scroll down");
             //console.log($(thispimg).offset().top);
             //console.log(pimgHeight - $(window).height() - (maxHeight - pimgHeight) + "asfdasfdn");

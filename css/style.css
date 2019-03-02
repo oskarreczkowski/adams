@@ -72,20 +72,23 @@ body {
     z-index: 102;
     outline: none;
     border: 5px solid #000000;
-    padding: 10px 4px;
+    padding: 9px 10px;
     opacity: 1;
 }
 .mb-cont .mb-bg {
-    width: 52px;
-    height: 52px;
+    width: 57px;
+    height: 58px;
     display: block;
     z-index: -1;
     content: "";
     position: absolute;
-    background-image: url(../img/ms-bg-01.png);
-    top: 6px;
-    left: 6px;
-    background-size: contain;
+    top: 11px;
+    left: 10px;
+    background: #ffd673; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 ); /* IE6-9 */
 }
 .text-1 {
     font-family: "LeagueSpartan";
