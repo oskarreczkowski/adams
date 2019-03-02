@@ -145,10 +145,13 @@ body {
 
 
 .view-more .circle-arrow {
-    width: 80px;
-    height: 80px;
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
     background-image: url(../img/bc-ar-01.png);
-    background-size: contain;
+    background-size: 70px;
+    background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -156,8 +159,8 @@ body {
     cursor: pointer;
 }
 .view-more .ca-bg{
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -349,11 +352,11 @@ video.menu-character3.anim {
     top: 570px;
 }
 .projects-indicator .indicator {
-    width: 50px;
-    height: 8px;
+    width: 46px;
+    height: 6px;
     background: #e3e3e3;
     display: inline-block;
-    margin: 4px;
+    margin: 2px;
     transition-property: background;
     transition-duration: .5s;
 }
@@ -458,19 +461,23 @@ video.menu-character3.anim {
 }
 
 .navigation-left .left-arrow .arrow {
-    width: 88px;
-    height: 88px;
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
     background-image: url(../img/bc-al-01.png);
-    background-size: contain;
+    background-size: 70px;
+    background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
     top: calc(50% - 44px);
     cursor: pointer;
 }
+
 .navigation-left .left-arrow .bg {
-    width: 88px;
-    height: 88px;
+    width: 84px;
+    height: 84px;
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -485,11 +492,12 @@ video.menu-character3.anim {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .navigation-left .line-left {
-    height: 6px;
+    height: 5px;
     background: #000;
     width: 300px;
     position: absolute;
     right: 40px;
+    top: -4px;
 }
 .navigation-right {
     position: absolute;
@@ -500,10 +508,13 @@ video.menu-character3.anim {
 }
 
 .navigation-right .right-arrow .arrow {
-    width: 88px;
-    height: 88px;
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
     background-image: url(../img/bc-ar-01.png);
-    background-size: contain;
+    background-size: 70px;
+    background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -511,8 +522,8 @@ video.menu-character3.anim {
     cursor: pointer;
 }
 .navigation-right .right-arrow .bg {
-    width: 88px;
-    height: 88px;
+    width: 84px;
+    height: 84px;
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -527,11 +538,12 @@ video.menu-character3.anim {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .navigation-right .line-right {
-    height: 6px;
+    height: 5px;
     background: #000;
     width: 300px;
     position: absolute;
     left: 128px;
+    top:-4px;
 }
 
 /* Portfolio Pages */
@@ -591,10 +603,13 @@ img {
 }
 
 .back .circle-x {
-    width: 74px;
-    height: 74px;
+    border:5px solid black;
+    border-radius:100px;
+    width: 66px;
+    height: 66px;
     background-image: url(../img/btproject_01.png);
-    background-size: contain;
+    background-size: 66px;
+    background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -602,15 +617,20 @@ img {
     cursor: pointer;
 }
 .back .btp-bg {
+    border-radius:100px;
     width: 73px;
     height: 73px;
-    background-image: url(../img/bc-bg-01.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     left: 8px;
     top: calc(50% - 42px);
     z-index: -1;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .back-label {
     font-family: "LeagueSpartan";
