@@ -552,6 +552,7 @@ video.menu-character3.anim {
     font-size:13px;
     text-transform: uppercase;
     letter-spacing: .7px;
+    margin-top: 90px;
 }
 
 .portfolio-sectionheader {
@@ -570,6 +571,8 @@ video.menu-character3.anim {
 
 .pimg {
     width: 100%;
+    top: -60px;
+    position: relative;
     display: none;
     margin: 110px 0 0 0;
     opacity: 0;
@@ -578,7 +581,7 @@ video.menu-character3.anim {
 .portfolio-piece {
     box-shadow: 0px 18px 120px #6b778454;
     border-radius: 10px;
-    max-width: 940px;
+    max-width: 850px;
 }
 
 /* End Portfolio Pages */
@@ -589,7 +592,7 @@ img {
 }
 .ender {
     width: 100%;
-    height: 1px;
+    height: 150px;
 }
 
 .back {
