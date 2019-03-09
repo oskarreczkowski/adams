@@ -1,11 +1,17 @@
 
  /* Global styles come from external css https://codepen.io/GreenSock/pen/JGaKdQ*/
 
-body {
-    overflow: hidden;   
+body, html {
     margin: 0;
     padding: 0;
     position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body {
+    
+    overflow-y: scroll;
 }
 
 @font-face {
@@ -48,15 +54,20 @@ body {
     padding: 4px 0 10px 0;
     padding-right: 46px !important;
 }
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+}
 .lockup-cont {
     max-width: 1024px;
     margin: 00 auto;
     position: relative;
+    height: 100%;
 }
 .container {
     display: block;
     position: absolute;
-    top: 50px;
+    top: calc(50% - 370px);
     left: 0;
     right: 0;
     height: 600px;
@@ -89,6 +100,42 @@ body {
     background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #ffd673 0%,#ff9945 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 ); /* IE6-9 */
+    transition: all 200ms ease;
+}
+.mb-cont #menu {
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
+.mb-cont:hover .mb-bg {
+    width: 70px;
+    height: 71px;
+    transition: all 300ms ease;
+    top: 6px;
+    left: 5px;
+}
+.mb-cont:hover #menu {
+    padding: 15px 15px;
+    transition: all 300ms ease;
+    transition-delay: 100ms;
+    top: -5px;
+    left: -4px;
+}
+.mb-cont:active .mb-bg  {
+    width: 57px;
+    height: 58px;
+    transition: all 50ms ease;
+    top: 6px;
+    left: 5px;
+}
+.mb-cont:active #menu {
+    padding: 10px 10px;
+    transition: all 100ms ease;
+    transition-delay: 0;
+    top: 2px;
+    left: 1px;
 }
 .text-1 {
     font-family: "LeagueSpartan";
@@ -157,6 +204,7 @@ body {
     left: 0;
     top: calc(50% - 44px);
     cursor: pointer;
+    transition: all 200ms ease;
 }
 .view-more .ca-bg{
     width: 78px;
@@ -172,7 +220,38 @@ body {
     background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%);
     background: linear-gradient(135deg, #31baff 0%,#317bff 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 );
+    transition: all 200ms ease;
     border-radius: 100px;
+}
+
+.view-more:hover .circle-arrow {
+    width: 78px;
+    height: 78px;
+    transition: all 200ms ease;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition-delay: 100ms;
+}
+.view-more:hover .ca-bg {
+    width: 86px;
+    height: 86px;
+    transition: all 200ms ease;
+    left: 6px;
+    top: calc(50% - 40px);
+}
+.view-more:active .circle-arrow {
+    width: 70px;
+    height: 70px;
+    transition: all 50ms ease;
+    left: 0;
+    top: calc(50% - 44px);
+}
+.view-more:active .ca-bg {
+    width: 80px;
+    height: 80px;
+    transition: all 200ms ease;
+    left: 8px;
+    top: calc(50% - 36px);
 }
 
 .page-bg {
@@ -415,36 +494,69 @@ video.menu-character3.anim {
 .vp-button-cont {
     margin: 0 auto;
     position: relative;
-    display: block;
-    width: 192px;
+    display: inline-block;
+    min-width: 192px;
     cursor: pointer;
+    min-height: 66px;
+    float: none;
+    transition: all 100ms ease;
+}
+.vp-button-cont:hover {
+    min-width: 200px;
+    transition: all 200ms ease;
 }
 .vp-button {
-    padding-top: 2px;
-    font-size:17px;
+    padding: 16px 30px;
+    display: inline-block;
+    font-size: 17px;
     border: 5px solid #000000;
-    width: 170px;
-    height: 54px;
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 6px;
-    line-height: 56px;
+    line-height: 17px;
+    transition: all 100ms ease;
+    cursor: pointer;
 }
 
-.vp-bg {
-    height: 61px;
+.vp-button:hover {
+    padding: 20px 34px;
+    top: -4px;
+    transition: all 200ms ease;
+    transition-delay: 50ms;
+}
+.vp-button:active {
+    padding: 16px 30px;
+    top: 0px;
+}
+
+.vp-button .vp-bg {
+    height: 58px;
     width: 175px;
     position: absolute;
-    top: 11px;
-    left: 17px;
+    top: 6px;
+    left: 8px;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-    background: #ffd673; /* Old browsers */
-    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 ); /* IE6-9 */
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%);
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%);
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 );
+    transition: all 100ms ease;
+}
+.vp-button:hover .vp-bg {
+    height: 69px;
+    width: 183px;
+    top: 6px;
+    left: 8px;
+    transition: all 200ms ease;
+}
+.vp-button:active .vp-bg {
+    height: 58px;
+    width: 175px;
+    top: 6px;
+    left: 8px;
+    transition: all 200ms ease;
 }
 .projects {
     display: none;
@@ -473,6 +585,23 @@ video.menu-character3.anim {
     left: 0;
     top: calc(50% - 44px);
     cursor: pointer;
+    transition: all 200ms ease;
+}
+.navigation-left:hover .left-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.navigation-left:active .left-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0px;
+    top: calc(50% - 44px);
+    transition: all 100ms ease;
+    transition-delay:00ms;
 }
 
 .navigation-left .left-arrow .bg {
@@ -490,6 +619,21 @@ video.menu-character3.anim {
     background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 200ms ease;
+}
+.navigation-left:hover .left-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+}
+.navigation-left:active .left-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 100ms ease;
 }
 .navigation-left .line-left {
     height: 5px;
@@ -498,6 +642,16 @@ video.menu-character3.anim {
     position: absolute;
     right: 40px;
     top: -4px;
+    transition: right 200ms ease;
+}
+.navigation-left:hover .line-left {
+    height: 5px;
+    background: #000;
+    width: 300px;
+    position: absolute;
+    right: 80px;
+    top: -4px;
+    transition: right 200ms ease;
 }
 .navigation-right {
     position: absolute;
@@ -520,6 +674,22 @@ video.menu-character3.anim {
     left: 0;
     top: calc(50% - 44px);
     cursor: pointer;
+    transition: all 100ms ease;
+}
+.navigation-right:hover .right-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.navigation-right:active .right-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0;
+    top: calc(50% - 44px);
+    transition: all 200ms ease;
 }
 .navigation-right .right-arrow .bg {
     width: 84px;
@@ -536,6 +706,21 @@ video.menu-character3.anim {
     background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 100ms ease;
+}
+.navigation-right:hover .right-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+}
+.navigation-right:active .right-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 200ms ease;
 }
 .navigation-right .line-right {
     height: 5px;
@@ -544,6 +729,12 @@ video.menu-character3.anim {
     position: absolute;
     left: 128px;
     top:-4px;
+    transition: left 200ms ease;
+}
+
+.navigation-right:hover .line-right {
+    left: 168px;
+    transition: left 200ms ease;
 }
 
 /* Portfolio Pages */

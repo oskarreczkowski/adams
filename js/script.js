@@ -473,7 +473,7 @@ $(document).ready(function () {
         opacity: 1,
         y: "-=50px"
       }), "-=1.5");
-      viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
+      viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
         //top: "+=100px",
@@ -729,7 +729,7 @@ $(document).ready(function () {
   });
 
 
-  /*  MENU BUTTON HOVER */
+  /*  MENU BUTTON HOVER 
   $('.mb-cont').hover(
     function () {
       mbhover.play();
@@ -738,7 +738,6 @@ $(document).ready(function () {
       mbhover.reverse();
     }
   );
-
   var vmhover = new TimelineLite({
     paused: true
   });
@@ -778,8 +777,9 @@ $(document).ready(function () {
     ease: Power3.easeOut
   }), "-=0.15");
 
+*/
 
-  /*  VIEW PROJECTS HOVER */
+  /*  VIEW PROJECTS HOVER 
   $('.vp-button-cont').hover(
     function () {
       if (!$("body").hasClass('working')) {
@@ -791,9 +791,9 @@ $(document).ready(function () {
       vphover.reverse();
       //TweenLite.to($(this).parent().find('.pimg'),0.2, {  width:"-=10%", ease: Power3.easeOut})
     }
-  );
+  );*/
 
-
+/*
   $('.view-more').hover(
     function () {
       if (!$("body").hasClass('working')) {
@@ -803,7 +803,7 @@ $(document).ready(function () {
     function () {
       vmhover.reverse();
     }
-  );
+  );*/
 
   /*  MENU BUTTON HOVER */
   $('.mitem').hover(
@@ -830,7 +830,7 @@ $(document).ready(function () {
       });
     }
   );
-
+/*
   var hovernavleft = new TimelineLite({
     paused: true
   });
@@ -877,8 +877,9 @@ $(document).ready(function () {
     ease: Power3.easeOut
   }), "-=0.4");
 
+*/
 
-  /*  LEFT ARROW HOVER */
+  /*  LEFT ARROW HOVER 
   $('.navigation-left').hover(
     function () {
       hovernavleft.play();
@@ -887,8 +888,8 @@ $(document).ready(function () {
       hovernavleft.reverse();
     }
   );
-
-  /*  RIGHT ARROW HOVER */
+*/
+  /*  RIGHT ARROW HOVER 
   $('.navigation-right').hover(
     function () {
       hovernavright.play();
@@ -896,9 +897,9 @@ $(document).ready(function () {
     function () {
       hovernavright.reverse();
     }
-  );
+  );*/
 
-  /* BACK HOVER */
+  /* BACK HOVER 
   var hovernavback = new TimelineLite({
     paused: true
   });
@@ -926,7 +927,7 @@ $(document).ready(function () {
       hovernavback.reverse();
     }
   );
-
+*/
 
 
   function updatenumber(newNumber) {
@@ -1144,7 +1145,7 @@ $(document).ready(function () {
 
   /* VIEW PROJECT DETAILS */
 
-  $('.vp-button-cont').click(function () {
+  $('.vp-button').click(function () {
 
     $(this).parent().addClass('activeProject');
     $(this).parent().addClass('detailedProject');
@@ -1209,7 +1210,7 @@ $(document).ready(function () {
     var thispimg = $(this).parent().find(".pimg");
     var winheight = $(window).height();
 
-
+/*
     $('.project-container[data-projectid="' + viewproject + '"]').on('wheel', function (e) {
       if (e.originalEvent.wheelDelta / 120 > 0) {
 
@@ -1269,7 +1270,7 @@ $(document).ready(function () {
 
         }
       }
-    });
+    });*/
   });
 
 
@@ -1306,10 +1307,10 @@ $(document).ready(function () {
       ease: Power3.easeOut,
       opacity: 1
     }), "-=.8");
-    viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
+    viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
-      "display": "block"
+      "display": "inline-block"
     }), "-=1");
     viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
       ease: Power3.easeOut,
