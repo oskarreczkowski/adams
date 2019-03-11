@@ -32,6 +32,8 @@ var character2 = $('.menu-character2');
 var character3 = $('.menu-character3');
 var projects = $('.projects');
 
+
+
 /*  MENU BG SIZE */
 var diag = Math.sqrt($(window).height() * $(window).height() + $(window).width() * $(window).width())
 //console.log(diag);
@@ -178,7 +180,7 @@ var mline1 = new TimelineLite({
 });
 mline1.add(TweenLite.to(line1, 1, {
   ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-  left: -0.5 * sideB
+  left: "-50%"
 }), "-=0.8");
 
 var mbhover = new TimelineLite({
@@ -272,21 +274,37 @@ tlhome.add(function () {
 $(document).ready(function () {
 
   var angletmp = "skew(" + (angleB + 100) + "deg)";
-  //console.log(angletmp);
-
   $(menubg).css({
-    left: -(2.5 * sideB),
-    width: offset + sideB,
-    height: $(window).height(),
+    left: "-250%",
+    width: "200%",
+    height: "100%",
     'transform': angletmp
   })
 
   $(pagebg).css({
-    left: -(0.5 * sideB),
-    width: offset + sideB,
-    height: $(window).height(),
+    left: "-50%",
+    width: "200%",
+    height: "100%",
     'transform': angletmp
   })
+/*START Adjust the diagonal line angle when resize */
+  $( window ).resize(function() {
+      var diag = Math.sqrt($(window).height() * $(window).height() + $(window).width() * $(window).width())
+      var sideA = $(window).height();
+      var sideB = $(window).width();
+      var angleB = Math.asin(sideA / diag) * 180 / Math.PI;
+      var offset = diag * Math.cos(Math.asin(sideA / diag));
+      var angletmp = "skew(" + (angleB + 100) + "deg)";
+      $(menubg).css({
+        'transform': angletmp
+      })
+      $(pagebg).css({
+        'transform': angletmp
+      })
+  });
+/*END Adjust the diagonal line angle when resize */
+
+
 
   tlhome.play();
   tlmenu1.play();
@@ -303,18 +321,18 @@ $(document).ready(function () {
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
         hidemenuhome.add(showmenuitems.reverse(), "-=0.5");
+        hidemenuhome.add(function () {
+          $(menubcont).removeClass('is-active');
+        });
         hidemenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-          left: -2.5 * sideB
+          left: "-250%"
         }), "+=0.2");
         hidemenuhome.add(tlhome.play(), "-=0.21");
         hidemenuhome.add(TweenLite.to($(mwrap), 0.5, {
           ease: Power3.easeOut,
           display: "none"
         }));
-        hidemenuhome.add(function () {
-          $(menubcont).removeClass('is-active');
-        });
         hidemenuhome.add(function () {
           $('body').removeClass('working');
         });
@@ -326,18 +344,18 @@ $(document).ready(function () {
         //console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
         //showmenuhome.add(tlhome.reverse().timeScale(1.2));
+        showmenuhome.add(function () {
+          $(menubcont).addClass('is-active');
+        });
         showmenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-          left: -0.5 * sideB
+          left: "-50%"
         }));
         showmenuhome.add(TweenLite.to($(mwrap), 0.1, {
           ease: Power3.easeOut,
           display: "block"
         }), "-=0.8");
         showmenuhome.add(showmenuitems.play());
-        showmenuhome.add(function () {
-          $(menubcont).addClass('is-active');
-        });
         showmenuhome.add(function () {
           $('body').removeClass('working');
         });
@@ -351,17 +369,17 @@ $(document).ready(function () {
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
         hidemenuhome.add(showmenuitems.reverse(), "-=1");
+        hidemenuhome.add(function () {
+          $(menubcont).removeClass('is-active');
+        });
         hidemenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-          left: -2.5 * sideB
+          left: "-250%"
         }), "-=0.2");
         hidemenuhome.add(TweenLite.to($(mwrap), 0.5, {
           ease: Power3.easeOut,
           display: "none"
         }));
-        hidemenuhome.add(function () {
-          $(menubcont).removeClass('is-active');
-        });
         hidemenuhome.add(function () {
           $('body').removeClass('working');
         });
@@ -372,18 +390,18 @@ $(document).ready(function () {
         $("#menu").addClass('is-active');
         //console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
+        showmenuhome.add(function () {
+          $(menubcont).addClass('is-active');
+        });
         showmenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-          left: -0.5 * sideB
+          left: "-50%"
         }), "+=0.2");
         showmenuhome.add(TweenLite.to($(mwrap), 0.1, {
           ease: Power3.easeOut,
           display: "block"
         }));
         showmenuhome.add(showmenuitems.play());
-        showmenuhome.add(function () {
-          $(menubcont).addClass('is-active');
-        });
         showmenuhome.add(function () {
           $('body').removeClass('working');
         });
@@ -397,17 +415,17 @@ $(document).ready(function () {
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
         hidemenuhome.add(showmenuitems.reverse(), "-=1");
+        hidemenuhome.add(function () {
+          $(menubcont).removeClass('is-active');
+        });
         hidemenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-          left: -2.5 * sideB
+          left: "-250%"
         }), "-=0.2");
         hidemenuhome.add(TweenLite.to($(mwrap), 0.5, {
           ease: Power3.easeOut,
           display: "none"
         }));
-        hidemenuhome.add(function () {
-          $(menubcont).removeClass('is-active');
-        });
         hidemenuhome.add(function () {
           $('body').removeClass('working');
         });
@@ -418,18 +436,18 @@ $(document).ready(function () {
         $("#menu").addClass('is-active');
         //console.log($(this).data('page'));
         var showmenuhome = new TimelineLite();
+        showmenuhome.add(function () {
+          $(menubcont).addClass('is-active');
+        });
         showmenuhome.add(TweenLite.to(menubg, 1, {
           ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-          left: -0.5 * sideB
+          left: "-50%"
         }), "+=0.2");
         showmenuhome.add(TweenLite.to($(mwrap), 0.1, {
           ease: Power3.easeOut,
           display: "block"
         }));
         showmenuhome.add(showmenuitems.play());
-        showmenuhome.add(function () {
-          $(menubcont).addClass('is-active');
-        });
         showmenuhome.add(function () {
           $('body').removeClass('working');
         });
@@ -473,11 +491,11 @@ $(document).ready(function () {
         opacity: 1,
         y: "-=50px"
       }), "-=1.5");
-      viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button'), 1, {
+      viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
         //top: "+=100px",
-        "display": "block"
+        "display": "inline-block"
       }), "-=1.5");
       viewworkpage2.add(TweenLite.to($('.navigation-left'), 1, {
         ease: Power3.easeOut,
@@ -517,10 +535,17 @@ $(document).ready(function () {
       hidemenuhome.add(function () {
         $(homepage).show();
       });
-
+      /*  
       hidemenuhome.add(TweenLite.to(pagebg, 0, {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-        left: -0.5 * sideB
+        left: "-50%"
+      }), "+=0.2");*/
+
+      hidemenuhome.add(TweenLite.to(pagebg, 0, {
+        ease: Power3.easeOut,
+        left: "-50%",
+        opacity:1,
+        display:"block"
       }), "+=0.2");
 
       hidemenuhome.add(showmenuitems.reverse(), "-=1");
@@ -530,7 +555,7 @@ $(document).ready(function () {
       }));
       hidemenuhome.add(TweenLite.to(menubg, 1, {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-        left: -2.5 * sideB
+        left: "-250%"
       }), "+=0.2");
       //hidemenuhome.add( hidemenubg );
       hidemenuhome.add(tlhome.play() );
@@ -569,10 +594,13 @@ $(document).ready(function () {
       $(pagebg).hide();
       $("#menu").removeClass('is-active');
       var hidemenuhome = new TimelineLite();
+      hidemenuhome.add(function () {
+        $(homepage).hide();
+      });
       hidemenuhome.add(showmenuitems.reverse(), "-=1");
       hidemenuhome.add(TweenLite.to(menubg, 1, {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-        left: -2.5 * sideB
+        left: "-250%"
       }), "+=0.2");
       hidemenuhome.add(TweenLite.to($('.projects'), 0, {
         ease: Power3.easeOut,
@@ -599,9 +627,6 @@ $(document).ready(function () {
 
 
       hidemenuhome.add(function () {
-        $(homepage).hide();
-      });
-      hidemenuhome.add(function () {
         $(menubcont).removeClass('is-active');
       });
       hidemenuhome.add(function () {
@@ -626,7 +651,7 @@ $(document).ready(function () {
       aboutanimation.add(showmenuitems.reverse(), "-=1");
       aboutanimation.add(TweenLite.to(menubg, 1, {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-        left: -2.5 * sideB
+        left: "-250%"
       }), "+=0.2");
       //hidemenuhome.add( hidemenubg );
       $('.projects').hide();
@@ -666,23 +691,38 @@ $(document).ready(function () {
       } else {
         changeproject(1, 1);
       }
+
       $('.project-container').hide();
       $('.project-container.activeProject').hide();
       $("#menu").removeClass('is-active');
       var viewworkpage = new TimelineLite();
+
+      viewworkpage.add(TweenLite.to($('.projects'), 0, {
+        ease: Power3.easeOut,
+        display: "none",
+        opacity:0
+      }, "0"));
       //hidemenuhome.add(showmenuitems.reverse(), "-=1");
       viewworkpage.add(tlhome.reverse().timeScale(1.3));
-      
+      /*
       viewworkpage.add(TweenLite.to(pagebg, 1, {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
-        left: -2.5 * sideB
-      }), "+=0.2");
+        left: "-250%"
+      }), "+=0.2"); */
       
+      viewworkpage.add(TweenLite.to(pagebg, 0.5, {
+        ease: Power3.easeOut,
+        opacity:0,
+        display: "none"
+      }), "-=0"); 
+
+
       //hidemenuhome.add( TweenLite.to(menubg, 1, {ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"), left:-2.5*sideB}), "+=0.2"  );
       //hidemenuhome.add( hidemenubg );
       viewworkpage.add(TweenLite.to($('.projects'), 0, {
         ease: Power3.easeOut,
-        display: "block"
+        display: "block",
+        opacity:1
       }, "0"));
       viewworkpage.add(TweenLite.to($('.project-container[data-projectid="1"]'), 0, {
         ease: Power3.easeOut,
@@ -1145,7 +1185,7 @@ $(document).ready(function () {
 
   /* VIEW PROJECT DETAILS */
 
-  $('.vp-button').click(function () {
+  $('.vp-button-cont').click(function () {
 
     $(this).parent().addClass('activeProject');
     $(this).parent().addClass('detailedProject');
@@ -1153,6 +1193,12 @@ $(document).ready(function () {
     //console.log(viewproject);
     var viewworkpage = new TimelineLite();
 
+    viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 0, {
+      ease: Expo.easeOut,
+      opacity: 0,
+      margin: "0px 0 0 0",
+      display: "none"
+    }));
     viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
       ease: Power3.easeInOut,
       opacity: 0,
@@ -1307,7 +1353,7 @@ $(document).ready(function () {
       ease: Power3.easeOut,
       opacity: 1
     }), "-=.8");
-    viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button'), 1, {
+    viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
       "display": "inline-block"

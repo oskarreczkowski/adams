@@ -78,6 +78,24 @@ body {
     left: 20px;
     z-index: 102;
 }
+.mb-cont:after {
+    position: absolute;
+    right: -94px;
+    top: 30px;
+    display: block;
+    content: "Menu";
+    text-transform: capitalize;
+    font-family: "LeagueSpartan";
+    line-height: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: all 1s ease;
+}
+.mb-cont.is-active:after {
+    opacity: 0;
+    transition: all 1s ease;
+}
 .menu-button {
     background: none;
     z-index: 102;
@@ -353,7 +371,7 @@ video.square.anim {
     text-align: left;
     height: 600px;
     left: calc(50% - 226px);
-    top: 150px;
+    top: calc(50% - 240px);
     font-family: "LeagueSpartan";
     display: none;
 }
@@ -454,7 +472,7 @@ video.menu-character3.anim {
     text-align: center;
     font-family: "LeagueSpartan";
     width: 100%;
-    opacity: 1;
+    opacity: 0;
 }
 .pn-cont {
     font-size: 32px;
@@ -518,23 +536,23 @@ video.menu-character3.anim {
     cursor: pointer;
 }
 
-.vp-button:hover {
+.vp-button-cont:hover .vp-button {
     padding: 20px 34px;
     top: -4px;
-    transition: all 200ms ease;
-    transition-delay: 50ms;
+    transition: all 300ms ease;
 }
-.vp-button:active {
+.vp-button-cont:active .vp-button {
     padding: 16px 30px;
     top: 0px;
+    transition: all 100ms ease;
 }
 
-.vp-button .vp-bg {
+.vp-button-cont  .vp-bg {
     height: 58px;
     width: 175px;
     position: absolute;
-    top: 6px;
-    left: 8px;
+    top: 9px;
+    left: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -544,19 +562,20 @@ video.menu-character3.anim {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 );
     transition: all 100ms ease;
 }
-.vp-button:hover .vp-bg {
-    height: 69px;
-    width: 183px;
+.vp-button-cont:hover .vp-bg {
+    height: 67px;
+    width: 186px;
     top: 6px;
-    left: 8px;
+    left: 22px;
     transition: all 200ms ease;
+    transition-delay: 100ms;
 }
-.vp-button:active .vp-bg {
+.vp-button-cont:active .vp-bg {
     height: 58px;
     width: 175px;
-    top: 6px;
-    left: 8px;
-    transition: all 200ms ease;
+    top: 9px;
+    left: 20px;
+    transition: all 100ms ease;
 }
 .projects {
     display: none;
@@ -810,6 +829,20 @@ img {
     top: calc(50% - 49px);
     cursor: pointer;
 }
+.back:hover .circle-x {
+    width: 74px;
+    height: 74px;
+    left: -4px;
+    top: calc(50% - 53px);
+    transition: all 300ms ease;
+}
+.back:active .circle-x {
+    width: 66px;
+    height: 66px;
+    left: 0px;
+    top: calc(50% - 49px);
+    transition: all 200ms ease;
+}
 .back .btp-bg {
     border-radius:100px;
     width: 73px;
@@ -825,6 +858,21 @@ img {
     background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.back:hover .btp-bg {
+    width: 81px;
+    height: 81px;
+    left: 4px;
+    top: calc(50% - 46px);
+    transition: all 200ms ease;
+    transition-delay: 50ms;
+}
+.back:active .btp-bg {
+    width: 73px;
+    height: 73px;
+    left: 8px;
+    top: calc(50% - 42px);
+    transition: all 200ms ease;
 }
 .back-label {
     font-family: "LeagueSpartan";
