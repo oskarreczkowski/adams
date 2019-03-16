@@ -31,28 +31,85 @@ body {
     top: -20px;
 }
 .icon-1 {
+    padding-right: 74px !important;
+    padding: 4px 0 10px 0;    
+    position: relative;
+}
+span.icon-1:after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    right: 0;
+    display: block;
+    top: 0px;
     background-image: url(../img/designer@2x.png);
     background-repeat: no-repeat;
     background-size: auto 34px;
     background-position: right 1px;
-    padding-right: 74px !important;
-    padding: 4px 0 10px 0;
+    animation: jump 5s ease 5s infinite normal ;
 }
 .icon-2 {
+    padding-right: 45px !important;
+    padding: 4px 0 10px 0;
+    position: relative;
+}
+span.icon-2:after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    right: 0;
+    display: block;
+    top: 0px;
     background-image: url(../img/illustrator@2x.png);
     background-repeat: no-repeat;
     background-size: auto 34px;
-    background-position: right 0px;
-    padding-right: 45px !important;
-    padding: 4px 0 10px 0;
+    background-position: right 1px;
+    animation: jump 6s ease 8s infinite normal ;
 }
 .icon-3 {
+    padding: 4px 0 10px 0;
+    padding-right: 46px !important;    
+    position: relative;
+}
+span.icon-3:after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    right: 0;
+    display: block;
+    top: 0px;
     background-image: url(../img/rebel-scum@2x.png);
     background-repeat: no-repeat;
     background-size: auto 34px;
     background-position: right 1px;
-    padding: 4px 0 10px 0;
-    padding-right: 46px !important;
+    animation: jump 5s ease 6s infinite normal ;
+}
+
+@keyframes jump {
+  0%{
+    transform: translateY(0);
+  }
+  2%{
+    transform: translateY(-30px);
+  }
+  5%{
+    transform: translateY(0);
+  }
+  7%{
+    transform: translateY(-15px);
+  }
+  10%{
+    transform: translateY(0);
+    }
+  80%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 .page-wrapper {
     width: 100%;
@@ -182,10 +239,10 @@ body {
     display: block;
     position: absolute;
     top: 495px;
-    left: calc(50% - 300px);
+    left: calc(50% - 350px);
     font-size: 26px;
     text-align: center;
-    width: 600px;
+    width: 700px;
 }
 .text-2 span {
     margin-right: 30px;
@@ -374,6 +431,7 @@ video.square.anim {
     top: calc(50% - 240px);
     font-family: "LeagueSpartan";
     display: none;
+    transition: top 0.8s ease;
 }
 .line-1 {
     height: 8px;
@@ -756,6 +814,102 @@ video.menu-character3.anim {
     transition: left 200ms ease;
 }
 
+
+
+
+
+.navigation-top {
+    position: fixed;
+    top: 50%;
+    right: 138px;
+    cursor:pointer;
+    z-index: 10;
+}
+
+.navigation-top .top-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-top-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.navigation-top:hover .top-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.navigation-top:active .top-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0;
+    top: calc(50% - 44px);
+    transition: all 200ms ease;
+}
+.navigation-top .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 100ms ease;
+}
+.navigation-top:hover .top-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+}
+.navigation-top:active .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 200ms ease;
+}
+
+.navigation-top span {
+    font-family: LeagueSpartan;
+    position: absolute;
+    top: 70px;
+    text-align: center;
+    width: 96px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Portfolio Pages */
 .portfolio-category {
     color:#f49231;
@@ -788,6 +942,15 @@ video.menu-character3.anim {
     opacity: 0;
 }
 
+.pimg section.outview {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+.pimg section.inview {
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
 .portfolio-piece {
     box-shadow: 0px 18px 120px #6b778454;
     border-radius: 10px;
@@ -804,7 +967,80 @@ img {
     width: 100%;
     height: 150px;
 }
+.next-project span.np {
+    text-transform: uppercase;
+    color: #bdbdbd;
+    letter-spacing: 1px;
+}
 
+.next-project .right-arrow {
+    width: 100%;
+    float: left;
+    position: relative;
+    display: block;
+    height: 1px;
+}
+.next-project span.np-but-title {
+    font-size: 30px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.next-project .right-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-ar-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: calc(50% - 48px);
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+
+.next-project .right-arrow:hover  .arrow {
+    width: 84px;
+    height: 84px;
+    left: calc(50% - 52px);
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+
+.next-project .right-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: calc(50% - 36px);
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #31baff;
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%);
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%);
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 );
+    transition: all 100ms ease;
+}
+.next-project .right-arrow:hover .bg {
+    width: 92px;
+    height: 92px;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+}
+.next-project .right-arrow {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-top: 50px;
+}
 .back {
     position: absolute;
     top: -100px;
