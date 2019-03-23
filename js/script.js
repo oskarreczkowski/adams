@@ -14,8 +14,12 @@
 /*ts 2 sroda 03.13 */
 /*ts 2 czwartek 03.14 */
 /*ts 3 piatek 03.15 */
+/*ts 1 wtorek 03.19 */
+/*ts 2 sroda 03.20 */
+/*ts 5 czwartek 03.21 */
+/*ts 5 piątek 03.22 */
 
-/*total 55 */
+/*total 67 */
 
 
 
@@ -303,20 +307,21 @@ tlhome.add(function () {
 
 $(document).ready(function () {
 
-  var angletmp = "skew(" + (angleB + 100) + "deg)";
-  $(menubg).css({
-    left: "-250%",
-    width: "200%",
-    height: "100%",
-    'transform': angletmp
-  })
+    
+      var angletmp = "skew(" + (angleB + 100) + "deg)";
+      $(menubg).css({
+        left: "-250%",
+        width: "200%",
+        height: "100%",
+        'transform': angletmp
+      })
 
-  $(pagebg).css({
-    left: "-50%",
-    width: "200%",
-    height: "100%",
-    'transform': angletmp
-  })
+      $(pagebg).css({
+        left: "-50%",
+        width: "200%",
+        height: "100%",
+        'transform': angletmp
+      });
 /*START Adjust the diagonal line angle when resize */
   $( window ).resize(function() {
       var diag = Math.sqrt($(window).height() * $(window).height() + $(window).width() * $(window).width())
@@ -351,11 +356,38 @@ $(document).ready(function () {
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
         //hidemenuhome.add(showmenuitems.reverse(), "-=0.5");
+        hidemenuhome.add(TweenLite.to($(line1), 0.4, {
+          ease:  Power3.easeOut,
+          width: 0
+        }));
+        hidemenuhome.add(TweenLite.to($(line2), 0.4, {
+          ease:  Power3.easeOut,
+          width: 0
+        }), '-=0.2');
+
+        hidemenuhome.add(TweenLite.to($(character1), 0.3, {
+          ease:  Power3.easeOut,
+          y: +80,
+          x: -80,
+          opacity: 0
+        }), '-=0.1');
+        hidemenuhome.add(TweenLite.to($(character2), 0.3, {
+          ease:  Power3.easeOut,
+          y: +150,
+          x: +150,
+          opacity: 0
+        }), '-=0.2');
+        hidemenuhome.add(TweenLite.to($(character3), 0.3, {
+          ease:  Power3.easeOut,
+          y: -150,
+          x: +150,
+          opacity: 0
+        }), '-=0.3');
         hidemenuhome.add(TweenLite.to($('.menu-wrapper'), 0.8, {
           ease:  Power3.easeOut,
           top:'20px',
           opacity:0
-        }));
+        }), '-=0.2');
         hidemenuhome.add(function () {
           $(menubcont).removeClass('is-active');
         });
@@ -410,12 +442,38 @@ $(document).ready(function () {
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
         //hidemenuhome.add(showmenuitems.reverse(), "-=1");
+        hidemenuhome.add(TweenLite.to($(line1), 0.4, {
+          ease:  Power3.easeOut,
+          width: 0
+        }));
+        hidemenuhome.add(TweenLite.to($(line2), 0.4, {
+          ease:  Power3.easeOut,
+          width: 0
+        }), '-=0.2');
 
+        hidemenuhome.add(TweenLite.to($(character1), 0.3, {
+          ease:  Power3.easeOut,
+          y: +80,
+          x: -80,
+          opacity: 0
+        }), '-=0.1');
+        hidemenuhome.add(TweenLite.to($(character2), 0.3, {
+          ease:  Power3.easeOut,
+          y: +150,
+          x: +150,
+          opacity: 0
+        }), '-=0.2');
+        hidemenuhome.add(TweenLite.to($(character3), 0.3, {
+          ease:  Power3.easeOut,
+          y: -150,
+          x: +150,
+          opacity: 0
+        }), '-=0.3');
         hidemenuhome.add(TweenLite.to($('.menu-wrapper'), 0.8, {
           ease:  Power3.easeOut,
           top:'20px',
           opacity:0
-        }));
+        }), '-=0.2');
         hidemenuhome.add(function () {
           $(menubcont).removeClass('is-active');
         });
@@ -467,12 +525,38 @@ $(document).ready(function () {
         $("#menu").removeClass('is-active');
         var hidemenuhome = new TimelineLite();
         //hidemenuhome.add(showmenuitems.reverse(), "-=1");
+        hidemenuhome.add(TweenLite.to($(line1), 0.4, {
+          ease:  Power3.easeOut,
+          width: 0
+        }));
+        hidemenuhome.add(TweenLite.to($(line2), 0.4, {
+          ease:  Power3.easeOut,
+          width: 0
+        }), '-=0.2');
 
+        hidemenuhome.add(TweenLite.to($(character1), 0.3, {
+          ease:  Power3.easeOut,
+          y: +80,
+          x: -80,
+          opacity: 0
+        }), '-=0.1');
+        hidemenuhome.add(TweenLite.to($(character2), 0.3, {
+          ease:  Power3.easeOut,
+          y: +150,
+          x: +150,
+          opacity: 0
+        }), '-=0.2');
+        hidemenuhome.add(TweenLite.to($(character3), 0.3, {
+          ease:  Power3.easeOut,
+          y: -150,
+          x: +150,
+          opacity: 0
+        }), '-=0.3');
         hidemenuhome.add(TweenLite.to($('.menu-wrapper'), 0.8, {
           ease:  Power3.easeOut,
           top:'20px',
           opacity:0
-        }));
+        }), '-=0.2');
         hidemenuhome.add(function () {
           $(menubcont).removeClass('is-active');
         });
@@ -549,16 +633,18 @@ $(document).ready(function () {
         ease: Power3.easeOut,
         left: "20px"
       }), "-=1.5");
-      viewworkpage2.add(TweenLite.to($('.projects-indicator'), 1, {
-        ease: Power3.easeOut,
-        opacity: 1,
-        y: "-=50px"
-      }), "-=1.5");
-      viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
+      viewworkpage2.add( function(){$(activeProject).find('.vp-button-cont').fadeIn() });
+
+      /*viewworkpage2.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
         ease: Power3.easeOut,
         opacity: 1,
         //top: "+=100px",
         "display": "inline-block"
+      }), "-=1.5");
+      viewworkpage2.add(TweenLite.to($('.projects-indicator'), 1, {
+        ease: Power3.easeOut,
+        opacity: 1,
+        y: "-=50px"
       }), "-=1.5");
       viewworkpage2.add(TweenLite.to($('.navigation-left'), 1, {
         ease: Power3.easeOut,
@@ -569,7 +655,11 @@ $(document).ready(function () {
         ease: Power3.easeOut,
         opacity: 1,
         right: "88px"
-      }), "-=1");
+      }), "-=1");*/
+
+      viewworkpage2.add( function(){$('.projects-indicator').removeClass('outView').addClass('inView') });
+      viewworkpage2.add( function(){$('.navigation-left').removeClass('outView').addClass('inView') });
+      viewworkpage2.add( function(){$('.navigation-right').removeClass('outView').addClass('inView') });
       viewworkpage2.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
         ease: Power3.easeOut,
         opacity: 0,
@@ -611,12 +701,38 @@ $(document).ready(function () {
         display:"block"
       }), "+=0.2");
 
+      hidemenuhome.add(TweenLite.to($(line1), 0.4, {
+        ease:  Power3.easeOut,
+        width: 0
+      }));
+      hidemenuhome.add(TweenLite.to($(line2), 0.4, {
+        ease:  Power3.easeOut,
+        width: 0
+      }), '-=0.2');
 
+      hidemenuhome.add(TweenLite.to($(character1), 0.3, {
+        ease:  Power3.easeOut,
+        y: +80,
+        x: -80,
+        opacity: 0
+      }), '-=0.1');
+      hidemenuhome.add(TweenLite.to($(character2), 0.3, {
+        ease:  Power3.easeOut,
+        y: +150,
+        x: +150,
+        opacity: 0
+      }), '-=0.2');
+      hidemenuhome.add(TweenLite.to($(character3), 0.3, {
+        ease:  Power3.easeOut,
+        y: -150,
+        x: +150,
+        opacity: 0
+      }), '-=0.3');
       hidemenuhome.add(TweenLite.to($('.menu-wrapper'), 0.8, {
         ease:  Power3.easeOut,
         top:'20px',
         opacity:0
-      }));
+      }), '-=0.2');
       hidemenuhome.add(TweenLite.to($(projects), 0, {
         ease: Power3.easeOut,
         display: "none"
@@ -651,9 +767,9 @@ $(document).ready(function () {
       $(menubcont).data("page", "projects");
       $('.about').hide();
       if ($('.projects').data('currentproject') != 1) {
-        changeproject($('.projects').data('currentproject') - 1, $('.projects').data('currentproject'));
+        changeproject($('.projects').data('currentproject') - 1, $('.projects').data('currentproject'),'');
       } else {
-        changeproject(1, 1);
+        changeproject(1, 1,'');
       }
 
 
@@ -666,12 +782,38 @@ $(document).ready(function () {
         $(homepage).hide();
       });
       //hidemenuhome.add(showmenuitems.reverse(), "-=1");
+      hidemenuhome.add(TweenLite.to($(line1), 0.4, {
+        ease:  Power3.easeOut,
+        width: 0
+      }));
+      hidemenuhome.add(TweenLite.to($(line2), 0.4, {
+        ease:  Power3.easeOut,
+        width: 0
+      }), '-=0.2');
 
+      hidemenuhome.add(TweenLite.to($(character1), 0.3, {
+        ease:  Power3.easeOut,
+        y: +80,
+        x: -80,
+        opacity: 0
+      }), '-=0.1');
+      hidemenuhome.add(TweenLite.to($(character2), 0.3, {
+        ease:  Power3.easeOut,
+        y: +150,
+        x: +150,
+        opacity: 0
+      }), '-=0.2');
+      hidemenuhome.add(TweenLite.to($(character3), 0.3, {
+        ease:  Power3.easeOut,
+        y: -150,
+        x: +150,
+        opacity: 0
+      }), '-=0.3');
       hidemenuhome.add(TweenLite.to($('.menu-wrapper'), 0.8, {
         ease:  Power3.easeOut,
         top:'20px',
         opacity:0
-      }));
+      }), '-=0.2');
       hidemenuhome.add(TweenLite.to(menubg, 0.8, {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
         left: "-250%"
@@ -688,7 +830,7 @@ $(document).ready(function () {
         ease: Power3.easeOut,
         display: "none"
       }));
-      hidemenuhome.add(TweenLite.from([$('.navigation-left'), $('.navigation-right')], 1, {
+      /*hidemenuhome.add(TweenLite.from([$('.navigation-left'), $('.navigation-right')], 1, {
         ease: Power3.easeOut,
         opacity: 0,
         y: "-=50px"
@@ -697,8 +839,13 @@ $(document).ready(function () {
         ease: Power3.easeOut,
         opacity: 0,
         y: "+=50px"
-      }), "-=0.7");
+      }), "-=0.7");*/
 
+      //hidemenuhome.add( function(){$('.projects-indicator').removeClass('outView').addClass('inView') });
+      //hidemenuhome.add( function(){$('.navigation-left').removeClass('outView').addClass('inView') });
+      hidemenuhome.add( function(){$('.projects-indicator').removeClass('outView').addClass('inView') });
+      hidemenuhome.add( function(){$('.navigation-right').removeClass('outView').addClass('inView') });
+      hidemenuhome.add( function(){$('.navigation-left').removeClass('outView').addClass('inView') });
 
       hidemenuhome.add(function () {
         $(menubcont).removeClass('is-active');
@@ -727,12 +874,38 @@ $(document).ready(function () {
       $("#menu").removeClass('is-active');
       var aboutanimation = new TimelineLite();
       //aboutanimation.add(showmenuitems.reverse(), "-=1");
+      aboutanimation.add(TweenLite.to($(line1), 0.4, {
+        ease:  Power3.easeOut,
+        width: 0
+      }));
+      aboutanimation.add(TweenLite.to($(line2), 0.4, {
+        ease:  Power3.easeOut,
+        width: 0
+      }), '-=0.2');
 
+      aboutanimation.add(TweenLite.to($(character1), 0.3, {
+        ease:  Power3.easeOut,
+        y: +80,
+        x: -80,
+        opacity: 0
+      }), '-=0.1');
+      aboutanimation.add(TweenLite.to($(character2), 0.3, {
+        ease:  Power3.easeOut,
+        y: +150,
+        x: +150,
+        opacity: 0
+      }), '-=0.2');
+      aboutanimation.add(TweenLite.to($(character3), 0.3, {
+        ease:  Power3.easeOut,
+        y: -150,
+        x: +150,
+        opacity: 0
+      }), '-=0.3');
       aboutanimation.add(TweenLite.to($('.menu-wrapper'), 0.8, {
         ease:  Power3.easeOut,
         top:'20px',
         opacity:0
-      }));
+      }), '-=0.2');
       aboutanimation.add(TweenLite.to($(projects), 0, {
         ease: Power3.easeOut,
         display: "none"
@@ -775,9 +948,9 @@ $(document).ready(function () {
       $(menubcont).data("page", "projects");
 
       if ($('.projects').data('currentproject') != 1) {
-        changeproject($('.projects').data('currentproject') - 1, $('.projects').data('currentproject'));
+        changeproject($('.projects').data('currentproject') - 1, $('.projects').data('currentproject'),'');
       } else {
-        changeproject(1, 1);
+        changeproject(1, 1,'');
       }
 
       $('.project-container').hide();
@@ -790,8 +963,13 @@ $(document).ready(function () {
         display: "none",
         opacity:0
       }, "0"));
+      viewworkpage.add(TweenLite.to($('.homepage'), 1, {
+        ease: Power3.easeOut,
+        display: "none",
+        opacity:0
+      }, "0"));
       //hidemenuhome.add(showmenuitems.reverse(), "-=1");
-      viewworkpage.add(tlhome.reverse().timeScale(1.3));
+      //viewworkpage.add(tlhome.reverse().timeScale(1.3));
       /*
       viewworkpage.add(TweenLite.to(pagebg, 1, {
         ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"),
@@ -803,6 +981,11 @@ $(document).ready(function () {
         opacity:0,
         display: "none"
       }), "-=0"); 
+
+      viewworkpage.add(TweenLite.to($('.homepage'), 0.1, {
+        ease: Power3.easeOut,
+        opacity:1
+      }, "0"));
 
 
       //hidemenuhome.add( TweenLite.to(menubg, 1, {ease: CustomEase.create("custom", "M0,0 C0.102,0.334 0.49,0.266 0.6,0.332 0.722,0.405 0.818,1 1,1"), left:-2.5*sideB}), "+=0.2"  );
@@ -823,7 +1006,7 @@ $(document).ready(function () {
         display: "none"
       }));
 
-      viewworkpage.add(TweenLite.from([$('.navigation-left'), $('.navigation-right')], 1, {
+      /*viewworkpage.add(TweenLite.from([$('.navigation-left'), $('.navigation-right')], 1, {
         ease: Power3.easeOut,
         opacity: 0,
         y: "-=50px"
@@ -834,13 +1017,16 @@ $(document).ready(function () {
         opacity: 0,
         y: "+=50px"
       }), "-=0.8");
-
       viewworkpage.add(TweenLite.from($('.picon'), 1.5, {
         ease: Expo.easeInOut,
         opacity: 0,
         y: "-=50px"
       }), "-=1.1");
-      
+      */
+
+      viewworkpage.add( function(){$('.projects-indicator').removeClass('outView').addClass('inView') }, '-=1');
+      viewworkpage.add( function(){$('.navigation-left').removeClass('outView').addClass('inView') }, '-=1');
+      viewworkpage.add( function(){$('.navigation-right').removeClass('outView').addClass('inView') }, '-=1');
 
 
       viewworkpage.add(function () {
@@ -1083,12 +1269,15 @@ $(document).ready(function () {
 
 
   }
-  function changeproject(pccurrent, pcnew) {
+  function changeproject(pccurrent, pcnew, openProject) {
 
     if (pcnew > pccurrent) {
       var currentpc = $('.project-container[data-projectid="' + pccurrent + '"]');
       var newpc = $('.project-container[data-projectid="' + pcnew + '"]');
 
+      if (openProject == 'open') {
+          setTimeout( viewProjectDetails , 0, ('project'+pcnew) );
+      }
       TweenLite.to(newpc, 0, {
         x: 400,
         y: 0,
@@ -1237,7 +1426,7 @@ $(document).ready(function () {
 
     $('.projects').data('currentproject', newproject);
     //console.log(newproject);
-    changeproject(currentproject, newproject)
+    changeproject(currentproject, newproject,'')
     //$('.project-container[data-projectid="'+currentproject+'"]').hide();
     //$('.project-container[data-projectid="'+newproject+'"]').show();
   });
@@ -1254,7 +1443,7 @@ $(document).ready(function () {
 
     $('.projects').data('currentproject', newproject);
     //console.log(newproject);
-    changeproject(currentproject, newproject)
+    changeproject(currentproject, newproject,'')
     //$('.project-container[data-projectid="'+currentproject+'"]').hide();
     //$('.project-container[data-projectid="'+newproject+'"]').show();
   });
@@ -1265,18 +1454,17 @@ $(document).ready(function () {
     var newproject = $(this).data('projectid');
     $('.projects').data('currentproject', newproject);
     //console.log(newproject);
-    changeproject(currentproject, newproject)
+    changeproject(currentproject, newproject,'')
     //$('.project-container[data-projectid="'+currentproject+'"]').hide();
     //$('.project-container[data-projectid="'+newproject+'"]').show();
   });
 
 
-  /* VIEW PROJECT DETAILS */
 
-  $('.vp-button-cont').click(function () {
+function viewProjectDetails( aProjectId ){
 
-    $(this).parent().addClass('activeProject');
-    $(this).parent().addClass('detailedProject');
+    $('#'+aProjectId).addClass('activeProject');
+    $('#'+aProjectId).addClass('detailedProject');
 
 
     /*var lastScrollTop = 0;
@@ -1304,12 +1492,12 @@ $(document).ready(function () {
         if ( $('.activeProject').length ){
           if (event.originalEvent.wheelDelta >= 0) {
             $('.navigation-top.outview').fadeIn().addClass('inview').removeClass('outview');
-                        console.log('Scroll up');
+                        //console.log('Scroll up');
 
           }
           else {
             $('.navigation-top.inview').fadeOut().addClass('outview').removeClass('inview');
-                        console.log('Scroll down');
+                        //console.log('Scroll down');
 
           }
        }
@@ -1331,7 +1519,9 @@ $(document).ready(function () {
             $(this).removeClass("outview") ;
             $(this).addClass("inview") ;
             $(this).addClass('ovh')
-            console.log('weszlo');
+
+
+            //console.log('weszlo');
           }
         } else { 
           //console.log('weszlo');
@@ -1342,53 +1532,54 @@ $(document).ready(function () {
     });
 
 
-    var viewproject = $(this).parent().data('projectid');
+    var viewproject =  $('#'+aProjectId).data('projectid');
     //console.log(viewproject);
     var viewworkpage = new TimelineLite();
 
-    viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 0, {
+    viewworkpage.add(TweenLite.to($('#'+aProjectId).find('.pimg'), 0, {
       ease: Expo.easeOut,
       opacity: 0,
       margin: "0px 0 0 0",
       display: "none"
     }));
-    viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
+    /*viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
       ease: Power3.easeInOut,
       opacity: 0,
       y: "+=50px"
-    }), "+=0.1");
-    viewworkpage.add(TweenLite.to($('.navigation-left'), 1, {
-      ease: Power3.easeInOut,
-      opacity: 0,
-      left: "-150px"
-    }), "-=0.5");
-    viewworkpage.add(TweenLite.to($('.navigation-right'), 1, {
+    }), "+=0.1");*/
+    viewworkpage.add( function(){$('.projects-indicator').removeClass('inView').addClass('outView') });
+    viewworkpage.add( function(){$('.navigation-left').removeClass('inView').addClass('outView') });
+    viewworkpage.add( function(){$('.navigation-right').removeClass('inView').addClass('outView') });
+    /*viewworkpage.add(TweenLite.to($('.navigation-right'), 1, {
       ease: Power3.easeInOut,
       opacity: 0,
       right: "-150px"
-    }), "-=1.0");
-    viewworkpage.add(TweenLite.to($(this).parent(), 1, {
+    }), "-=1.0");*/
+    viewworkpage.add(TweenLite.to( $('#'+aProjectId), 1, {
       ease: Power3.easeOut,
       top: "0px"
     }), "-=0.2");
-    viewworkpage.add(TweenLite.to($(this), 1, {
+
+    viewworkpage.add( function(){$('#'+aProjectId+' .vp-button-cont').fadeOut() } , '-=0.5s');
+
+    /*viewworkpage.add(TweenLite.to($('#'+aProjectId+' .vp-button-cont'), 1, {
       ease: Power3.easeInOut,
       opacity: 0,
       //top: "-=100px",
       "display": "none"
-    }), "-=1");
-    viewworkpage.add(TweenLite.to($(this).parent().find('.pdesc'), 1, {
+    }), "-=1");*/
+    viewworkpage.add(TweenLite.to($('#'+aProjectId).find('.pdesc'), 1, {
       ease: Power3.easeInOut,
       opacity: 0
     }), "-=1");
-    viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
+    viewworkpage.add(TweenLite.to($('#'+aProjectId).find('.roles'), 1, {
       ease: Power3.easeInOut,
       opacity: 1,
       display: "block",
       top: "185px"
     }), "-=0.3");
     
-    viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 3, {
+    viewworkpage.add(TweenLite.to($('#'+aProjectId).find('.pimg'), 3, {
       ease: Expo.easeOut,
       opacity: 1,
       margin: "0px 0 0 0",
@@ -1400,9 +1591,43 @@ $(document).ready(function () {
       top: "58px",
       right: "-30px"
     }), "-=3");
+    viewworkpage.add( function(){ createSlick()}, '-=3' );
+
+
+}
+
+function createSlick(){  
+  $(".carousel-cont").each(function(){
+    var ctmp = $(this);
+    $(ctmp).not('.slick-initialized').slick({
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 3,
+          centerMode: true,
+          variableWidth: true,
+          cssEase: 'ease',
+          appendArrows:  $(ctmp).parent().find('.carousel-nav'),
+          appendDots:  $(ctmp).parent().find('.carousel-nav'),
+          prevArrow: '<button type="button" class="slick-prev"><span class="prev-ico"><</span> PREV</button>',
+          nextArrow: '<button type="button" class="slick-next"> NEXT <span class="prev-ico">></span></button>',
+    }); 
+  })
+  $('.carousel-cont').slick('refresh');
+}
 
 
 
+  /* VIEW PROJECT DETAILS */
+
+  $('.vp-button-cont').click(function () {
+
+    viewProjectDetails( $(this).parent().attr('id') );
+
+
+
+    //console.log($(this).parent().attr('id'));
+/*
     var pimgHeight = $(this).parent().find('.pimg').height();
     var maxHeight = $(this).parent().height();
     var curHeight = 0;
@@ -1411,7 +1636,7 @@ $(document).ready(function () {
     var thisproj = $(this).parent();
     var thispimg = $(this).parent().find(".pimg");
     var winheight = $(window).height();
-
+*/
 /*
     $('.project-container[data-projectid="' + viewproject + '"]').on('wheel', function (e) {
       if (e.originalEvent.wheelDelta / 120 > 0) {
@@ -1483,6 +1708,11 @@ $(document).ready(function () {
 
     $('body').unbind('wheel');
 
+
+
+    $('.projects-indicator').removeClass('outView').addClass('inView') ;
+    $('.navigation-left').removeClass('outView').addClass('inView') ;
+    $('.navigation-right').removeClass('outView').addClass('inView');
     var viewworkpage = new TimelineLite();
 
     viewworkpage.add(TweenLite.to($('.back'), 1, {
@@ -1510,7 +1740,11 @@ $(document).ready(function () {
       ease: Power3.easeOut,
       opacity: 1
     }), "-=.8");
-    viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
+    viewworkpage.add( function(){$(activeProject).find('.vp-button-cont').fadeIn() }, '-=1');
+
+
+    $(this).parent().parent().find('.vp-button-cont').fadeIn();
+    /*viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
       "display": "inline-block"
@@ -1530,7 +1764,10 @@ $(document).ready(function () {
       ease: Power3.easeOut,
       opacity: 1,
       right: "88px"
-    }), "-=1");
+    }), "-=1");*/
+
+    //viewworkpage.add( function(){$('.navigation-left').removeClass('outView').addClass('inView') });
+    //viewworkpage.add( function(){$('.navigation-right').removeClass('outView').addClass('inView') });
     $('.pimg section.fade-in').removeClass('inview').addClass('outview');
 
     $(".activeProject").removeClass('activeProject');
@@ -1570,12 +1807,16 @@ $(document).ready(function () {
       ease: Power3.easeOut,
       opacity: 1
     }), "-=.8");
-    viewworkpage.add(TweenLite.to($(activeProject).parent().find('.vp-button-cont'), 1, {
+    //viewworkpage.add( function(){$(activeProject).parent().find('.vp-button-cont').fadeIn() });
+
+    /*viewworkpage.add(TweenLite.to($(activeProject).parent().find('.vp-button-cont'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
       "display": "inline-block"
     }), "-=1");
-    viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
+    */
+    viewworkpage.add( function(){$('.projects-indicator').removeClass('inView').addClass('outView') });
+    /*viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
       y: "-=50px"
@@ -1590,7 +1831,10 @@ $(document).ready(function () {
       ease: Power3.easeOut,
       opacity: 1,
       right: "88px"
-    }), "-=1");
+    }), "-=1");*/
+
+    viewworkpage.add( function(){$('.navigation-left').removeClass('inView').addClass('outView') });
+    viewworkpage.add( function(){$('.navigation-right').removeClass('inView').addClass('outView') });
     $('.pimg section.fade-in').removeClass('inview').addClass('outview');
 
     $(".activeProject").removeClass('activeProject');
@@ -1606,7 +1850,12 @@ $(document).ready(function () {
 
 
     $('.projects').data('currentproject', newproject);
-    changeproject(currentproject, newproject);
+    changeproject(currentproject, newproject, 'open');
+    //console.log(currentproject + '  ' + newproject)
+    //viewProjectDetails( 'project'+newproject);
+
+
+
 
   });
 

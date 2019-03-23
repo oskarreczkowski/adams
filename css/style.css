@@ -124,10 +124,15 @@ span.icon-3:after {
 .container {
     display: block;
     position: absolute;
-    top: calc(50% - 370px);
+    top: 0;
     left: 0;
     right: 0;
     height: 600px;
+}
+@media screen and (min-height: 700px)  {
+    .container {
+        top: calc(50% - 370px);
+    }
 }
 .mb-cont { 
     position: absolute;
@@ -190,11 +195,11 @@ span.icon-3:after {
     transition: all 300ms ease;
     top: 6px;
     left: 5px;
+    transition-delay: 100ms;
 }
 .mb-cont:hover #menu {
     padding: 15px 15px;
     transition: all 300ms ease;
-    transition-delay: 100ms;
     top: -5px;
     left: -4px;
 }
@@ -305,7 +310,6 @@ span.icon-3:after {
     transition: all 200ms ease;
     left: -4px;
     top: calc(50% - 48px);
-    transition-delay: 100ms;
 }
 .view-more:hover .ca-bg {
     width: 86px;
@@ -313,6 +317,7 @@ span.icon-3:after {
     transition: all 200ms ease;
     left: 6px;
     top: calc(50% - 40px);
+    transition-delay: 100ms;
 }
 .view-more:active .circle-arrow {
     width: 70px;
@@ -504,8 +509,18 @@ video.menu-character3.anim {
     display: inline-block;
     height: 30px;
     position: absolute;
-    top: 570px;
+    opacity: 0;
+    top: 620px;
+    transition: all 1s ease;
+    transition-delay: 0.5s; 
 }
+.projects-indicator.inView {
+    opacity: 1;
+    top: 570px;
+    transition-delay: 1s; 
+}
+
+
 .projects-indicator .indicator {
     width: 46px;
     height: 6px;
@@ -575,10 +590,10 @@ video.menu-character3.anim {
     cursor: pointer;
     min-height: 66px;
     float: none;
-    transition: all 100ms ease;
+    transition: top 100ms ease, left 100ms ease;
 }
 .vp-button-cont:hover {
-    min-width: 200px;
+    /*min-width: 200px;*/
     transition: all 200ms ease;
 }
 .vp-button {
@@ -647,8 +662,12 @@ video.menu-character3.anim {
     left:50px;
     cursor:pointer;
     z-index: 10;
+    transition: all 1s ease;
 }
 
+.navigation-left.outView {
+    left: -100%;
+}
 .navigation-left .left-arrow .arrow {
     border: 5px solid black;
     border-radius: 100px;
@@ -670,7 +689,6 @@ video.menu-character3.anim {
     left: -4px;
     top: calc(50% - 48px);
     transition: all 200ms ease;
-    transition-delay: 100ms;
 }
 .navigation-left:active .left-arrow .arrow {
     width: 76px;
@@ -704,6 +722,7 @@ video.menu-character3.anim {
     left: 4px;
     top: calc(50% - 40px);
     transition: all 200ms ease;
+    transition-delay: 100ms;
 }
 .navigation-left:active .left-arrow .bg {
     width: 84px;
@@ -730,12 +749,17 @@ video.menu-character3.anim {
     top: -4px;
     transition: right 200ms ease;
 }
+
 .navigation-right {
     position: absolute;
     top: 300px;
     right: 138px;
     cursor:pointer;
     z-index: 10;
+    transition: all 1s ease;
+}
+.navigation-right.outView {
+    right: -100%;
 }
 
 .navigation-right .right-arrow .arrow {
@@ -759,7 +783,6 @@ video.menu-character3.anim {
     left: -4px;
     top: calc(50% - 48px);
     transition: all 200ms ease;
-    transition-delay: 100ms;
 }
 .navigation-right:active .right-arrow .arrow {
     width: 76px;
@@ -791,6 +814,7 @@ video.menu-character3.anim {
     left: 4px;
     top: calc(50% - 40px);
     transition: all 200ms ease;
+    transition-delay: 100ms;
 }
 .navigation-right:active .right-arrow .bg {
     width: 84px;
@@ -943,11 +967,11 @@ video.menu-character3.anim {
 }
 
 .pimg section.outview {
-    opacity: 0;
+    visibility: hidden;
     transition: opacity 2s ease;
 }
 .pimg section.inview {
-    opacity: 1;
+    visibility: visible;
     transition: opacity 2s ease;
 }
 
@@ -1127,4 +1151,454 @@ img {
     top: 100px;
     position: absolute;
     width: 100%;
+}
+.section.carousel {
+    float: left;
+    width: 100%;
+    margin-bottom: 150px;
+}
+.slide {
+    height: 400px;
+    padding: 0 30px;
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+.slide.slick-current {
+    opacity: 1;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+}
+.slide img {
+    max-height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    height: 100%;
+}
+.slick-dots {
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: initial;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li button:before {
+    content: '';
+}
+.slick-dots li button{
+    width: 46px;
+    height:6px;
+    background: #e3e3e3;
+    padding: 0 5px;
+}
+.slick-dots .slick-active button{
+    background: #000000;
+}
+.slick-dots li {
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+}
+.section-header {
+    margin: 20px 0 40px 0;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.section-header span {
+    max-width: 510px;
+    font-size: 14px;
+    color: #8b9296;
+    line-height: 25px;
+    margin: 0 auto 60px;
+    font-family: "SourceSansProRegular";
+}
+.section-cont {
+    display: inline-block;
+    width: 100%;
+}
+.carousel-nav {
+    position: relative;
+    display: inline-block;
+}
+button.slick-prev, button.slick-next {
+    height: 30px;
+    background:none;
+    border: none;  
+    font-family: "LeagueSpartan";
+    cursor: pointer;
+}
+button.slick-prev.slick-arrow {
+    position: absolute;
+    width: 100px;
+    left: -100px;
+}
+button.slick-next.slick-arrow {
+    width: 100px;
+    position: absolute;
+    right: -100px;
+}
+
+button.slick-disabled {
+    opacity: 0.5;
+}
+.slide .slide-desc h3{
+    margin-bottom: 5px;
+}
+.slide .slide-desc span{
+    max-width: 510px;
+    font-size: 14px;
+    color: #8b9296;
+    line-height: 25px;
+    margin: 0 auto 60px;
+    font-family: "SourceSansProRegular";
+}
+.section.carousel.withCaptions .carousel-nav {
+    position: relative;
+    display: inline-block;
+    bottom: -85px;
+}
+
+section.aboutme {
+    margin: 30px;
+}
+section.aboutme h2.main-title {
+    font-family: "LeagueSpartan";
+    font-size: 48px;
+}
+section.aboutme .left-copy {
+    width: 50%;
+    float: left;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+section.aboutme .right-img {
+    width: 50%;
+    float: right;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+section.aboutme .right-img img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 50px #cccccc;
+}
+section.aboutme .left-copy p {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+}
+
+.contact-but-cont {
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    min-width: 192px;
+    cursor: pointer;
+    min-height: 66px;
+    float: none;
+    transition: top 100ms ease, left 100ms ease;
+}
+.contact-but-cont:hover {
+    /*min-width: 200px;*/
+    transition: all 200ms ease;
+}
+.contact-but {
+    padding: 16px 30px;
+    display: inline-block;
+    font-size: 17px;
+    border: 5px solid #000000;
+    position: relative;
+    top: 0px;
+    left: 6px;
+    line-height: 17px;
+    transition: all 100ms ease;
+    cursor: pointer;    font-family: "LeagueSpartan";
+
+}
+
+.contact-but-cont:hover .contact-but {
+    padding: 20px 34px;
+    top: -4px;
+    transition: all 300ms ease;
+
+}
+.contact-but-cont:active .contact-but {
+    padding: 16px 30px;
+    top: 0px;
+    transition: all 100ms ease;
+}
+
+.contact-but-cont  .con-bg {
+    height: 58px;
+    width: 160px;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%);
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%);
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 );
+    transition: all 100ms ease;
+}
+.contact-but-cont:hover .con-bg {
+    height: 67px;
+    width: 168px;
+    top: 6px;
+    left: 22px;
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.contact-but-cont:active .con-bg {
+    height: 58px;
+    width: 175px;
+    top: 9px;
+    left: 20px;
+    transition: all 100ms ease;
+}
+
+section.skills {
+    display: inline-block;
+    width: 100%;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+    margin: 80px 0;
+    padding: 40px 50px;
+}
+.tskills {
+    display: inline-block;
+    margin: 30px 0;
+}
+.tskills-title {
+    font-family: "LeagueSpartan";
+    font-size: 34px;
+    width: 200px;
+    line-height: 46px;
+    float: left;
+}
+.tsicons {
+    float: left;
+    width: calc(100% - 200px);
+}
+.tsicon {
+    width: 20%;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 130px;
+}
+.tsicon img{
+    width: 80%;
+
+}
+.tsicon span{
+    font-family: "LeagueSpartan";
+    display: inline-block;
+    margin-top: 10px;
+}
+.alinks {
+    margin: 100px 0;
+    display: block;
+    height: 200px;
+}
+.left-link {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    float:  left;   
+}
+.dl-resume {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.dl-resume .top-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-bot-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.dl-resume:hover .top-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+}
+.dl-resume:active .top-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0;
+    top: calc(50% - 44px);
+    transition: all 200ms ease;
+}
+.dl-resume .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #ffd673; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%);
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%);
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 );
+    transition: all 100ms ease;
+}
+.dl-resume:hover .top-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.dl-resume:active .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 200ms ease;
+}
+
+.dl-resume span {
+    font-family: LeagueSpartan;
+    position: absolute;
+    top: -100px;
+    width: 300px;
+    font-size: 28px;
+    left: -110px;
+    text-align: center;
+}
+
+.right-link {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    float:  left;   
+}
+.view-lnp {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.view-lnp .top-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-ar-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.view-lnp:hover .top-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+}
+.view-lnp:active .top-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0;
+    top: calc(50% - 44px);
+    transition: all 200ms ease;
+}
+.view-lnp .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 100ms ease;
+}
+.view-lnp:hover .top-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.view-lnp:active .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 200ms ease;
+}
+
+.view-lnp span {
+    font-family: LeagueSpartan;
+    position: absolute;
+    top: -100px;
+    width: 330px;
+    font-size: 28px;
+    left: -125px;
+    text-align: center;
 }
