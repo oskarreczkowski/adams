@@ -19,8 +19,9 @@
 /*ts 5 czwartek 03.21 */
 /*ts 5 piątek 03.22 */
 /*ts 1 czwartek 03.28 */
+/*ts 3 czwartek 04.01 */
 
-/*total 68 */
+/*total 71 - 40 = 31 */
 
 
 
@@ -197,8 +198,8 @@ tlmenu1.add(TweenLite.from(menubcont, 1, {
   y: -150,
   delay:.55
 }));
-tlmenu1.add(TweenLite.from(menubcont, 1, {
-  opacity: 0,
+tlmenu1.add(TweenLite.to(menubcont, 1, {
+  opacity: 1,
   ease: Power0.easeNone
 }), "-=0.8");
 
@@ -664,7 +665,8 @@ $(document).ready(function () {
       viewworkpage2.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
         ease: Power3.easeOut,
         opacity: 0,
-        margin: "120px 0 0 0",
+        margin: "0",
+        top: '0',
         display: "none"
       }), "-=2");
 
@@ -949,7 +951,7 @@ $(document).ready(function () {
       $(menubcont).data("page", "projects");
 
       if ($('.projects').data('currentproject') != 1) {
-        changeproject($('.projects').data('currentproject') - 1, $('.projects').data('currentproject'),'');
+        changeproject(1, 1,'');
       } else {
         changeproject(1, 1,'');
       }
@@ -1121,7 +1123,7 @@ $(document).ready(function () {
   );*/
 
   /*  MENU BUTTON HOVER */
-  $('.mitem').hover(
+  /*$('.mitem').hover(
     function () {
       if (!$("body").hasClass('working')) TweenLite.to($(this).find('.bbar'), .8, {
         width: 100,
@@ -1144,7 +1146,7 @@ $(document).ready(function () {
         ease: Power4.easeOut
       });
     }
-  );
+  );*/
 /*
   var hovernavleft = new TimelineLite({
     paused: true
@@ -1539,9 +1541,7 @@ function viewProjectDetails( aProjectId ){
 
     viewworkpage.add(TweenLite.to($('#'+aProjectId).find('.pimg'), 0, {
       ease: Expo.easeOut,
-      opacity: 0,
-      margin: "0px 0 0 0",
-      display: "none"
+      display: "block"
     }));
     /*viewworkpage.add(TweenLite.to($('.projects-indicator'), 1, {
       ease: Power3.easeInOut,
@@ -1561,7 +1561,7 @@ function viewProjectDetails( aProjectId ){
       top: "0px"
     }), "-=0.2");
 
-    viewworkpage.add( function(){$('#'+aProjectId+' .vp-button-cont').fadeOut() } , '-=0.5s');
+    viewworkpage.add( function(){$('#'+aProjectId+' .vp-button-cont').fadeOut() } , '-=0.5');
 
     /*viewworkpage.add(TweenLite.to($('#'+aProjectId+' .vp-button-cont'), 1, {
       ease: Power3.easeInOut,
@@ -1580,12 +1580,13 @@ function viewProjectDetails( aProjectId ){
       top: "185px"
     }), "-=0.3");
     
-    viewworkpage.add(TweenLite.to($('#'+aProjectId).find('.pimg'), 3, {
+    viewworkpage.add(TweenLite.to($('#'+aProjectId).find('.pimg'), 1, {
       ease: Expo.easeOut,
       opacity: 1,
-      margin: "0px 0 0 0",
+      margin: "0",
+      top: '-60px',
       display: "block"
-    }), "-=0.3");
+    }), "-=0.1");
     viewworkpage.add(TweenLite.to($('.back'), 1.5, {
       ease: Expo.easeOut,
       opacity: 1,
@@ -1594,6 +1595,16 @@ function viewProjectDetails( aProjectId ){
     }), "-=3");
     viewworkpage.add( function(){ createSlick()}, '-=3' );
 
+    viewworkpage.add(TweenLite.to($('.loading-cont'), 0.5, {
+          ease: Expo.easeOut,
+          opacity:0,
+          display: "block"
+        }));
+    viewworkpage.add(TweenLite.to($('.loading'), 0.5, {
+      ease: Expo.easeOut,
+      opacity: 0,
+      display:'none'
+    }));
 
 }
 
@@ -1708,7 +1719,7 @@ function createSlick(){
     var activeProject = $('.project-container.activeProject');
 
     $('body').unbind('wheel');
-
+    $('.navigation-top.inview').removeClass('inview').addClass('outview').css('display', 'none');
 
 
     $('.projects-indicator').removeClass('outView').addClass('inView') ;
@@ -1725,6 +1736,7 @@ function createSlick(){
     viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
       ease: Expo.easeOut,
       opacity:0,
+      top: '0',
       display: "none"
     }), "-=.9");
     viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
@@ -1741,10 +1753,10 @@ function createSlick(){
       ease: Power3.easeOut,
       opacity: 1
     }), "-=.8");
-    viewworkpage.add( function(){$(activeProject).find('.vp-button-cont').fadeIn() }, '-=1');
+    viewworkpage.add( function(){$(activeProject).find('.vp-button-cont').fadeIn() }, '-=0.5');
 
 
-    $(this).parent().parent().find('.vp-button-cont').fadeIn();
+    //$(this).parent().parent().find('.vp-button-cont').fadeIn();
     /*viewworkpage.add(TweenLite.to($(activeProject).find('.vp-button-cont'), 1, {
       ease: Power3.easeOut,
       opacity: 1,
@@ -1789,25 +1801,39 @@ function createSlick(){
       top: "-100px",
       right: "-30px"
     }), "0.3");*/
-    viewworkpage.add(TweenLite.to($(this).parent().parent().find('.pimg'), 1, {
+    viewworkpage.add(TweenLite.to($('.loading'), 0, {
+          ease: Expo.easeOut,
+          opacity:1,
+          display: "block"
+        }));
+    viewworkpage.add(TweenLite.to($('.loading-cont'), 1, {
+          ease: Expo.easeOut,
+          opacity:1,
+          display: "block"
+        }), '+=0.2');
+    viewworkpage.add(TweenLite.to($(this).parent().parent().find('.pimg'), 0, {
       ease: Expo.easeOut,
       opacity:0,
+      top: '0',
       display: "none"
     }));
-    viewworkpage.add(TweenLite.to($(this).parent().parent().find('.roles'), 1, {
+    viewworkpage.add(TweenLite.to($(this).parent().parent().find('.roles'), 0, {
       ease: Expo.easeOut,
       opacity: 0,
       display: "none",
       top: "230px"
-    }), "-=0.5");
-    viewworkpage.add(TweenLite.to(activeProject, 1, {
+    }));
+    //viewworkpage.add(function(){$("body").animate({ scrollTop: 0 })});
+    viewworkpage.add(TweenLite.to(activeProject, 0, {
       ease: Power3.easeOut,
       top: "80px"
-    }), "1.2");
-    viewworkpage.add(TweenLite.to($(this).parent().parent().find('.pdesc'), 1, {
+    }));
+    viewworkpage.add(TweenLite.to($(this).parent().parent().find('.pdesc'), 0, {
       ease: Power3.easeOut,
       opacity: 1
-    }), "-=.8");
+    }));
+    viewworkpage.add( function(){$(activeProject).find('.vp-button-cont').fadeIn() });
+
     //viewworkpage.add( function(){$(activeProject).parent().find('.vp-button-cont').fadeIn() });
 
     /*viewworkpage.add(TweenLite.to($(activeProject).parent().find('.vp-button-cont'), 1, {
@@ -1852,6 +1878,7 @@ function createSlick(){
 
     $('.projects').data('currentproject', newproject);
     changeproject(currentproject, newproject, 'open');
+    //$("body").animate({ scrollTop: 0 })
     //console.log(currentproject + '  ' + newproject)
     //viewProjectDetails( 'project'+newproject);
 

@@ -139,6 +139,7 @@ span.icon-3:after {
     top: 20px;
     left: 20px;
     z-index: 102;
+    opacity: 0;
 }
 .mb-cont:after {
     position: absolute;
@@ -501,8 +502,29 @@ video.menu-character3.anim {
 .mitem:hover {
     cursor: pointer;
 }
-
-
+.mitem * {
+    transition: all 0.5s ease;
+}
+.mitem:hover .bbar {
+    width: 100px;
+}
+.mitem:active .bbar {
+    width: 50px;
+}
+.mitem:hover span.txt {
+    margin-left: -30px;
+    color: #317bff;
+}
+.working .mitem:hover .bbar {
+    width: 0 !important ;
+}
+.working .mitem:active .bbar {
+    width: 0 !important;
+}
+.working .mitem:hover span.txt {
+    margin-left: 0 !important;
+    color: #000000 !important;
+}
 .projects-indicator {
     width: 100%;
     text-align: center;
@@ -546,6 +568,7 @@ video.menu-character3.anim {
     font-family: "LeagueSpartan";
     width: 100%;
     opacity: 0;
+    transition: top 1s ease 0s;
 }
 .pn-cont {
     font-size: 32px;
@@ -849,7 +872,9 @@ video.menu-character3.anim {
     cursor:pointer;
     z-index: 10;
 }
-
+.navigation-top.outview {
+    display: none;
+}
 .navigation-top .top-arrow .arrow {
     border: 5px solid black;
     border-radius: 100px;
@@ -959,10 +984,10 @@ video.menu-character3.anim {
 
 .pimg {
     width: 100%;
-    top: -60px;
+    top: 0;
     position: relative;
     display: none;
-    margin: 110px 0 0 0;
+    margin: 0;
     opacity: 0;
 }
 
@@ -1602,6 +1627,41 @@ section.skills {
     left: -125px;
     text-align: center;
 }
+    .resize {
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background:#ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom:0;
+        display: none;
+    }  
+    .loading {
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background:#ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom:0;
+        display: none;
+    }  
+
+    .loading-cont {
+        text-align: center;
+        position: relative;
+        top: calc(50% - 250px);
+        font-family: "LeagueSpartan";
+        opacity: 0;
+    }
+    .loading-cont  video.res.anim {
+        max-width: 500px;
+    }
 @media screen and (max-width: 920px) {
     .resize {
         width: 100%;
@@ -1613,6 +1673,7 @@ section.skills {
         left: 0;
         right:0
         bottom:0;
+        display: block;
     }  
     .resize-cont {
         text-align: center;
