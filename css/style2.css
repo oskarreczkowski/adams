@@ -1,0 +1,1976 @@
+
+ /* Global styles come from external css https://codepen.io/GreenSock/pen/JGaKdQ*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body {
+    
+    overflow-y: scroll;
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  src: url(../fonts/LeagueSpartan-Bold.otf);
+}
+
+@font-face {
+  font-family: SourceSansProRegular;
+  src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+.homepage {
+    display:none;
+    z-index: 2;
+    position: relative;
+    top: -20px;
+}
+.icon-1 {
+    padding-right: 74px !important;
+    padding: 4px 0 10px 0;    
+    position: relative;
+}
+span.icon-1:after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    right: 0;
+    display: block;
+    top: 0px;
+    background-image: url(../img/designer@2x.png);
+    background-repeat: no-repeat;
+    background-size: auto 34px;
+    background-position: right 1px;
+    animation: jump 5s ease 5s infinite normal ;
+}
+.icon-2 {
+    padding-right: 45px !important;
+    padding: 4px 0 10px 0;
+    position: relative;
+}
+span.icon-2:after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    right: 0;
+    display: block;
+    top: 0px;
+    background-image: url(../img/illustrator@2x.png);
+    background-repeat: no-repeat;
+    background-size: auto 34px;
+    background-position: right 1px;
+    animation: jump 6s ease 8s infinite normal ;
+}
+.icon-3 {
+    padding: 4px 0 10px 0;
+    padding-right: 46px !important;    
+    position: relative;
+}
+span.icon-3:after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    right: 0;
+    display: block;
+    top: 0px;
+    background-image: url(../img/rebel-scum@2x.png);
+    background-repeat: no-repeat;
+    background-size: auto 34px;
+    background-position: right 1px;
+    animation: jump 5s ease 6s infinite normal ;
+}
+
+@keyframes jump {
+  0%{
+    transform: translateY(0);
+  }
+  2%{
+    transform: translateY(-30px);
+  }
+  5%{
+    transform: translateY(0);
+  }
+  7%{
+    transform: translateY(-15px);
+  }
+  10%{
+    transform: translateY(0);
+    }
+  80%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+}
+.lockup-cont {
+    max-width: 1024px;
+    margin: 00 auto;
+    position: relative;
+    height: 100%;
+}
+.container {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 600px;
+}
+@media screen and (min-height: 700px)  {
+    .container {
+        top: calc(50% - 370px);
+    }
+}
+.mb-cont { 
+    position: absolute;
+    top: -60px;
+    left: 20px;
+    z-index: 102;
+    opacity: 0;
+    display: none;
+}
+
+.viewMenu.mb-cont { 
+    opacity: 1;
+    transition: all 1s ease;
+    top:20px;
+    transition-delay: 0.5s;
+}
+
+.mb-cont:after {
+    position: absolute;
+    right: -94px;
+    top: 30px;
+    display: block;
+    content: "Menu";
+    text-transform: capitalize;
+    font-family: "LeagueSpartan";
+    line-height: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: all 1s ease;
+}
+.mb-cont.is-active:after {
+    opacity: 0;
+    transition: all 1s ease;
+}
+.menu-button {
+    background: none;
+    z-index: 102;
+    outline: none;
+    border: 5px solid #000000;
+    padding: 9px 10px;
+    opacity: 1;
+}
+.mb-cont .mb-bg {
+    width: 57px;
+    height: 58px;
+    display: block;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    background: #ffd673; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 ); /* IE6-9 */
+    transition: all 200ms ease;
+}
+.mb-cont #menu {
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
+.mb-cont:hover .mb-bg {
+    width: 70px;
+    height: 71px;
+    transition: all 300ms ease;
+    top: 6px;
+    left: 5px;
+    transition-delay: 100ms;
+}
+.mb-cont:hover #menu {
+    padding: 15px 15px;
+    transition: all 300ms ease;
+    top: -5px;
+    left: -4px;
+}
+.mb-cont:active .mb-bg  {
+    width: 57px;
+    height: 58px;
+    transition: all 50ms ease;
+    top: 6px;
+    left: 5px;
+}
+.mb-cont:active #menu {
+    padding: 10px 10px;
+    transition: all 100ms ease;
+    transition-delay: 0;
+    top: 2px;
+    left: 1px;
+}
+.text-1 {
+    font-family: "LeagueSpartan";
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 150px);
+    font-size: 28px;
+    letter-spacing: .3px;
+    opacity: 1;
+    width: 300px;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.viewHome .text-1 {
+    top: 110px;
+    opacity: 1;
+    transition: all 1s ease;
+    transition-delay: 0.2s;
+}
+.title-1 {
+    font-family: "LeagueSpartan";
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 300px);
+    font-size: 72px;
+    width: 600px;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.viewHome .title-1 {
+    top: 165px;
+    opacity: 1;
+    transition: all 1s ease;
+    transition-delay: 0.4s;
+}
+.text-2 {
+    font-family: "LeagueSpartan";
+    display: block;
+    position: absolute;
+    top: 550px;
+    left: calc(50% - 350px);
+    font-size: 26px;
+    text-align: center;
+    width: 700px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.viewHome .text-2 {
+    top: 495px;
+    opacity: 1;
+    transition: all 1s ease;
+    transition-delay: 0.6s;
+}
+.text-2 span {
+    margin-right: 30px;
+    padding-right: 35px;
+}
+.view-more {
+    position: absolute;
+    top: 640px;
+    left: calc(50% - 145px);
+    font-family: "LeagueSpartan";
+    padding-left: 115px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.viewHome .view-more {
+    top: 586px;
+    opacity: 1;
+    transition: all 1s ease;
+    transition-delay: 0.4s;
+}
+
+.view-more span {
+    transition-property: color;
+    transition-duration: .3s; 
+}
+.view-more:hover span {
+    color: #317bff;  
+    transition-property: color;
+    transition-duration: .3s; 
+}
+
+
+.view-more .circle-arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/bc-ar-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.view-more .ca-bg{
+    width: 78px;
+    height: 78px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    background: #31baff;
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%);
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%);
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 );
+    transition: all 200ms ease;
+    border-radius: 100px;
+}
+
+.view-more:hover .circle-arrow {
+    width: 78px;
+    height: 78px;
+    transition: all 200ms ease;
+    left: -4px;
+    top: calc(50% - 48px);
+}
+.view-more:hover .ca-bg {
+    width: 86px;
+    height: 86px;
+    transition: all 200ms ease;
+    left: 6px;
+    top: calc(50% - 40px);
+    transition-delay: 100ms;
+}
+.view-more:active .circle-arrow {
+    width: 70px;
+    height: 70px;
+    transition: all 50ms ease;
+    left: 0;
+    top: calc(50% - 44px);
+}
+.view-more:active .ca-bg {
+    width: 80px;
+    height: 80px;
+    transition: all 200ms ease;
+    left: 8px;
+    top: calc(50% - 36px);
+}
+
+.page-bg {
+    position: fixed;
+    background: #ffffff;
+    border-right: 16px solid #000000;
+    box-shadow: 0 0 400px #00000061;
+    transform: skew(-45deg);
+    top: 0;
+    left: -250%;
+    display: block;
+    z-index: 1;
+    /*opacity: 0;*/
+}
+.menu-bg {
+    position: fixed;
+    background: #ffffff;
+    border-right: 16px solid #000000;
+    box-shadow: 0 0 400px #00000061;
+    transform: skew(-45deg);
+    top: 0;
+
+    left: -300%;
+    width: 200%;
+    height: 100%;
+    display: block;
+    z-index: 100;
+    /*opacity: 0;*/
+    -webkit-transition: left 1s cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    -moz-transition: left 1s cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    -o-transition: left 1s cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    transition: left 1s cubic-bezier(0.425, 0.865, 0.640, 0.175); /* custom */
+
+    -webkit-transition-timing-function: cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    -moz-transition-timing-function: cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    -o-transition-timing-function: cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    transition-timing-function: cubic-bezier(0.425, 0.865, 0.640, 0.175); /* custom */
+}
+
+.menu-bg.showmenu {
+    left: -50% !important;
+    -webkit-transition: left 1s cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    -moz-transition: left 1s cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    -o-transition: left 1s cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    transition: left 1s cubic-bezier(0.425, 0.865, 0.640, 0.175); /* custom */
+
+    -webkit-transition-timing-function: cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    -moz-transition-timing-function: cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    -o-transition-timing-function: cubic-bezier(0.425, 0.865, 0.640, 0.175); 
+    transition-timing-function: cubic-bezier(0.425, 0.865, 0.640, 0.175); /* custom */
+}
+.orange-circle {
+    display: block;
+    position: absolute;
+    top: 260px;
+}
+video.circle.anim {
+    width: 222px;
+}
+
+.homepage-animation {
+    position: absolute;
+    top: 200px;
+    left: calc(50% - 346px);
+    width: 700px;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.viewHome .homepage-animation {
+    position: absolute;
+    top: 300px;
+    left: calc(50% - 346px);
+    width: 700px;
+    text-align: center;
+    opacity: 1;
+    transition: all 1s ease;
+}
+video.homepage.anim {
+    width: 100%;
+}
+.blue-square {
+    position: absolute;
+    top: 190px;
+    right: -30px;
+}
+video.square.anim {
+    width: 278px;
+}
+
+.roles {
+    width: 100%;
+    margin-top: 31px;
+    padding: 30px 0 0 0;
+    display: block;
+    position: absolute;
+    top:230px;
+    opacity: 0;
+}
+.roles span {
+    font-size: 13px;
+    letter-spacing: .5px;
+    margin: 0 10px;
+    padding-left: 30px;
+    position:relative;
+}
+.roles span:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    left: 8px;
+    top: 2px;
+}
+
+.roles span.green:before {
+    background: #619f21;
+}
+.roles span.orange:before {
+    background: #f18f31;
+}
+.roles span.blue:before {
+    background: #31b6ff;
+}
+
+
+
+/* MENU */
+.menu-wrapper {
+    z-index: 121;
+    position: absolute;
+    width: 430px;
+    text-align: left;
+    height: 600px;
+    left: calc(50% - 226px);
+    top: calc(50% - 240px);
+    font-family: "LeagueSpartan";
+    display: none;
+    transition: top 0.8s ease;
+}
+.line-1 {
+    height: 8px;
+    width: 0;
+    display: block;
+    background: #000000;
+    margin: 0 50px 60px  0;
+    transition: width 0.2s ease;
+}
+.line-2 {
+    height: 8px;
+    width: 0;
+    display: block;
+    background: #000000;
+    float: right;
+    margin: 50px 0 0 0;
+    transition: width 0.2s ease;
+}
+.link-home, .link-projects, .link-about {
+    font-size: 52px;
+    margin: 20px 0 20px 40px;
+}
+.email-info {
+    margin: 20px 0 5px 53px;
+    font-size: 20px;
+}
+.email-info a{
+    color:#317bff;
+    text-decoration: none;
+}
+
+
+video.menu-character1.anim {
+    width: 330px;
+    position: absolute;
+    left: -600px;
+    top: 400px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s ease;
+    transition-delay: 0;
+}
+video.menu-character2.anim {
+    width: 330px;
+    position: absolute;
+    right: -600px;
+    top: 400px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s ease;
+    transition-delay: 0;
+}
+video.menu-character3.anim {
+    width: 330px;
+    position: absolute;
+    right: -650px;
+    top: -450px;
+    z-index: -1;
+    opacity: 0;
+    transition-delay: 0;
+}
+
+.showmenu video.menu-character1.anim {
+    width: 330px;
+    position: absolute;
+    z-index: -1;
+    opacity:1;
+    left: -320px;
+    top: 90px;
+    transition: all 1s ease;
+    transition-delay: 1s;
+}
+.showmenu video.menu-character2.anim {
+    width: 330px;
+    position: absolute;
+    z-index: -1;
+    right: -310px;
+    top: 230px;
+    opacity:1;
+    transition: all 1s ease;
+    transition-delay: 1s;
+}
+.showmenu video.menu-character3.anim {
+    width: 330px;
+    position: absolute;
+    z-index: -1;
+    right: -350px;
+    top: -150px;
+    opacity:1;
+    transition: all 1s ease;
+    transition-delay: 1s;
+}
+.bbar {
+    width: 0;
+    display: inline-block;
+    height: 8px;
+    background: #000000;
+    margin-bottom: 16px;
+    margin-right: 0;
+    position: relative;
+    left: -40px;
+}
+.mitem:hover {
+    cursor: pointer;
+}
+.mitem * {
+    transition: all 0.5s ease;
+}
+.mitem:hover .bbar {
+    width: 100px;
+}
+.mitem:active .bbar {
+    width: 50px;
+}
+.mitem:hover span.txt {
+    margin-left: -30px;
+    color: #317bff;
+}
+.working .mitem:hover .bbar {
+    width: 0 !important ;
+}
+.working .mitem:active .bbar {
+    width: 0 !important;
+}
+.working .mitem:hover span.txt {
+    margin-left: 0 !important;
+    color: #000000 !important;
+}
+
+
+.menu-wrapper.showmenu {
+}
+.menu-wrapper .mitem{
+    opacity: 0;
+    transition: all 1s ease;
+    transition-delay: 0.2s;
+    transform: translate(0,-100px);
+}
+.menu-wrapper .email-info {
+    opacity: 0;
+    transition: all 1s ease;
+    transition-delay: 0.2s;
+    transform: translate(0,-100px);
+}
+.menu-wrapper.showmenu .mitem{
+    opacity: 1;
+    transform: translate(0,0);
+    transition: all 1s ease;
+    transition-delay: 1s;
+}
+
+.menu-wrapper.showmenu .mitem.link-home{
+    opacity: 1;
+    transform: translate(0,0);
+    transition: all 0.8s ease;
+    transition-delay: 0.4s;
+}
+.menu-wrapper.showmenu .mitem.link-projects{
+    opacity: 1;
+    transform: translate(0,0);
+    transition: all 0.8s ease;
+    transition-delay: 0.6s;
+}
+.menu-wrapper.showmenu .mitem.link-about{
+    opacity: 1;
+    transform: translate(0,0);
+    transition: all 0.8s ease;
+    transition-delay: 0.8s;
+}
+
+.menu-wrapper.showmenu .email-info {
+    opacity: 1;
+    transform: translate(0,0);
+    transition: all 0.8s ease;
+    transition-delay: 1s;
+}
+
+
+.menu-wrapper.showmenu .line-1 {
+    height: 8px;
+    width: 100%;
+    display: block;
+    background: #000000;
+    margin: 0 50px 60px 0;
+    transition: width 0.6s ease;
+}
+
+.menu-wrapper.showmenu .line-2 {
+
+    height: 8px;
+    width: 100%;
+    display: block;
+    background: #000000;
+    float: right;
+    margin: 50px 0 0 0;
+    transition: width 0.6s ease;
+}
+
+
+.projects-indicator {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    opacity: 0;
+    top: 620px;
+    transition: all 1s ease;
+    transition-delay: 0.5s; 
+}
+.projects-indicator.inView {
+    opacity: 1;
+    top: 570px;
+    transition-delay: 1s; 
+}
+
+
+.projects-indicator .indicator {
+    width: 46px;
+    height: 6px;
+    background: #e3e3e3;
+    display: inline-block;
+    margin: 2px;
+    transition-property: background;
+    transition-duration: .5s;
+}
+
+.projects-indicator .indicator:hover {
+    background: #000000;
+    cursor: pointer;
+}
+
+.projects-indicator .indicator.active {
+    background: #000000;
+}
+.project-container {
+    position: absolute;
+    top: 70px;
+    text-align: center;
+    font-family: "LeagueSpartan";
+    width: 100%;
+    opacity: 0;
+    transition: top 1s ease 0s;
+}
+.pn-cont {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: "LeagueSpartan";
+    position: relative;
+}
+.pn-cont .pnumber.active {
+    display: inline-block;
+    position: relative;
+    top:0;
+    opacity: 1;
+}
+.pn-cont .pnumber.inactive {
+    display: none;
+}
+.pn-cont span.numberp {
+    color: #c1c1c1;
+}
+.picon img {
+    max-width: 142px;
+    margin-bottom: 25px;
+}
+.ptitle {
+    font-size: 40px;
+    margin: 0 0 22px 0;
+}
+.pdesc {
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: SourceSansProRegular;
+    line-height: 24px;
+    margin-bottom: 32px;
+}
+.vp-button-cont {
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    min-width: 192px;
+    cursor: pointer;
+    min-height: 66px;
+    float: none;
+    transition: top 100ms ease, left 100ms ease;
+}
+.vp-button-cont:hover {
+    /*min-width: 200px;*/
+    transition: all 200ms ease;
+}
+.vp-button {
+    padding: 16px 30px;
+    display: inline-block;
+    font-size: 17px;
+    border: 5px solid #000000;
+    position: relative;
+    top: 0px;
+    left: 6px;
+    line-height: 17px;
+    transition: all 100ms ease;
+    cursor: pointer;
+}
+
+.vp-button-cont:hover .vp-button {
+    padding: 20px 34px;
+    top: -4px;
+    transition: all 300ms ease;
+}
+.vp-button-cont:active .vp-button {
+    padding: 16px 30px;
+    top: 0px;
+    transition: all 100ms ease;
+}
+
+.vp-button-cont  .vp-bg {
+    height: 58px;
+    width: 175px;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%);
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%);
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 );
+    transition: all 100ms ease;
+}
+.vp-button-cont:hover .vp-bg {
+    height: 67px;
+    width: 186px;
+    top: 6px;
+    left: 22px;
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.vp-button-cont:active .vp-bg {
+    height: 58px;
+    width: 175px;
+    top: 9px;
+    left: 20px;
+    transition: all 100ms ease;
+}
+.projects {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+}
+.navigation-left {
+    position: absolute;
+    top: 300px;
+    left:50px;
+    cursor:pointer;
+    z-index: 10;
+    transition: all 1s ease;
+    transition-delay: 0.5s;
+}
+
+.navigation-left.outView {
+    left: -100%;
+    transition: all 1s ease;
+}
+.navigation-left .left-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-al-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.navigation-left:hover .left-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+}
+.navigation-left:active .left-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0px;
+    top: calc(50% - 44px);
+    transition: all 100ms ease;
+    transition-delay:00ms;
+}
+
+.navigation-left .left-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 200ms ease;
+}
+.navigation-left:hover .left-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.navigation-left:active .left-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 100ms ease;
+}
+.navigation-left .line-left {
+    height: 5px;
+    background: #000;
+    width: 300px;
+    position: absolute;
+    right: 40px;
+    top: -4px;
+    transition: right 200ms ease;
+}
+.navigation-left:hover .line-left {
+    height: 5px;
+    background: #000;
+    width: 300px;
+    position: absolute;
+    right: 80px;
+    top: -4px;
+    transition: right 200ms ease;
+}
+
+.navigation-right {
+    position: absolute;
+    top: 300px;
+    right: 138px;
+    cursor:pointer;
+    z-index: 10;
+    transition: all 1s ease;
+    transition-delay: 0.5s;
+}
+.navigation-right.outView {
+    right: -100%;
+    transition: all 1s ease;
+}
+
+.navigation-right .right-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-ar-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.navigation-right:hover .right-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+}
+.navigation-right:active .right-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0;
+    top: calc(50% - 44px);
+    transition: all 200ms ease;
+}
+.navigation-right .right-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 100ms ease;
+}
+.navigation-right:hover .right-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.navigation-right:active .right-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 200ms ease;
+}
+.navigation-right .line-right {
+    height: 5px;
+    background: #000;
+    width: 300px;
+    position: absolute;
+    left: 128px;
+    top:-4px;
+    transition: left 200ms ease;
+}
+
+.navigation-right:hover .line-right {
+    left: 168px;
+    transition: left 200ms ease;
+}
+
+
+
+
+
+.navigation-top {
+    position: fixed;
+    top: 50%;
+    right: 138px;
+    cursor:pointer;
+    z-index: 10;
+}
+.navigation-top.outview {
+    display: none;
+}
+.navigation-top .top-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-top-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.navigation-top:hover .top-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.navigation-top:active .top-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0;
+    top: calc(50% - 44px);
+    transition: all 200ms ease;
+}
+.navigation-top .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 100ms ease;
+}
+.navigation-top:hover .top-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+}
+.navigation-top:active .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 200ms ease;
+}
+
+.navigation-top span {
+    font-family: LeagueSpartan;
+    position: absolute;
+    top: 70px;
+    text-align: center;
+    width: 96px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Portfolio Pages */
+.portfolio-category {
+    color:#f49231;
+    font-size:13px;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    margin-top: 90px;
+}
+
+.portfolio-sectionheader {
+    font-size: 25px;
+    margin: 15px 0 20px;
+}
+
+.portfolio-body {
+    max-width: 510px;
+    font-size: 14px;
+    color: #8b9296;
+    line-height: 25px;
+    margin: 0 auto 60px;
+    font-family: "SourceSansProRegular";
+}
+
+.pimg {
+    width: 100%;
+    top: 0;
+    position: relative;
+    display: none;
+    margin: 0;
+    opacity: 0;
+}
+
+.pimg section.outview {
+    visibility: hidden;
+    transition: opacity 2s ease;
+}
+.pimg section.inview {
+    visibility: visible;
+    transition: opacity 2s ease;
+}
+
+.portfolio-piece {
+    box-shadow: 0px 18px 120px #6b778454;
+    border-radius: 10px;
+    max-width: 850px;
+}
+
+/* End Portfolio Pages */
+
+
+img {
+    width: 100%;
+}
+.ender {
+    width: 100%;
+    height: 150px;
+}
+.next-project span.np {
+    text-transform: uppercase;
+    color: #bdbdbd;
+    letter-spacing: 1px;
+}
+
+.next-project .right-arrow {
+    width: 100%;
+    float: left;
+    position: relative;
+    display: block;
+    height: 1px;
+}
+.next-project span.np-but-title {
+    font-size: 30px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.next-project .right-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-ar-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: calc(50% - 48px);
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+
+.next-project .right-arrow:hover  .arrow {
+    width: 84px;
+    height: 84px;
+    left: calc(50% - 52px);
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+
+.next-project .right-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: calc(50% - 36px);
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #31baff;
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%);
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%);
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 );
+    transition: all 100ms ease;
+}
+.next-project .right-arrow:hover .bg {
+    width: 92px;
+    height: 92px;
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+}
+.next-project .right-arrow {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-top: 50px;
+}
+.back {
+    position: absolute;
+    top: -100px;
+    right: -30px;
+    cursor:pointer;
+    z-index: 10;
+    display: block;
+    opacity: 0;
+}
+
+.back .circle-x {
+    border:5px solid black;
+    border-radius:100px;
+    width: 66px;
+    height: 66px;
+    background-image: url(../img/btproject_01.png);
+    background-size: 66px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 49px);
+    cursor: pointer;
+}
+.back:hover .circle-x {
+    width: 74px;
+    height: 74px;
+    left: -4px;
+    top: calc(50% - 53px);
+    transition: all 300ms ease;
+}
+.back:active .circle-x {
+    width: 66px;
+    height: 66px;
+    left: 0px;
+    top: calc(50% - 49px);
+    transition: all 200ms ease;
+}
+.back .btp-bg {
+    border-radius:100px;
+    width: 73px;
+    height: 73px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 42px);
+    z-index: -1;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.back:hover .btp-bg {
+    width: 81px;
+    height: 81px;
+    left: 4px;
+    top: calc(50% - 46px);
+    transition: all 200ms ease;
+    transition-delay: 50ms;
+}
+.back:active .btp-bg {
+    width: 73px;
+    height: 73px;
+    left: 8px;
+    top: calc(50% - 42px);
+    transition: all 200ms ease;
+}
+.back-label {
+    font-family: "LeagueSpartan";
+    font-size: 15px;
+    position: relative;
+    top: 53px;
+    right: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+
+.about {
+    display: none;
+    color: #000000;
+    top: 100px;
+    position: absolute;
+    width: 100%;
+}
+.section.carousel {
+    float: left;
+    width: 100%;
+    margin-bottom: 150px;
+}
+.slide {
+    height: 400px;
+    padding: 0 30px;
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+.slide.slick-current {
+    opacity: 1;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+}
+.slide img {
+    max-height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    height: 100%;
+}
+.slick-dots {
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: initial;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li button:before {
+    content: '';
+}
+.slick-dots li button{
+    width: 46px;
+    height:6px;
+    background: #e3e3e3;
+    padding: 0 5px;
+}
+.slick-dots .slick-active button{
+    background: #000000;
+}
+.slick-dots li {
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+}
+.section-header {
+    margin: 20px 0 40px 0;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.section-header span {
+    max-width: 510px;
+    font-size: 14px;
+    color: #8b9296;
+    line-height: 25px;
+    margin: 0 auto 60px;
+    font-family: "SourceSansProRegular";
+}
+.section-cont {
+    display: inline-block;
+    width: 100%;
+}
+.carousel-nav {
+    position: relative;
+    display: inline-block;
+}
+button.slick-prev, button.slick-next {
+    height: 30px;
+    background:none;
+    border: none;  
+    font-family: "LeagueSpartan";
+    cursor: pointer;
+}
+button.slick-prev.slick-arrow {
+    position: absolute;
+    width: 100px;
+    left: -100px;
+}
+button.slick-next.slick-arrow {
+    width: 100px;
+    position: absolute;
+    right: -100px;
+}
+
+button.slick-disabled {
+    opacity: 0.5;
+}
+.slide .slide-desc h3{
+    margin-bottom: 5px;
+}
+.slide .slide-desc span{
+    max-width: 510px;
+    font-size: 14px;
+    color: #8b9296;
+    line-height: 25px;
+    margin: 0 auto 60px;
+    font-family: "SourceSansProRegular";
+}
+.section.carousel.withCaptions .carousel-nav {
+    position: relative;
+    display: inline-block;
+    bottom: -85px;
+}
+
+section.aboutme {
+    margin: 30px;
+}
+section.aboutme h2.main-title {
+    font-family: "LeagueSpartan";
+    font-size: 48px;
+}
+section.aboutme .left-copy {
+    width: 50%;
+    float: left;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+section.aboutme .right-img {
+    width: 50%;
+    float: right;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+section.aboutme .right-img img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 50px #cccccc;
+}
+section.aboutme .left-copy p {
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+}
+
+.contact-but-cont {
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    min-width: 192px;
+    cursor: pointer;
+    min-height: 66px;
+    float: none;
+    transition: top 100ms ease, left 100ms ease;
+}
+.contact-but-cont:hover {
+    /*min-width: 200px;*/
+    transition: all 200ms ease;
+}
+.contact-but {
+    padding: 16px 30px;
+    display: inline-block;
+    font-size: 17px;
+    border: 5px solid #000000;
+    position: relative;
+    top: 0px;
+    left: 6px;
+    line-height: 17px;
+    transition: all 100ms ease;
+    cursor: pointer;    font-family: "LeagueSpartan";
+
+}
+
+.contact-but-cont:hover .contact-but {
+    padding: 20px 34px;
+    top: -4px;
+    transition: all 300ms ease;
+
+}
+.contact-but-cont:active .contact-but {
+    padding: 16px 30px;
+    top: 0px;
+    transition: all 100ms ease;
+}
+
+.contact-but-cont  .con-bg {
+    height: 58px;
+    width: 160px;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%);
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%);
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 );
+    transition: all 100ms ease;
+}
+.contact-but-cont:hover .con-bg {
+    height: 67px;
+    width: 168px;
+    top: 6px;
+    left: 22px;
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.contact-but-cont:active .con-bg {
+    height: 58px;
+    width: 175px;
+    top: 9px;
+    left: 20px;
+    transition: all 100ms ease;
+}
+
+section.skills {
+    display: inline-block;
+    width: 100%;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+    margin: 80px 0;
+    padding: 40px 50px;
+}
+.tskills {
+    display: inline-block;
+    margin: 30px 0;
+}
+.tskills-title {
+    font-family: "LeagueSpartan";
+    font-size: 34px;
+    width: 200px;
+    line-height: 46px;
+    float: left;
+}
+.tsicons {
+    float: left;
+    width: calc(100% - 200px);
+}
+.tsicon {
+    width: 20%;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 130px;
+}
+.tsicon img{
+    width: 80%;
+
+}
+.tsicon span{
+    font-family: "LeagueSpartan";
+    display: inline-block;
+    margin-top: 10px;
+}
+.alinks {
+    margin: 100px 0;
+    display: block;
+    height: 200px;
+}
+.left-link {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    float:  left;   
+}
+.dl-resume {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.dl-resume .top-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-bot-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.dl-resume:hover .top-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+}
+.dl-resume:active .top-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0;
+    top: calc(50% - 44px);
+    transition: all 200ms ease;
+}
+.dl-resume .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #ffd673; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%);
+    background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%);
+    background: linear-gradient(to right, #ffd673 0%,#ff9945 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 );
+    transition: all 100ms ease;
+}
+.dl-resume:hover .top-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.dl-resume:active .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 200ms ease;
+}
+
+.dl-resume span {
+    font-family: LeagueSpartan;
+    position: absolute;
+    top: -100px;
+    width: 300px;
+    font-size: 28px;
+    left: -110px;
+    text-align: center;
+}
+
+.right-link {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    float:  left;   
+}
+.view-lnp {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.view-lnp .top-arrow .arrow {
+    border: 5px solid black;
+    border-radius: 100px;
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-ar-01.png);
+    background-size: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.view-lnp:hover .top-arrow .arrow {
+    width: 84px;
+    height: 84px;
+    left: -4px;
+    top: calc(50% - 48px);
+    transition: all 200ms ease;
+}
+.view-lnp:active .top-arrow .arrow {
+    width: 76px;
+    height: 76px;
+    left: 0;
+    top: calc(50% - 44px);
+    transition: all 200ms ease;
+}
+.view-lnp .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 8px;
+    top: calc(50% - 36px);
+    z-index: -1;
+    border-radius: 100px;
+    background: #31baff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #31baff 0%, #317bff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #31baff 0%,#317bff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #31baff 0%,#317bff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31baff', endColorstr='#317bff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 100ms ease;
+}
+.view-lnp:hover .top-arrow .bg {
+    width: 92px;
+    height: 92px;
+    left: 4px;
+    top: calc(50% - 40px);
+    transition: all 200ms ease;
+    transition-delay: 100ms;
+}
+.view-lnp:active .top-arrow .bg {
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: calc(50% - 36px);
+    transition: all 200ms ease;
+}
+
+.view-lnp span {
+    font-family: LeagueSpartan;
+    position: absolute;
+    top: -100px;
+    width: 330px;
+    font-size: 28px;
+    left: -125px;
+    text-align: center;
+}
+    .resize {
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background:#ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom:0;
+        display: none;
+    }  
+    .loading {
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background:#ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom:0;
+        display: none;
+    }  
+
+    .loading-cont {
+        text-align: center;
+        position: relative;
+        top: calc(50% - 250px);
+        font-family: "LeagueSpartan";
+        opacity: 0;
+    }
+    .loading-cont  video.res.anim {
+        max-width: 500px;
+    }
+@media screen and (max-width: 920px) {
+    .resize {
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background:#ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right:0
+        bottom:0;
+        display: block;
+    }  
+    .resize-cont {
+        text-align: center;
+        position: relative;
+        top: calc(50% - 250px);
+        font-family: "LeagueSpartan";
+    }
+    video.res.anim {
+        max-width: 500px;
+    }
+    img.res-arrow {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+    }
+    img.res-arrow.arrow_br {
+        bottom:0;
+        right: 0;
+        animation: abr 2s ease  infinite normal ;
+    }
+    img.res-arrow.arrow_bl {
+        bottom:0;
+        left: 0;
+        animation: abl 2s ease  infinite normal ;
+    }
+    img.res-arrow.arrow_tl {
+        top: 0;
+        left: 0;
+        animation: atl 2s ease  infinite normal ;
+    }
+    img.res-arrow.arrow_tr {
+        top: 0;
+        right: 0;
+        animation: atr 2s ease  infinite normal ;
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    img.res-arrow.arrow_br {
+        animation: abr 1s ease  infinite normal ;
+    }
+    img.res-arrow.arrow_bl {
+        animation: abl 1s ease  infinite normal ;
+    }
+    img.res-arrow.arrow_tl {
+        animation: atl 1s ease  infinite normal ;
+    }
+    img.res-arrow.arrow_tr {
+        animation: atr 1s ease  infinite normal ;
+    }
+}
+
+
+
+@keyframes atl {
+  0%{
+    transform: translate(0,0) ;
+  }
+  50%{
+    transform: translate(75px, 75px);
+  }
+
+  100%{
+    transform: translate(0,0) ;
+  }
+}
+@keyframes atr {
+  0%{
+    transform: translate(0,0) ;
+  }
+  50%{
+    transform: translate(-75px, 75px);
+  }
+
+  100%{
+    transform: translate(0,0) ;
+  }
+}
+@keyframes abr {
+  0%{
+    transform: translate(0,0) ;
+  }
+  50%{
+    transform: translate(-75px, -75px);
+  }
+
+  100%{
+    transform: translate(0,0) ;
+  }
+}
+@keyframes abl {
+  0%{
+    transform: translate(0,0) ;
+  }
+  50%{
+    transform: translate(75px, -75px);
+  }
+
+  100%{
+    transform: translate(0,0) ;
+  }
+}
