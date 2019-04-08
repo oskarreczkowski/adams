@@ -21,8 +21,10 @@
 /*ts 1 czwartek 03.28 */
 /*ts 3 poniedzialek 04.01 */
 /*ts 5 czwartek 04.04 */
+/*ts 3 niedziela 04.07 */
+/*ts 2 poniedzialek 04.08 */
 
-/*total 76 - 40 = 36 */
+/*total 81 - 40 = 41 */
 
 
 
