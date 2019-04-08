@@ -157,9 +157,9 @@ function viewProjectsPage() {
 
 
     setTimeout(function() {
-        $('.projects-indicator').removeClass('outView').addClass('inView');
-        $('.navigation-left').removeClass('outView').addClass('inView');
-        $('.navigation-right').removeClass('outView').addClass('inView');
+        $('.projects-indicator').removeClass('outview').addClass('inview');
+        $('.navigation-left').removeClass('outview').addClass('inview');
+        $('.navigation-right').removeClass('outview').addClass('inview');
     }, 850);
     document.location.hash = "projects";
 
@@ -290,9 +290,6 @@ function viewProjectDetails(aProjectId) {
         }
     });
 
-
-
-
     $(".navigation-top").click(function() {
         $("body").animate({
             scrollTop: 0
@@ -311,70 +308,69 @@ function viewProjectDetails(aProjectId) {
         } else {}
     });
 
+    $('.projects-indicator').removeClass('inview').addClass('outview').delay(500).fadeOut();
+    $('.navigation-right').removeClass('inview').addClass('outview')
+    $('.navigation-left').removeClass('inview').addClass('outview')
+
+    $('.back').addClass('inview').removeClass('outview').fadeIn();
+
 
     var viewproject = $('#' + aProjectId).data('projectid');
-    var viewworkpage = new TimelineLite();
 
-    viewworkpage.add(TweenLite.to($('#' + aProjectId).find('.pimg'), 0, {
-        ease: Expo.easeOut,
-        display: "block"
-    }));
-    viewworkpage.add(function() {
-        $('.projects-indicator').removeClass('inView').addClass('outView')
-    });
-    viewworkpage.add(function() {
-        $('.navigation-left').removeClass('inView').addClass('outView')
-    });
-    viewworkpage.add(function() {
-        $('.navigation-right').removeClass('inView').addClass('outView')
-    });
-    viewworkpage.add(TweenLite.to($('#' + aProjectId), 1, {
-        ease: Power3.easeOut,
-        top: "0px"
-    }), "-=0.2");
 
-    viewworkpage.add(function() {
-        $('#' + aProjectId + ' .vp-button-cont').fadeOut()
-    }, '-=0.5');
-    viewworkpage.add(TweenLite.to($('#' + aProjectId).find('.pdesc'), 1, {
-        ease: Power3.easeInOut,
-        opacity: 0
-    }), "-=1");
-    viewworkpage.add(TweenLite.to($('#' + aProjectId).find('.roles'), 1, {
-        ease: Power3.easeInOut,
-        opacity: 1,
-        display: "block",
-        top: "185px"
-    }), "-=0.3");
+    $('#' + aProjectId).addClass('inview').removeClass('outview');
 
-    viewworkpage.add(TweenLite.to($('#' + aProjectId).find('.pimg'), 1, {
-        ease: Expo.easeOut,
-        opacity: 1,
-        margin: "0",
-        top: '-60px',
-        display: "block"
-    }), "-=0.1");
-    viewworkpage.add(TweenLite.to($('.back'), 1.5, {
-        ease: Expo.easeOut,
-        opacity: 1,
-        top: "58px",
-        right: "-30px"
-    }), "-=3");
-    viewworkpage.add(function() {
-        createSlick()
-    }, '-=3');
+    $('#' + aProjectId + ' .vbc').addClass('outview').removeClass('inview').delay(300).fadeOut();
+    
+    $('#' + aProjectId).find('.pdesc').removeClass('inview').addClass('outview');
+    
+    $('#' + aProjectId).find('.roles').fadeIn().delay(500).addClass('inview').removeClass('outview');
 
-    viewworkpage.add(TweenLite.to($('.loading-cont'), 0.5, {
-        ease: Expo.easeOut,
-        opacity: 0,
-        display: "block"
-    }));
-    viewworkpage.add(TweenLite.to($('.loading'), 0.5, {
-        ease: Expo.easeOut,
-        opacity: 0,
-        display: 'none'
-    }));
+    $('#' + aProjectId).find('.pimg').fadeIn().delay(200).addClass('inview').removeClass('outview');
 
+
+    createSlick()
+    setTimeout(function() {
+
+        $('.loading-cont').removeClass('inview');
+        $('.loading').delay(1000).fadeOut();
+    }, 2000); 
+}
+
+function goBack(){
+
+        var activeProjectId = $('.project-container.activeProject').data('projectid');
+        var activeProject = $('.project-container.activeProject');
+
+        $('body').unbind('wheel');
+        $('.navigation-top.inview').removeClass('inview').addClass('outview').css('display', 'none');
+
+
+        $('.navigation-left').removeClass('outview').addClass('inview');
+        $('.navigation-right').removeClass('outview').addClass('inview');
+
+        $('.back').addClass('outview').removeClass('inview').delay(500).fadeOut();
+        $(activeProject).find('.pimg').fadeOut().removeClass('inview').addClass('outview');
+
+
+        $(activeProject).addClass('inview').removeClass('outview');
+
+        $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
+        
+        $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
+        
+        $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
+    
+        $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
+
+
+
+
+
+        $('.pimg section.fade-in').removeClass('inview').addClass('outview');
+
+        $(".activeProject").removeClass('activeProject');
+        $(".detailedProject").removeClass('detailedProject');
 }
 
 function createSlick() {
@@ -398,6 +394,24 @@ function createSlick() {
 }
 
 
+function pageLocal(){
+    var pagelocation = document.location.hash;
+    if (pagelocation == "#projects") {
+        viewProjectsPage();
+    } else if (pagelocation == "#about") {
+        viewAboutPage();
+    } else {
+        $('.projects').fadeOut();
+        $('.about').fadeOut();
+        setTimeout(function() {
+            $(homepage).fadeIn('slow').addClass('viewHome');
+            $(menubcont).fadeIn().addClass('viewMenu');
+            $('body').removeClass('working')
+
+        }, 1000);
+        $(menubcont).fadeIn().addClass('viewMenu');
+    }
+}
 
 
 $(document).ready(function() {
@@ -430,21 +444,12 @@ $(document).ready(function() {
     });
     /*END Adjust the diagonal line angle when resize */
 
-    var pagelocation = document.location.hash;
-    if (pagelocation == "#projects") {
-        viewProjectsPage();
-    } else if (pagelocation == "#about") {
-        viewAboutPage();
-    } else {
+    pageLocal();
 
-        setTimeout(function() {
-            $(homepage).fadeIn('slow').addClass('viewHome');
-            $(menubcont).fadeIn().addClass('viewMenu');
-            $('body').removeClass('working')
+    $(window).on('hashchange', function() {
+        pageLocal();
+    });
 
-        }, 1000);
-        $(menubcont).fadeIn().addClass('viewMenu');
-    }
 
 
     /*  MENU CLICK */
@@ -476,52 +481,25 @@ $(document).ready(function() {
             $('.project-container').unbind('wheel');
             var activeProjectId = $('.project-container.activeProject').data('projectid');
             var activeProject = $('.project-container.activeProject');
-            var viewworkpage2 = new TimelineLite();
 
-            viewworkpage2.add(TweenLite.to($('.back'), 1, {
-                ease: Power3.easeOut,
-                opacity: 0,
-                top: "-100px",
-                right: "-30px"
-            }), "0");
-            viewworkpage2.add(TweenLite.to(activeProject, 1, {
-                ease: Power3.easeOut,
-                top: "80px"
-            }), "0.5");
-            viewworkpage2.add(TweenLite.to($(this).parent().find('.roles'), 1, {
-                ease: Power3.easeOut,
-                opacity: 0,
-                display: "none",
-                top: "230px"
-            }), "-=1.5");
-            viewworkpage2.add(TweenLite.to($(this).parent().find('.pdesc'), 1, {
-                ease: Power3.easeOut,
-                opacity: 1
-            }));
-            viewworkpage2.add(TweenLite.to($('.mb-cont'), 1, {
-                ease: Power3.easeOut,
-                left: "20px"
-            }), "-=1.5");
-            viewworkpage2.add(function() {
-                $(activeProject).find('.vp-button-cont').fadeIn()
-            });
+            $('.back').addClass('outview').removeClass('inview').fadeOut();
 
-            viewworkpage2.add(function() {
-                $('.projects-indicator').removeClass('outView').addClass('inView')
-            });
-            viewworkpage2.add(function() {
-                $('.navigation-left').removeClass('outView').addClass('inView')
-            });
-            viewworkpage2.add(function() {
-                $('.navigation-right').removeClass('outView').addClass('inView')
-            });
-            viewworkpage2.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
-                ease: Power3.easeOut,
-                opacity: 0,
-                margin: "0",
-                top: '0',
-                display: "none"
-            }), "-=2");
+            $(activeProject).addClass('inview').removeClass('outview');
+
+            $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
+            
+            $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
+            
+            $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
+        
+            $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
+
+            $(this).parent().find('.pimg').addClass('outview').removeClass('inview').delay( 500 ).fadeOut();
+
+            $('.projects-indicator').removeClass('outview').addClass('inview')  ;              
+            $('.navigation-left').removeClass('outview').addClass('inview');
+            $('.navigation-right').removeClass('outview').addClass('inview');
+
 
             $(".activeProject").removeClass('activeProject');
             $(".detailedProject").removeClass('detailedProject');
@@ -536,7 +514,7 @@ $(document).ready(function() {
         } else {
             $('body').addClass('working');
             $(menubcont).data("page", "home");
-            $('.navigation-right,.navigation-left').removeClass('inView').addClass('outView');
+            $('.navigation-right,.navigation-left').removeClass('inview').addClass('outview');
             $('.about').hide();
 
             $(pagebg).show();
@@ -570,9 +548,9 @@ $(document).ready(function() {
             $(projects).fadeIn();
             $(homepage).fadeOut().removeClass('viewHome');
 
-            $('.projects-indicator').removeClass('outView').addClass('inView');
-            $('.navigation-right').removeClass('outView').addClass('inView');
-            $('.navigation-left').removeClass('outView').addClass('inView');
+            $('.projects-indicator').removeClass('outview').addClass('inview');
+            $('.navigation-right').removeClass('outview').addClass('inview');
+            $('.navigation-left').removeClass('outview').addClass('inview');
             document.location.hash = "projects";
 
         }
@@ -655,7 +633,7 @@ $(document).ready(function() {
 
     /* VIEW PROJECT DETAILS */
 
-    $('.vp-button-cont').click(function() {
+    $('.vbc').click(function() {
 
         viewProjectDetails($(this).parent().attr('id'));
 
@@ -664,52 +642,9 @@ $(document).ready(function() {
 
     /* CLOSE PROJECT */
     $('.back').click(function() {
-        var activeProjectId = $('.project-container.activeProject').data('projectid');
-        var activeProject = $('.project-container.activeProject');
 
-        $('body').unbind('wheel');
-        $('.navigation-top.inview').removeClass('inview').addClass('outview').css('display', 'none');
+        goBack();
 
-
-        $('.projects-indicator').removeClass('outView').addClass('inView');
-        $('.navigation-left').removeClass('outView').addClass('inView');
-        $('.navigation-right').removeClass('outView').addClass('inView');
-        var viewworkpage = new TimelineLite();
-
-        viewworkpage.add(TweenLite.to($('.back'), 1, {
-            ease: Power3.easeOut,
-            opacity: 0,
-            top: "-100px",
-            right: "-30px"
-        }), "0.3");
-        viewworkpage.add(TweenLite.to($(this).parent().find('.pimg'), 1, {
-            ease: Expo.easeOut,
-            opacity: 0,
-            top: '0',
-            display: "none"
-        }), "-=.9");
-        viewworkpage.add(TweenLite.to($(this).parent().find('.roles'), 1, {
-            ease: Expo.easeOut,
-            opacity: 0,
-            display: "none",
-            top: "230px"
-        }), "-=0.5");
-        viewworkpage.add(TweenLite.to(activeProject, 1, {
-            ease: Power3.easeOut,
-            top: "80px"
-        }), "1.2");
-        viewworkpage.add(TweenLite.to($(this).parent().find('.pdesc'), 1, {
-            ease: Power3.easeOut,
-            opacity: 1
-        }), "-=.8");
-        viewworkpage.add(function() {
-            $(activeProject).find('.vp-button-cont').fadeIn()
-        }, '-=0.5');
-
-        $('.pimg section.fade-in').removeClass('inview').addClass('outview');
-
-        $(".activeProject").removeClass('activeProject');
-        $(".detailedProject").removeClass('detailedProject');
 
     });
     /* NEXT PROJECT */
@@ -718,53 +653,37 @@ $(document).ready(function() {
         var activeProject = $('.project-container.activeProject');
 
         $('body').unbind('wheel');
-        var viewworkpage = new TimelineLite();
 
-        viewworkpage.add(TweenLite.to($('.loading'), 0, {
-            ease: Expo.easeOut,
-            opacity: 1,
-            display: "block"
-        }));
-        viewworkpage.add(TweenLite.to($('.loading-cont'), 1, {
-            ease: Expo.easeOut,
-            opacity: 1,
-            display: "block"
-        }), '+=0.2');
-        viewworkpage.add(TweenLite.to($(this).parent().parent().find('.pimg'), 0, {
-            ease: Expo.easeOut,
-            opacity: 0,
-            top: '0',
-            display: "none"
-        }));
-        viewworkpage.add(TweenLite.to($(this).parent().parent().find('.roles'), 0, {
-            ease: Expo.easeOut,
-            opacity: 0,
-            display: "none",
-            top: "230px"
-        }));
-        viewworkpage.add(TweenLite.to(activeProject, 0, {
-            ease: Power3.easeOut,
-            top: "80px"
-        }));
-        viewworkpage.add(TweenLite.to($(this).parent().parent().find('.pdesc'), 0, {
-            ease: Power3.easeOut,
-            opacity: 1
-        }));
-        viewworkpage.add(function() {
-            $(activeProject).find('.vp-button-cont').fadeIn()
-        });
 
-        viewworkpage.add(function() {
-            $('.projects-indicator').removeClass('inView').addClass('outView')
+        $('.loading').show();
+        $('.loading-cont').delay(500).addClass('inview');
+        
+        
+        $("body").animate({
+            scrollTop: 0
         });
+        $(activeProject).find('.pimg').delay(500).fadeOut().addClass('outview').removeClass('inview');
 
-        viewworkpage.add(function() {
-            $('.navigation-left').removeClass('inView').addClass('outView')
-        });
-        viewworkpage.add(function() {
-            $('.navigation-right').removeClass('inView').addClass('outView')
-        });
-        $('.pimg section.fade-in').removeClass('inview').addClass('outview');
+
+
+
+
+        $(activeProject).addClass('inview').removeClass('outview');
+
+        $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
+        
+        $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
+        
+        $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
+    
+        $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
+
+
+        $('.pimg section.fade-in').removeClass('inview').addClass('outview');            
+        $('.navigation-right').removeClass('inview').addClass('outview')
+        $('.navigation-left').removeClass('inview').addClass('outview')
+        $('.projects-indicator').removeClass('inview').addClass('outview')
+
 
         $(".activeProject").removeClass('activeProject');
         $(".detailedProject").removeClass('detailedProject');

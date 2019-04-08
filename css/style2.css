@@ -477,6 +477,18 @@ video.square.anim {
     top:230px;
     opacity: 0;
 }
+.roles.inview {
+    top:185px;
+    opacity: 1;
+    transition: all 1s ease;
+    transition-delay: 1s;
+}
+.roles.outview {
+    top: 230px;
+    opacity: 0;
+    transition: all 1s ease;
+    transition-delay: 1s;
+}
 .roles span {
     font-size: 13px;
     letter-spacing: .5px;
@@ -727,12 +739,15 @@ video.menu-character3.anim {
     opacity: 0;
     top: 620px;
     transition: all 1s ease;
-    transition-delay: 0.5s; 
 }
-.projects-indicator.inView {
+.projects-indicator.inview {
     opacity: 1;
     top: 570px;
-    transition-delay: 1s; 
+}
+
+.projects-indicator.outview {
+    opacity: 0;
+    top: 630px;
 }
 
 
@@ -797,16 +812,52 @@ video.menu-character3.anim {
     font-family: SourceSansProRegular;
     line-height: 24px;
     margin-bottom: 32px;
+    top: 250px;
+    position: absolute;
+    left: calc(50% - 270px);
 }
-.vp-button-cont {
+.pdesc.inview {
+    opacity: 1;
+    transition: all 1s ease ;
+    top: 250px;
+    transition-delay: 0.3s;
+}
+.pdesc.outview {
+    opacity: 0;
+    transition: all 1s ease ;
+    top: 320px;
+}
+
+.vbc{
     margin: 0 auto;
-    position: relative;
+    position: absolute;
     display: inline-block;
     min-width: 192px;
     cursor: pointer;
     min-height: 66px;
     float: none;
-    transition: top 100ms ease, left 100ms ease;
+    transition: all 1s ease  ;
+    top: 360px;
+    left: calc(50% - 96px);
+}
+.vbc.inview {
+    top: 360px;
+    transition-delay: 0.2s;
+    opacity: 1;
+    transition: all 1s ease  ;
+}
+.vbc.outview {
+    top: 420px;
+    opacity: 0;
+    transition: all 1s ease  ;
+}
+.vp-button-cont {
+    margin: 0 auto;
+    display: inline-block;
+    min-width: 192px;
+    cursor: pointer;
+    min-height: 66px;
+    float: none;
 }
 .vp-button-cont:hover {
     /*min-width: 200px;*/
@@ -866,6 +917,7 @@ video.menu-character3.anim {
     left: 20px;
     transition: all 100ms ease;
 }
+
 .projects {
     display: none;
     position: absolute;
@@ -882,7 +934,7 @@ video.menu-character3.anim {
     transition-delay: 0.5s;
 }
 
-.navigation-left.outView {
+.navigation-left.outview {
     left: -100%;
     transition: all 1s ease;
 }
@@ -977,7 +1029,7 @@ video.menu-character3.anim {
     transition: all 1s ease;
     transition-delay: 0.5s;
 }
-.navigation-right.outView {
+.navigation-right.outview {
     right: -100%;
     transition: all 1s ease;
 }
@@ -1162,7 +1214,7 @@ video.menu-character3.anim {
     font-size:13px;
     text-transform: uppercase;
     letter-spacing: .7px;
-    margin-top: 90px;
+    margin-top: 20px;
 }
 
 .portfolio-sectionheader {
@@ -1186,6 +1238,18 @@ video.menu-character3.anim {
     display: none;
     margin: 0;
     opacity: 0;
+    transition: all 1s ease;
+}
+.pimg.inview {
+    opacity: 1;
+    top: 60px;
+    transition: all 1s ease;
+    transition-delay: 0.5s;
+}
+.pimg.outview {
+    opacity: 0;
+    transition: all 1s ease;
+    top: 120px;
 }
 
 .pimg section.outview {
@@ -1293,7 +1357,16 @@ img {
     right: -30px;
     cursor:pointer;
     z-index: 10;
-    display: block;
+}
+.back.inview {
+    top: 58px;
+    right: -30px;
+    transition: all 1s ease;
+}
+.back.outview {
+    top: -100px;
+    right: -30px;
+    transition: all 1s ease;
     opacity: 0;
 }
 
@@ -1846,7 +1919,6 @@ section.skills {
         left: 0;
         right:0;
         bottom:0;
-        display: none;
     }  
 
     .loading-cont {
@@ -1854,8 +1926,16 @@ section.skills {
         position: relative;
         top: calc(50% - 250px);
         font-family: "LeagueSpartan";
-        opacity: 0;
+        opacity:0;
+        transition-delay: 0.5s;
+        transition: all 1s ease;
     }
+    .loading-cont.inview {
+        opacity: 1;
+        transition: all 1s ease;
+        transition-delay: 0.5s;
+    }
+    
     .loading-cont  video.res.anim {
         max-width: 500px;
     }
