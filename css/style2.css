@@ -2054,3 +2054,97 @@ section.skills {
     transform: translate(0,0) ;
   }
 }
+
+.mobileHome {
+    display: none;
+}
+
+@media screen and (max-width: 560px) {
+    .homepage.viewHome, .projects, .about, .resize, .mb-cont.viewMenu {
+        display: none !important;
+    }    
+    .mobileHome {
+        display: block;
+        position: relative;
+        z-index: 10000;
+        text-align: center;
+    }
+    video.homepage.anim {
+        width: 100%;
+        display: block !important;
+    }
+    .homepage-animation {
+        position: relative;
+        top: inherit;
+        left: inherit;
+        width: 100%;
+        text-align: center;
+        opacity: 1;
+        transition: all 1s ease;
+        float: left;
+    }
+    .text-1 {
+        font-family: "LeagueSpartan";
+        display: block;
+        position: relative;
+        top: initial;
+        left: initial;
+        font-size: 28px;
+        letter-spacing: .3px;
+        opacity: 1;
+        width: 300px;
+        text-align: center;
+        opacity: 1;
+        float: left;
+        width: 100%;
+        z-index: 321;
+    }
+    .title-1 {
+        font-family: "LeagueSpartan";
+        display: block;
+        position: relative;
+        top: initial;
+        left: initial;
+        font-size: 48px;
+        letter-spacing: .3px;
+        opacity: 1;
+        width: 300px;
+        text-align: center;
+        opacity: 1;
+        float: left;
+        width: 100%;
+        z-index: 321;
+        margin-bottom: 40px;
+    }
+    .container {
+        top: inherit;
+        margin-top: 90px;
+    }
+
+    .text-4 {
+        font-family: "LeagueSpartan";
+        display: block;
+        position: relative;
+        top: initial;
+        left: initial;
+        font-size: 20px;
+        letter-spacing: .3px;
+        opacity: 1;
+        width: 300px;
+        text-align: center;
+        opacity: 1;
+        float: left;
+        width: 100%;
+        z-index: 321;
+        padding: 25px;
+        width: 100%;
+        box-sizing: border-box;
+        line-height: 30px;
+    }
+    .text-4 span.blue {
+        color: #3e91ee;
+    }
+    .menu-bg {
+        display: none;
+    }
+}

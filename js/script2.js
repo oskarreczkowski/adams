@@ -23,8 +23,9 @@
 /*ts 5 czwartek 04.04 */
 /*ts 3 niedziela 04.07 */
 /*ts 2 poniedzialek 04.08 */
+/*ts 2 piatek 04.12 */
 
-/*total 81 - 40 = 41 */
+/*total 84 - 40 = 44 */
 
 
 
