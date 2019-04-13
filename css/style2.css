@@ -743,7 +743,7 @@ video.menu-character3.anim {
 }
 .projects-indicator.inview {
     opacity: 1;
-    top: 570px;
+    top: 600px;
 }
 
 .projects-indicator.outview {
@@ -772,7 +772,7 @@ video.menu-character3.anim {
 }
 .project-container {
     position: absolute;
-    top: 70px;
+    top: 100px;
     text-align: center;
     font-family: "LeagueSpartan";
     width: 100%;
@@ -802,13 +802,13 @@ video.menu-character3.anim {
     margin-bottom: 25px;
 }
 .ptitle {
-    font-size: 40px;
-    margin: 0 0 22px 0;
+    font-size: 38px;
+    margin: 12px 0 22px 0;
 }
 .pdesc {
     max-width: 540px;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 200;
     font-family: SourceSansProRegular;
     line-height: 24px;
@@ -842,7 +842,7 @@ video.menu-character3.anim {
     left: calc(50% - 96px);
 }
 .vbc.inview {
-    top: 360px;
+    top: 352px;
     transition-delay: 0.2s;
     opacity: 1;
     transition: all 1s ease  ;
@@ -865,35 +865,36 @@ video.menu-character3.anim {
     transition: all 200ms ease;
 }
 .vp-button {
-    padding: 16px 30px;
+    padding: 16px 28px;
     display: inline-block;
-    font-size: 17px;
+    font-size: 16px;
     border: 5px solid #000000;
     position: relative;
     top: 0px;
     left: 6px;
-    line-height: 17px;
-    transition: all 100ms ease;
+    line-height: 18px;
+    transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
     cursor: pointer;
 }
 
 .vp-button-cont:hover .vp-button {
-    padding: 20px 34px;
+    padding: 21px 35px;
     top: -4px;
-    transition: all 300ms ease;
+    transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
 }
+/*
 .vp-button-cont:active .vp-button {
     padding: 16px 30px;
     top: 0px;
-    transition: all 100ms ease;
-}
+    transition: all 100ms cubic-bezier(0.75, 0, 0.25, 1);
+}*/
 
-.vp-button-cont  .vp-bg {
-    height: 58px;
-    width: 175px;
+.vp-button-cont .vp-bg {
+    height: 55px;
+    width: 166px;
     position: absolute;
-    top: 9px;
-    left: 20px;
+    top: 10px;
+    left: 26px;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -901,22 +902,23 @@ video.menu-character3.anim {
     background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%);
     background: linear-gradient(to right, #ffd673 0%,#ff9945 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 );
-    transition: all 100ms ease;
+    transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 150ms;
 }
 .vp-button-cont:hover .vp-bg {
-    height: 67px;
-    width: 186px;
-    top: 6px;
-    left: 22px;
-    transition: all 200ms ease;
-    transition-delay: 100ms;
+    height: 65px;
+    width: 180px;
+    top: 7px;
+    left: 20px;
+    transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 200ms;
 }
 .vp-button-cont:active .vp-bg {
-    height: 58px;
-    width: 175px;
+    height: 61px;
+    width: 176px;
     top: 9px;
-    left: 20px;
-    transition: all 100ms ease;
+    left: 22px;
+    transition: all 100ms cubic-bezier(0.75, 0, 0.25, 1);
 }
 
 .projects {
@@ -927,17 +929,19 @@ video.menu-character3.anim {
 }
 .navigation-left {
     position: absolute;
-    top: 300px;
+    opacity:1;
+    top: 330px;
     left:50px;
     cursor:pointer;
     z-index: 10;
-    transition: all 1s ease;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 0.5s;
 }
 
 .navigation-left.outview {
-    left: -100%;
-    transition: all 1s ease;
+    left: -200px;
+    opacity:0;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .navigation-left .left-arrow .arrow {
     border: 5px solid black;
@@ -961,14 +965,14 @@ video.menu-character3.anim {
     top: calc(50% - 48px);
     transition: all 200ms ease;
 }
-.navigation-left:active .left-arrow .arrow {
+/*.navigation-left:active .left-arrow .arrow {
     width: 76px;
     height: 76px;
     left: 0px;
     top: calc(50% - 44px);
     transition: all 100ms ease;
     transition-delay:00ms;
-}
+}*/
 
 .navigation-left .left-arrow .bg {
     width: 84px;
@@ -1021,18 +1025,30 @@ video.menu-character3.anim {
     transition: right 200ms ease;
 }
 
+.navigation-left:active .line-left {
+    height: 5px;
+    background: #000;
+    width: 300px;
+    position: absolute;
+    right: 60px;
+    top: -4px;
+    transition: right 200ms ease;
+}
+
 .navigation-right {
     position: absolute;
-    top: 300px;
+    top: 330px;
+    opacity:1;
     right: 138px;
     cursor:pointer;
     z-index: 10;
-    transition: all 1s ease;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 0.5s;
 }
 .navigation-right.outview {
-    right: -100%;
-    transition: all 1s ease;
+    right: -112px;
+    opacity:0;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 
 .navigation-right .right-arrow .arrow {
@@ -1057,13 +1073,15 @@ video.menu-character3.anim {
     top: calc(50% - 48px);
     transition: all 200ms ease;
 }
+
+/*
 .navigation-right:active .right-arrow .arrow {
     width: 76px;
     height: 76px;
     left: 0;
     top: calc(50% - 44px);
     transition: all 200ms ease;
-}
+}*/
 .navigation-right .right-arrow .bg {
     width: 84px;
     height: 84px;
@@ -1108,6 +1126,10 @@ video.menu-character3.anim {
 
 .navigation-right:hover .line-right {
     left: 168px;
+    transition: left 200ms ease;
+}
+.navigation-right:active .line-right {
+    left: 148px;
     transition: left 200ms ease;
 }
 
