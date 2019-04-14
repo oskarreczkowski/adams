@@ -794,6 +794,11 @@ video.menu-character3.anim {
 .pn-cont .pnumber.inactive {
     display: none;
 }
+
+.project-container.detailedProject {
+    top: 40px;
+}
+
 .pn-cont span.numberp {
     color: #c1c1c1;
 }
@@ -1233,18 +1238,29 @@ video.menu-character3.anim {
 /* Portfolio Pages */
 
 .portfolio-sectionheader {
-    font-size: 25px;
-    margin: 15px 0 20px;
+    font-size: 24px;
+    margin: 50px auto 20px;
+    max-width: 540px;
+    line-height: 38px;
 }
 
 .portfolio-body {
     max-width: 510px;
-    font-size: 14px;
-    color: #8b9296;
-    line-height: 25px;
-    margin: 0 auto 60px;
+    font-size: 15px;
+    color: #687075;
+    line-height: 26px;
+    margin: 18px auto 60px;
     font-family: "SourceSansProRegular";
 }
+
+#intro-header {
+    margin-top:0px;
+}
+
+#intro-paragraph {
+    margin-bottom: 90px;
+}
+
 
 .pimg {
     width: 100%;
@@ -1257,7 +1273,7 @@ video.menu-character3.anim {
 }
 .pimg.inview {
     opacity: 1;
-    top: 60px;
+    top: 90px;
     transition: all 1s ease;
     transition-delay: 0.5s;
 }
@@ -1278,6 +1294,7 @@ video.menu-character3.anim {
 
 .portfolio-img {
     max-width:1000px;
+    margin-bottom: 50px;
 }
 
 /* End Portfolio Pages */
