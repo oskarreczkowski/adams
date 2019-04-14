@@ -478,7 +478,7 @@ video.square.anim {
     opacity: 0;
 }
 .roles.inview {
-    top:185px;
+    top:234px;
     opacity: 1;
     transition: all 1s ease;
     transition-delay: 1s;
@@ -772,7 +772,7 @@ video.menu-character3.anim {
 }
 .project-container {
     position: absolute;
-    top: 100px;
+    top: 80px;
     text-align: center;
     font-family: "LeagueSpartan";
     width: 100%;
@@ -798,8 +798,7 @@ video.menu-character3.anim {
     color: #c1c1c1;
 }
 .picon img {
-    max-width: 142px;
-    margin-bottom: 25px;
+    max-width: 410px;
 }
 .ptitle {
     font-size: 38px;
@@ -813,14 +812,14 @@ video.menu-character3.anim {
     font-family: SourceSansProRegular;
     line-height: 24px;
     margin-bottom: 32px;
-    top: 250px;
+    top: 290px;
     position: absolute;
     left: calc(50% - 270px);
 }
 .pdesc.inview {
     opacity: 1;
     transition: all 1s ease ;
-    top: 250px;
+    top: 290px;
     transition-delay: 0.3s;
 }
 .pdesc.outview {
@@ -842,7 +841,7 @@ video.menu-character3.anim {
     left: calc(50% - 96px);
 }
 .vbc.inview {
-    top: 352px;
+    top: 390px;
     transition-delay: 0.2s;
     opacity: 1;
     transition: all 1s ease  ;
@@ -1232,13 +1231,6 @@ video.menu-character3.anim {
 
 
 /* Portfolio Pages */
-.portfolio-category {
-    color:#f49231;
-    font-size:13px;
-    text-transform: uppercase;
-    letter-spacing: .7px;
-    margin-top: 20px;
-}
 
 .portfolio-sectionheader {
     font-size: 25px;
@@ -1284,10 +1276,8 @@ video.menu-character3.anim {
     transition: opacity 2s ease;
 }
 
-.portfolio-piece {
-    box-shadow: 0px 18px 120px #6b778454;
-    border-radius: 10px;
-    max-width: 850px;
+.portfolio-img {
+    max-width:1000px;
 }
 
 /* End Portfolio Pages */
