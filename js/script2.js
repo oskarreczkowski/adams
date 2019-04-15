@@ -311,11 +311,11 @@ function viewProjectDetails(aProjectId) {
         } else {}
     });
 
-    $('.projects-indicator').removeClass('inview').addClass('outview').delay(500).fadeOut();
+    $('.projects-indicator').removeClass('inview').addClass('outview').delay(1200).fadeOut();
     $('.navigation-right').removeClass('inview').addClass('outview')
     $('.navigation-left').removeClass('inview').addClass('outview')
 
-    $('.back').addClass('inview').removeClass('outview').fadeIn();
+    $('.back').fadeIn().addClass('inview').removeClass('outview');
 
 
     var viewproject = $('#' + aProjectId).data('projectid');
@@ -349,11 +349,10 @@ function goBack(){
         $('.navigation-top.inview').removeClass('inview').addClass('outview').css('display', 'none');
 
 
-        $('.navigation-left').removeClass('outview').addClass('inview');
-        $('.navigation-right').removeClass('outview').addClass('inview');
+
 
         $('.back').addClass('outview').removeClass('inview').delay(500).fadeOut();
-        $(activeProject).find('.pimg').fadeOut().removeClass('inview').addClass('outview');
+        $(activeProject).find('.pimg').removeClass('inview').addClass('outview').delay(1000).fadeOut();
 
 
         $(activeProject).addClass('inview').removeClass('outview');
@@ -362,12 +361,12 @@ function goBack(){
         
         $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
         
-        $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
+        $(activeProject).find('.roles').addClass('outview').removeClass('inview').delay(1400).fadeOut();
+
+        $('.navigation-left').removeClass('outview').addClass('inview');
+        $('.navigation-right').removeClass('outview').addClass('inview');
     
         $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
-
-
-
 
 
         $('.pimg section.fade-in').removeClass('inview').addClass('outview');
@@ -493,11 +492,11 @@ $(document).ready(function() {
             
             $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
             
-            $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
+            $(activeProject).find('.roles').addClass('outview').removeClass('inview').delay(50000).fadeOut();
         
             $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
 
-            $(this).parent().find('.pimg').addClass('outview').removeClass('inview').delay( 500 ).fadeOut();
+            $(this).parent().find('.pimg').addClass('outview').removeClass('inview').delay(35000).fadeOut();
 
             $('.projects-indicator').removeClass('outview').addClass('inview')  ;              
             $('.navigation-left').removeClass('outview').addClass('inview');

@@ -474,8 +474,6 @@ video.square.anim {
     padding: 30px 0 0 0;
     display: block;
     position: absolute;
-    top:230px;
-    opacity: 0;
 }
 .roles.inview {
     top:230px;
@@ -487,7 +485,7 @@ video.square.anim {
     top: 280px;
     opacity: 0;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
-    transition-delay: 1s;
+    transition-delay: .5s;
 }
 .roles span {
     font-size: 13px;
@@ -737,17 +735,19 @@ video.menu-character3.anim {
     height: 30px;
     position: absolute;
     opacity: 0;
-    top: 620px;
-    transition: all .6s cubic-bezier(0.75, 0, 0.25, 1);
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .projects-indicator.inview {
     opacity: 1;
     top: 600px;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 1.5s;
 }
 
 .projects-indicator.outview {
     opacity: 0;
-    top: 640px;
+    top: 660px;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 
 
@@ -776,7 +776,8 @@ video.menu-character3.anim {
     font-family: "LeagueSpartan";
     width: 100%;
     opacity: 0;
-    transition: top 1s ease 0s;
+    transition: top 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 1s;
 }
 .pn-cont {
     font-size: 32px;
@@ -796,7 +797,7 @@ video.menu-character3.anim {
 
 .project-container.detailedProject {
     top: 40px;
-    transition-delay: 1s;
+    transition-delay: .7s;
 }
 
 .pn-cont span.numberp {
@@ -825,7 +826,7 @@ video.menu-character3.anim {
 .pdesc.inview {
     opacity: 1;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
-    transition-delay: 0.8s;
+    transition-delay: 1s;
 }
 .pdesc.outview {
     opacity: 0;
@@ -848,7 +849,7 @@ video.menu-character3.anim {
 .vbc.inview {
     opacity: 1;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
-    transition-delay: 0.5s;
+    transition-delay: 0.8s;
 }
 .vbc.outview {
     opacity: 0;
@@ -1409,11 +1410,12 @@ img {
 .back.inview {
     top: 84px;
     opacity:1;
-    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition: all 1.2s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 1.35s;
 }
 .back.outview {
     top: -80px;
-    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition: all 1.2s cubic-bezier(0.75, 0, 0.25, 1);
     opacity: 0;
 }
 
