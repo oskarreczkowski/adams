@@ -1298,12 +1298,12 @@ video.menu-character3.anim {
     top: 170px;
 }
 
-.pimg section.outview {
+.pimg section.outview img{
     opacity:0;
     margin-top:100px;
     transition: all 1.6s ease;
 }
-.pimg section.inview {
+.pimg section.inview img{
     opacity:1;
     margin-top:0px;
     transition: all 1.6s ease;
@@ -1317,7 +1317,16 @@ video.menu-character3.anim {
 
 /* End Portfolio Pages */
 
-
+section.fullWidth {
+    width: 100%;
+    float: left;
+    margin-bottom: 100px;
+}
+section.fullWidth .secbanner {
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 img {
     width: 100%;
 }

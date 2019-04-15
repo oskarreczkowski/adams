@@ -51,6 +51,7 @@
 
 
 
+
 /*  HOME SET OF TWEENS */
 var homepage = $(".homepage");
 var txt1 = $(".text-1");
@@ -287,7 +288,12 @@ function viewProjectDetails(aProjectId) {
     $('body').bind('mousewheel', function(event) {
         if ($('.activeProject').length) {
             if (event.originalEvent.wheelDelta >= 0) {
-                $('.navigation-top.outview').fadeIn().addClass('inview').removeClass('outview');
+                if ( $('body').scrollTop() > 600) {
+                    $('.navigation-top.outview').fadeIn().addClass('inview').removeClass('outview');
+                } else {
+                    $('.navigation-top.inview').fadeOut().addClass('outview').removeClass('inview');
+                }
+
             } else {
                 $('.navigation-top.inview').fadeOut().addClass('outview').removeClass('inview');
             }
@@ -418,7 +424,23 @@ function pageLocal(){
     }
 }
 
+function fullWidth(){
 
+
+    if ( $(window).width() > 1024 ) {
+        $('.fullWidth').each(function(){
+            $(this).find('.secbanner').css( {
+                'margin-left': -( $(window).width() - 1024 )*0.5, 
+                'margin-right': -( $(window).width() - 1024 )*0.5,
+                'height': $(this).data('sectionheight')+'px'
+            }  )
+            $(this).css ({
+                'height': $(this).data('sectionheight')+'px'
+            })
+        })
+    }
+
+}
 $(document).ready(function() {
 
     var angletmp = "skew(" + (angleB + 100) + "deg)";
@@ -446,11 +468,12 @@ $(document).ready(function() {
         $(pagebg).css({
             'transform': angletmp
         })
+        fullWidth();
     });
     /*END Adjust the diagonal line angle when resize */
 
     pageLocal();
-
+    fullWidth();
     $(window).on('hashchange', function() {
         pageLocal();
     });
@@ -526,7 +549,7 @@ $(document).ready(function() {
             $("#menu").removeClass('is-active');
 
             hideMenu();
-            
+
             setTimeout(function() {
                 $(projects).fadeOut();
                 $(homepage).fadeIn().addClass('viewHome');
