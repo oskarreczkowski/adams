@@ -106,7 +106,8 @@ function hideMenu() {
 
     setTimeout(function() {
         $('.menu-bg').removeClass('showmenu');
-    }, 500);
+        /* DELAY THE DIAGONAL LINE ANIMATION in miliseconds*/
+    }, 1500);
     $('body').removeClass('working');
 }
 
@@ -525,9 +526,13 @@ $(document).ready(function() {
             $("#menu").removeClass('is-active');
 
             hideMenu();
-            $(projects).fadeOut();
-            $(homepage).fadeIn().addClass('viewHome');
-            document.location.hash = "";
+            
+            setTimeout(function() {
+                $(projects).fadeOut();
+                $(homepage).fadeIn().addClass('viewHome');
+                document.location.hash = "";
+                /*adjust delay here */
+            }, 1500);
 
         }
     });
@@ -549,13 +554,16 @@ $(document).ready(function() {
             $("#menu").removeClass('is-active');
 
             hideMenu();
-            $(projects).fadeIn();
-            $(homepage).fadeOut().removeClass('viewHome');
 
-            $('.projects-indicator').removeClass('outview').addClass('inview');
-            $('.navigation-right').removeClass('outview').addClass('inview');
-            $('.navigation-left').removeClass('outview').addClass('inview');
-            document.location.hash = "projects";
+            $(homepage).fadeOut().removeClass('viewHome');
+            $(projects).fadeIn();
+            setTimeout(function() {
+                $('.projects-indicator').removeClass('outview').addClass('inview');
+                $('.navigation-right').removeClass('outview').addClass('inview');
+                $('.navigation-left').removeClass('outview').addClass('inview');
+                document.location.hash = "projects";
+                /*adjust delay here */
+            }, 1500);
 
         }
     });
@@ -577,13 +585,16 @@ $(document).ready(function() {
 
             hideMenu();
 
-            $(pagebg).fadeOut();
-            $(projects).fadeOut();
-            $(homepage).fadeOut().removeClass('viewHome');
-            $('.about').fadeIn();
+            setTimeout(function() {
+                $(pagebg).fadeOut();
+                $(projects).fadeOut();
+                $(homepage).fadeOut().removeClass('viewHome');
+                $('.about').fadeIn();
 
-            $('body').removeClass('working');
-            document.location.hash = "about";
+                $('body').removeClass('working');
+                document.location.hash = "about";
+                /*adjust delay here */
+            }, 1500);
 
         }
     });
