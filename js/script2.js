@@ -163,7 +163,7 @@ function viewProjectsPage() {
         $('.projects-indicator').removeClass('outview').addClass('inview');
         $('.navigation-left').removeClass('outview').addClass('inview');
         $('.navigation-right').removeClass('outview').addClass('inview');
-    }, 850);
+    }, 1100);
     document.location.hash = "projects";
 
 }
@@ -351,7 +351,7 @@ function goBack(){
 
 
 
-        $('.back').addClass('outview').removeClass('inview').delay(500).fadeOut();
+        $('.back').addClass('outview').removeClass('inview').delay(800).fadeOut();
         $(activeProject).find('.pimg').removeClass('inview').addClass('outview').delay(1000).fadeOut();
 
 
@@ -363,10 +363,12 @@ function goBack(){
         
         $(activeProject).find('.roles').addClass('outview').removeClass('inview').delay(1400).fadeOut();
 
+        setTimeout(function() {
         $('.navigation-left').removeClass('outview').addClass('inview');
         $('.navigation-right').removeClass('outview').addClass('inview');
-    
-        $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
+        $('.projects-indicator').fadeIn().removeClass('outview').addClass('inview');
+        }, 1400);
+        
 
 
         $('.pimg section.fade-in').removeClass('inview').addClass('outview');

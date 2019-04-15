@@ -730,18 +730,19 @@ video.menu-character3.anim {
 
 .projects-indicator {
     width: 100%;
+    top: 660px;
+    opacity: 0;
     text-align: center;
     display: inline-block;
     height: 30px;
     position: absolute;
-    opacity: 0;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .projects-indicator.inview {
     opacity: 1;
     top: 600px;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
-    transition-delay: 1.5s;
+    
 }
 
 .projects-indicator.outview {
@@ -946,7 +947,7 @@ video.menu-character3.anim {
     left:50px;
     opacity:1;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
-    transition-delay: 0.5s;
+    
 }
 
 .navigation-left.outview {
@@ -1060,7 +1061,7 @@ video.menu-character3.anim {
     right:138px;
     opacity:1;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
-    transition-delay: 0.5s;
+    
 }
 
 .navigation-right.outview {
