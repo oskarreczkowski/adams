@@ -478,15 +478,15 @@ video.square.anim {
     opacity: 0;
 }
 .roles.inview {
-    top:234px;
+    top:230px;
     opacity: 1;
-    transition: all 1s ease;
-    transition-delay: 1s;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 1.2s;
 }
 .roles.outview {
-    top: 230px;
+    top: 280px;
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 1s;
 }
 .roles span {
@@ -730,7 +730,6 @@ video.menu-character3.anim {
     transition-delay: .3s;
 }
 
-
 .projects-indicator {
     width: 100%;
     text-align: center;
@@ -739,7 +738,7 @@ video.menu-character3.anim {
     position: absolute;
     opacity: 0;
     top: 620px;
-    transition: all 1s ease;
+    transition: all .6s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .projects-indicator.inview {
     opacity: 1;
@@ -748,7 +747,7 @@ video.menu-character3.anim {
 
 .projects-indicator.outview {
     opacity: 0;
-    top: 630px;
+    top: 640px;
 }
 
 
@@ -797,6 +796,7 @@ video.menu-character3.anim {
 
 .project-container.detailedProject {
     top: 40px;
+    transition-delay: 1s;
 }
 
 .pn-cont span.numberp {
@@ -820,17 +820,17 @@ video.menu-character3.anim {
     top: 290px;
     position: absolute;
     left: calc(50% - 270px);
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .pdesc.inview {
     opacity: 1;
-    transition: all 1s ease ;
-    top: 290px;
-    transition-delay: 0.3s;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 0.8s;
 }
 .pdesc.outview {
     opacity: 0;
-    transition: all 1s ease ;
-    top: 320px;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay:0.7s;
 }
 
 .vbc{
@@ -842,19 +842,18 @@ video.menu-character3.anim {
     min-height: 66px;
     float: none;
     transition: all 1s ease  ;
-    top: 360px;
+    top: 390px;
     left: calc(50% - 96px);
 }
 .vbc.inview {
-    top: 390px;
-    transition-delay: 0.2s;
     opacity: 1;
-    transition: all 1s ease  ;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 0.5s;
 }
 .vbc.outview {
-    top: 420px;
     opacity: 0;
-    transition: all 1s ease  ;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: .7s;
 }
 .vp-button-cont {
     margin: 0 auto;
@@ -933,11 +932,18 @@ video.menu-character3.anim {
 }
 .navigation-left {
     position: absolute;
-    opacity:1;
+    opacity:0;
     top: 330px;
-    left:50px;
+    left: -200px;
     cursor:pointer;
     z-index: 10;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 0.5s;
+}
+
+.navigation-left.inview {
+    left:50px;
+    opacity:1;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 0.5s;
 }
@@ -1042,13 +1048,20 @@ video.menu-character3.anim {
 .navigation-right {
     position: absolute;
     top: 330px;
-    opacity:1;
-    right: 138px;
+    right: -112px;
+    opacity:0;
     cursor:pointer;
     z-index: 10;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+}
+
+.navigation-right.inview {
+    right:138px;
+    opacity:1;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 0.5s;
 }
+
 .navigation-right.outview {
     right: -112px;
     opacity:0;
@@ -1274,22 +1287,25 @@ video.menu-character3.anim {
 .pimg.inview {
     opacity: 1;
     top: 90px;
-    transition: all 1s ease;
-    transition-delay: 0.5s;
+    transition: all 1.5s cubic-bezier(0.75, 0, 0.25, 1);
+    transition-delay: 1.3s;
 }
 .pimg.outview {
     opacity: 0;
-    transition: all 1s ease;
-    top: 120px;
+    transition: all 1.3s cubic-bezier(0.75, 0, 0.25, 1);
+    top: 170px;
 }
 
 .pimg section.outview {
     opacity:0;
-    transition: opacity 2s ease;
+    margin-top:100px;
+    transition: all 1.6s ease;
 }
 .pimg section.inview {
     opacity:1;
-    transition: opacity 2s ease;
+    margin-top:0px;
+    transition: all 1.6s ease;
+    transition-delay: .3s;
 }
 
 .portfolio-img {
@@ -1387,16 +1403,16 @@ img {
     right: -50px;
     cursor:pointer;
     z-index: 10;
+    opacity:0;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .back.inview {
     top: 84px;
-    right: -50px;
+    opacity:1;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .back.outview {
     top: -80px;
-    right: -50px;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     opacity: 0;
 }

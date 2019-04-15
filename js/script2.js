@@ -323,7 +323,7 @@ function viewProjectDetails(aProjectId) {
 
     $('#' + aProjectId).addClass('inview').removeClass('outview');
 
-    $('#' + aProjectId + ' .vbc').addClass('outview').removeClass('inview').delay(300).fadeOut();
+    $('#' + aProjectId + ' .vbc').addClass('outview').removeClass('inview').delay(2000).fadeOut();
     
     $('#' + aProjectId).find('.pdesc').removeClass('inview').addClass('outview');
     
