@@ -141,6 +141,7 @@ span.icon-3:after {
     z-index: 102;
     opacity: 0;
     display: none;
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 
 .viewMenu.mb-cont { 
@@ -174,8 +175,8 @@ span.icon-3:after {
     transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
     /*transition-delay: 100ms;*/
     position: relative;
-    top: 3px;
-    left: 3px;
+    top: 0px;
+    left: 0px;
 }
 .menu-button {
     background: none;
@@ -184,12 +185,13 @@ span.icon-3:after {
     border: 5px solid #000000;
     padding: 10px 10px;
     opacity: 1;
+    transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
 }
 .mb-cont:hover #menu {
     padding: 16px 16px;
     transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
-    top: -3px;
-    left: -3px;
+    top: -6px;
+    left: -6px;
 }
 .mb-cont .mb-bg {
     width: 56px;
@@ -198,8 +200,8 @@ span.icon-3:after {
     z-index: -1;
     content: "";
     position: absolute;
-    top: 14px;
-    left: 14px;
+    top: 12px;
+    left: 12px;
     background: #ffd673; /* Old browsers */
     background: -moz-linear-gradient(left, #ffd673 0%, #ff9945 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%); /* Chrome10-25,Safari5.1-6 */
@@ -211,25 +213,25 @@ span.icon-3:after {
     width: 68px;
     height: 72px;
     transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
-    top: 8px;
-    left: 8px;
+    top: 6px;
+    left: 6px;
     transition-delay: 150ms;
 }
 .mb-cont:active .mb-bg  {
     width: 60px;
     height: 64px;
     transition: all 80ms cubic-bezier(0.75, 0, 0.25, 1);
-    top: 12px;
-    left: 12px;
+    top: 6px;
+    left: 6px;
 }
-/*
+
 .mb-cont:active #menu {
     padding: 10px 10px;
     transition: all 100ms ease;
     transition-delay: 0;
     top: 2px;
     left: 1px;
-}*/
+}
 .text-1 {
     font-family: "LeagueSpartan";
     display: block;
@@ -525,10 +527,11 @@ video.square.anim {
     text-align: left;
     height: 600px;
     left: calc(50% - 226px);
-    top: calc(50% - 240px);
+    top: calc(50% - 320px);
     font-family: "LeagueSpartan";
     display: none;
     transition: top 0.8s ease;
+    transition-delay: 600ms;
 }
 .line-1 {
     height: 8px;
@@ -658,8 +661,9 @@ video.menu-character3.anim {
     color: #000000 !important;
 }
 
-
 .menu-wrapper.showmenu {
+    top: calc(50% - 240px);
+    transition: top 0s ease;
 }
 .menu-wrapper .mitem{
     opacity: 0;
@@ -669,9 +673,9 @@ video.menu-character3.anim {
 }
 .menu-wrapper .email-info {
     opacity: 0;
-    transition: all .8s cubic-bezier(0.75, 0, 0.25, 1);
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 0.2s;
-    transform: translate(-45px,0px);
+    transform: translate(0px,-35px);
 }
 .menu-wrapper.showmenu .mitem{
     opacity: 1;
@@ -702,11 +706,9 @@ video.menu-character3.anim {
 .menu-wrapper.showmenu .email-info {
     opacity: 1;
     transform: translate(0,0);
-    transition: all .8s cubic-bezier(0.75, 0, 0.25, 1);
+    transition: all .6s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 1.2s;
 }
-
-
 .menu-wrapper.showmenu .line-1 {
     height: 8px;
     width: 100%;
@@ -717,7 +719,6 @@ video.menu-character3.anim {
 }
 
 .menu-wrapper.showmenu .line-2 {
-
     height: 8px;
     width: 100%;
     display: block;
@@ -846,6 +847,7 @@ video.menu-character3.anim {
     transition: all 1s ease  ;
     top: 390px;
     left: calc(50% - 96px);
+    transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .vbc.inview {
     opacity: 1;
@@ -864,6 +866,7 @@ video.menu-character3.anim {
     cursor: pointer;
     min-height: 66px;
     float: none;
+    transition: all 200ms ease;
 }
 .vp-button-cont:hover {
     /*min-width: 200px;*/
@@ -883,7 +886,7 @@ video.menu-character3.anim {
 }
 
 .vp-button-cont:hover .vp-button {
-    padding: 21px 35px;
+    padding: 20px 35px;
     top: -4px;
     transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
 }
@@ -1329,6 +1332,7 @@ img {
 .ender {
     width: 100%;
     height: 150px;
+    float: left;
 }
 .next-project span.np {
     text-transform: uppercase;
