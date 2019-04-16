@@ -24,8 +24,10 @@
 /*ts 3 niedziela 04.07 */
 /*ts 2 poniedzialek 04.08 */
 /*ts 2 piatek 04.12 */
+/*ts 2 poniedzialek 04.15 */
+/*ts 1 wtorek 04.16 */
 
-/*total 84 - 40 = 44 */
+/*total 87 - 40 = 47 */
 
 
 
@@ -90,6 +92,7 @@ var offset = diag * Math.cos(Math.asin(sideA / diag));
 function viewMenu() {
     $('body').addClass('working');
     $(menubcont).addClass('is-active');
+    $(menubcont).find('.menu-button').addClass('is-active');
     $('.menu-bg').addClass('showmenu');
     $('.menu-wrapper').delay(800).fadeIn();
 
@@ -103,12 +106,14 @@ function viewMenu() {
 function hideMenu() {
     $('body').addClass('working');
     $(menubcont).removeClass('is-active');
-    $('.menu-wrapper').removeClass('showmenu').delay(1000).fadeOut();
+    $(menubcont).find('.menu-button').removeClass('is-active');
+    $('.menu-wrapper').removeClass('showmenu');
 
     setTimeout(function() {
+        $('.menu-wrapper').fadeOut();
         $('.menu-bg').removeClass('showmenu');
         /* DELAY THE DIAGONAL LINE ANIMATION in miliseconds*/
-    }, 2000);
+    }, 1000);
     $('body').removeClass('working');
 }
 
