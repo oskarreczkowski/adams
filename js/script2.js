@@ -103,12 +103,12 @@ function viewMenu() {
 function hideMenu() {
     $('body').addClass('working');
     $(menubcont).removeClass('is-active');
-    $('.menu-wrapper').fadeOut().removeClass('showmenu');
+    $('.menu-wrapper').removeClass('showmenu').delay(1000).fadeOut();
 
     setTimeout(function() {
         $('.menu-bg').removeClass('showmenu');
         /* DELAY THE DIAGONAL LINE ANIMATION in miliseconds*/
-    }, 1500);
+    }, 2000);
     $('body').removeClass('working');
 }
 

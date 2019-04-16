@@ -1240,23 +1240,18 @@ video.menu-character3.anim {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* Portfolio Pages */
 
-.portfolio-sectionheader {
-    font-size: 24px;
-    margin: 50px auto 20px;
+.portfolio-link-label {
+    font-size: 25px;
+    margin: 20px auto 0px;
     max-width: 540px;
     line-height: 38px;
+}
+
+.link {
+    color: #317bff;
+    text-decoration: none;
 }
 
 .portfolio-body {
@@ -1264,7 +1259,7 @@ video.menu-character3.anim {
     font-size: 15px;
     color: #687075;
     line-height: 26px;
-    margin: 18px auto 60px;
+    margin: 18px auto 50px;
     font-family: "SourceSansProRegular";
 }
 
@@ -1301,12 +1296,12 @@ video.menu-character3.anim {
 .pimg section.outview img{
     opacity:0;
     margin-top:100px;
-    transition: all 1.6s ease;
+    transition: all 1.6s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .pimg section.inview img{
     opacity:1;
     margin-top:0px;
-    transition: all 1.6s ease;
+    transition: all 1.6s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: .3s;
 }
 
@@ -1320,6 +1315,7 @@ video.menu-character3.anim {
 section.fullWidth {
     width: 100%;
     float: left;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 section.fullWidth .secbanner {
@@ -1348,8 +1344,8 @@ img {
     height: 1px;
 }
 .next-project span.np-but-title {
-    font-size: 30px;
-    margin: 10px 0;
+    font-size: 34px;
+    margin: 15px 0;
     display: inline-block;
 }
 
@@ -1375,7 +1371,6 @@ img {
     left: calc(50% - 52px);
     top: calc(50% - 48px);
     transition: all 200ms ease;
-    transition-delay: 100ms;
 }
 
 .next-project .right-arrow .bg {
@@ -1401,12 +1396,14 @@ img {
     left: calc(50% - 40px);
     top: calc(50% - 40px);
     transition: all 200ms ease;
+    transition-delay: 200ms;
 }
 .next-project .right-arrow {
     width: 100%;
     float: left;
     position: relative;
     margin-top: 50px;
+    margin-bottom: 130px;
 }
 .back {
     position: absolute;
