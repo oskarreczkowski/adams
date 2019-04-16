@@ -633,9 +633,10 @@ $(document).ready(function() {
         if ($('body').hasClass('working')) {
 
         } else {
-
-            viewProjectsPage();
-            document.location.hash = "projects";
+            setTimeout(function() {
+                viewProjectsPage();
+                document.location.hash = "projects";
+            }, 600);
         }
     });
 
