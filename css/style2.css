@@ -1318,6 +1318,21 @@ video.menu-character3.anim {
     margin-bottom: 50px;
 }
 
+#pop-out {
+    border-radius: 5px;
+    box-shadow: 0px 30px 70px 20px #8da0a73d;
+}
+
+#small-img {
+    max-width:500px;
+}
+
+.link {
+    color: #317bff;
+    text-decoration: none;
+}
+   
+
 /* End Portfolio Pages */
 
 section.fullWidth {
