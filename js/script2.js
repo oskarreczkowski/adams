@@ -76,6 +76,7 @@ var character1 = $('.menu-character1');
 var character2 = $('.menu-character2');
 var character3 = $('.menu-character3');
 var projects = $('.projects');
+var projectscount = 8;
 
 
 
@@ -647,7 +648,7 @@ $(document).ready(function() {
     $('.navigation-right').click(function() {
         var currentproject = $('.projects').data('currentproject');
 
-        if (currentproject >= 8) {
+        if (currentproject >= projectscount ) {
             newproject = 1;
         } else {
             newproject = currentproject + 1;
@@ -660,7 +661,7 @@ $(document).ready(function() {
         var currentproject = $('.projects').data('currentproject');
 
         if (currentproject <= 1) {
-            newproject = 8;
+            newproject = projectscount;
         } else {
             newproject = currentproject - 1;
         }
@@ -738,7 +739,7 @@ $(document).ready(function() {
 
         var currentproject = $('.projects').data('currentproject');
 
-        if (currentproject >= 8) {
+        if (currentproject >= projectscount) {
             newproject = 1;
         } else {
             newproject = currentproject + 1;
