@@ -221,6 +221,10 @@ function changeproject(pccurrent, pcnew, openProject) {
         $('.projects').data('currentproject', pcnew);
 
     } else {
+
+        if (openProject == 'open') {
+            setTimeout(viewProjectDetails, 0, ('project' + pcnew));
+        }
         var currentpc = $('.project-container[data-projectid="' + pccurrent + '"]');
         var newpc = $('.project-container[data-projectid="' + pcnew + '"]');
 
@@ -643,7 +647,7 @@ $(document).ready(function() {
     $('.navigation-right').click(function() {
         var currentproject = $('.projects').data('currentproject');
 
-        if (currentproject >= 10) {
+        if (currentproject >= 8) {
             newproject = 1;
         } else {
             newproject = currentproject + 1;
@@ -656,7 +660,7 @@ $(document).ready(function() {
         var currentproject = $('.projects').data('currentproject');
 
         if (currentproject <= 1) {
-            newproject = 10;
+            newproject = 8;
         } else {
             newproject = currentproject - 1;
         }
@@ -734,7 +738,7 @@ $(document).ready(function() {
 
         var currentproject = $('.projects').data('currentproject');
 
-        if (currentproject >= 10) {
+        if (currentproject >= 8) {
             newproject = 1;
         } else {
             newproject = currentproject + 1;
