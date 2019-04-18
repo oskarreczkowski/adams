@@ -1606,10 +1606,10 @@ img {
     margin: 0 5px;
 }
 .section-header {
-    margin: 20px 0 40px 0;
-    float: left;
+    margin: 20px auto 40px;
+    display: inline-block;
     text-align: center;
-    width: 100%;
+    width: 600px;
 }
 .section-header span {
     max-width: 510px;
