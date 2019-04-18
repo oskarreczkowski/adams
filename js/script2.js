@@ -26,8 +26,9 @@
 /*ts 2 piatek 04.12 */
 /*ts 2 poniedzialek 04.15 */
 /*ts 1 wtorek 04.16 */
+/*ts 1 czwartek 04.18 */
 
-/*total 87 - 40 = 47 */
+/*total 88 - 40 = 48 */
 
 
 
@@ -401,7 +402,7 @@ function createSlick() {
             dots: true,
             infinite: false,
             speed: 300,
-            slidesToShow: 3,
+            slidesToShow: 1,
             centerMode: true,
             variableWidth: true,
             cssEase: 'ease',
