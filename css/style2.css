@@ -1655,6 +1655,8 @@ button.slick-disabled {
 .slide .slide-desc h3{
     margin-bottom: 5px;
     margin-top: 30px;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 .slide .slide-desc span{
     max-width: 510px;
@@ -1663,8 +1665,13 @@ button.slick-disabled {
     line-height: 25px;
     margin: 0 auto 30px;
     font-family: "SourceSansProRegular";
-
+    opacity: 0;
+    transition: opacity 1s ease;
     display: inline-block;
+}
+.slick-current .slide-desc span, .slick-current .slide-desc h3 {
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 .section.carousel.withCaptions .carousel-nav {
     position: relative;
