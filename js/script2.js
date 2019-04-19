@@ -408,8 +408,8 @@ function createSlick() {
             cssEase: 'ease',
             appendArrows: $(ctmp).parent().find('.carousel-nav'),
             appendDots: $(ctmp).parent().find('.carousel-nav'),
-            prevArrow: '<button type="button" class="slick-prev"><span class="prev-ico"><</span> PREV</button>',
-            nextArrow: '<button type="button" class="slick-next"> NEXT <span class="prev-ico">></span></button>',
+            prevArrow: '<button type="button" class="slick-prev">PREV</button>',
+            nextArrow: '<button type="button" class="slick-next">NEXT</button>',
         });
     })
     $('.carousel-cont').slick('refresh');
