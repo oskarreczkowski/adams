@@ -795,7 +795,7 @@ video.menu-character3.anim {
     width: 50px;
     text-align: right;
     padding-right: 5px;
-    margin-left: 14px;
+    margin-left: 4px;
 }
 .pn-cont .pnumber.inactive {
     display: none;
@@ -1285,6 +1285,13 @@ video.menu-character3.anim {
     margin-bottom: 90px;
 }
 
+br {
+    line-height: 50px;
+}
+
+.portfolio-video {
+    margin-bottom: 40px;
+}
 
 .pimg {
     width: 100%;
@@ -1315,8 +1322,7 @@ video.menu-character3.anim {
 .pimg section.inview img{
     opacity:1;
     margin-top:0px;
-    transition: all 1.6s ease;
-    transition-delay: .3s;
+    transition: all 1.6s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .portfolio-img {
@@ -1333,18 +1339,33 @@ video.menu-character3.anim {
     max-width:500px;
 }
 
+#med-img {
+    max-width:750px;
+}
+
+.portfolio-link-label {
+    margin-bottom: 30px;
+    font-size: 26px;
+    margin-top: 50px;
+}
+
 .link {
     color: #317bff;
     text-decoration: none;
+    transition:color .5s ease;
 }
-   
+
+.link:hover {
+    color: #54a7ef;
+    transition:color .5s ease;
+}
 
 /* End Portfolio Pages */
 
 section.fullWidth {
     width: 100%;
     float: left;
-    margin-bottom: 90px;
+    margin: 80px 0 90px;
 }
 section.fullWidth .secbanner {
     background-size: cover;
