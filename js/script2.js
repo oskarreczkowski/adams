@@ -705,48 +705,51 @@ $(document).ready(function() {
         $('body').unbind('wheel');
 
 
-        $('.loading').show();
+        $('.loading').fadeIn();
         $('.loading-cont').delay(500).addClass('inview');
         
         
-        $("body").animate({
-            scrollTop: 0
-        });
-        $(activeProject).find('.pimg').delay(500).fadeOut().addClass('outview').removeClass('inview');
+        setTimeout(function() {
+            $("body").animate({
+                scrollTop: 0
+            });
+
+            $(activeProject).find('.pimg').delay(500).fadeOut().addClass('outview').removeClass('inview');
 
 
 
 
 
-        $(activeProject).addClass('inview').removeClass('outview');
+            $(activeProject).addClass('inview').removeClass('outview');
 
-        $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
+            $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
+            
+            $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
+            
+            $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
         
-        $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
-        
-        $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
-    
-        $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
+            $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
 
 
-        $('.pimg section.fade-in').removeClass('inview').addClass('outview');            
-        $('.navigation-right').removeClass('inview').addClass('outview')
-        $('.navigation-left').removeClass('inview').addClass('outview')
-        $('.projects-indicator').removeClass('inview').addClass('outview')
+            $('.pimg section.fade-in').removeClass('inview').addClass('outview');            
+            $('.navigation-right').removeClass('inview').addClass('outview')
+            $('.navigation-left').removeClass('inview').addClass('outview')
+            $('.projects-indicator').removeClass('inview').addClass('outview')
 
 
-        $(".activeProject").removeClass('activeProject');
-        $(".detailedProject").removeClass('detailedProject');
+            $(".activeProject").removeClass('activeProject');
+            $(".detailedProject").removeClass('detailedProject');
 
-        var currentproject = $('.projects').data('currentproject');
+            var currentproject = $('.projects').data('currentproject');
 
-        if (currentproject >= projectscount) {
-            newproject = 1;
-        } else {
-            newproject = currentproject + 1;
-        }
-        $('.projects').data('currentproject', newproject);
-        changeproject(currentproject, newproject, 'open');
+            if (currentproject >= projectscount) {
+                newproject = 1;
+            } else {
+                newproject = currentproject + 1;
+            }
+            $('.projects').data('currentproject', newproject);
+            changeproject(currentproject, newproject, 'open');
+        }, 500);
     });
 
 

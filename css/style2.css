@@ -2062,7 +2062,7 @@ section.skills {
     .loading-cont {
         text-align: center;
         position: relative;
-        top: calc(50% - 250px);
+        top: calc(50% - 150px);
         font-family: "LeagueSpartan";
         opacity:0;
         transition-delay: 0.5s;
