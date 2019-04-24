@@ -1101,15 +1101,6 @@ video.menu-character3.anim {
     top: calc(50% - 48px);
     transition: all 200ms ease;
 }
-
-/*
-.navigation-right:active .right-arrow .arrow {
-    width: 76px;
-    height: 76px;
-    left: 0;
-    top: calc(50% - 44px);
-    transition: all 200ms ease;
-}*/
 .navigation-right .right-arrow .bg {
     width: 84px;
     height: 84px;
@@ -1151,7 +1142,6 @@ video.menu-character3.anim {
     top:-4px;
     transition: left 200ms ease;
 }
-
 .navigation-right:hover .line-right {
     left: 168px;
     transition: left 200ms ease;
@@ -1236,7 +1226,6 @@ video.menu-character3.anim {
     top: calc(50% - 36px);
     transition: all 200ms ease;
 }
-
 .navigation-top span {
     font-family: LeagueSpartan;
     position: absolute;
@@ -1894,7 +1883,7 @@ section.skills {
     height: 200px;
 }
 .left-link {
-    width: 50%;
+    width: 45%;
     display: inline-block;
     text-align: center;
     float:  left;   
@@ -1905,6 +1894,10 @@ section.skills {
     cursor: pointer;
     z-index: 10;
 }
+
+
+
+
 
 .dl-resume .top-arrow .arrow {
     border: 5px solid black;
@@ -1926,13 +1919,6 @@ section.skills {
     height: 84px;
     left: -4px;
     top: calc(50% - 48px);
-    transition: all 200ms ease;
-}
-.dl-resume:active .top-arrow .arrow {
-    width: 76px;
-    height: 76px;
-    left: 0;
-    top: calc(50% - 44px);
     transition: all 200ms ease;
 }
 .dl-resume .top-arrow .bg {
@@ -1979,7 +1965,7 @@ section.skills {
 }
 
 .right-link {
-    width: 50%;
+    width: 45%;
     display: inline-block;
     text-align: center;
     float:  left;   
@@ -2011,13 +1997,6 @@ section.skills {
     height: 84px;
     left: -4px;
     top: calc(50% - 48px);
-    transition: all 200ms ease;
-}
-.view-lnp:active .top-arrow .arrow {
-    width: 76px;
-    height: 76px;
-    left: 0;
-    top: calc(50% - 44px);
     transition: all 200ms ease;
 }
 .view-lnp .top-arrow .bg {
