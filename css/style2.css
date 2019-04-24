@@ -1740,36 +1740,38 @@ button.slick-disabled {
 }
 
 section.aboutme {
-    margin: 30px;
+    margin: 80px 0;
+    padding: 0 22px;
 }
 section.aboutme h2.main-title {
     font-family: "LeagueSpartan";
-    font-size: 48px;
+    font-size: 45px;
+    margin-bottom: 25px;
 }
 section.aboutme .left-copy {
-    width: 50%;
+    width: 52%;
     float: left;
     padding-right: 50px;
     box-sizing: border-box;
 }
 section.aboutme .right-img {
-    width: 50%;
+    width: 42%;
     float: right;
-    padding: 0 20px;
     box-sizing: border-box;
 }
 section.aboutme .right-img img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 0 50px #cccccc;
+    box-shadow: 10px 10px 70px #cccccc;
 }
 section.aboutme .left-copy p {
     font-family: "Source Sans Pro";
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 27px;
 }
 
 .contact-but-cont {
-    margin: 0 auto;
+    margin: 15px 0 0 -5px;
     position: relative;
     display: inline-block;
     min-width: 192px;
@@ -1841,22 +1843,28 @@ section.aboutme .left-copy p {
 
 section.skills {
     display: inline-block;
-    width: 100%;
+    width: 84%;
     border-top: 5px solid #000000;
     border-bottom: 5px solid #000000;
-    margin: 80px 0;
-    padding: 40px 50px;
+    margin: 100px 0 80px 22px;
+    padding: 40px 60px;
 }
 .tskills {
     display: inline-block;
-    margin: 30px 0;
+    margin: 60px 0 0;
 }
 .tskills-title {
     font-family: "LeagueSpartan";
-    font-size: 34px;
+    font-size: 30px;
     width: 200px;
     line-height: 46px;
     float: left;
+}
+.tsname {
+    font-size: 14px;
+}
+#my-specialties {
+    margin-top:10px;
 }
 .tsicons {
     float: left;
@@ -1881,7 +1889,7 @@ section.skills {
     margin-top: 10px;
 }
 .alinks {
-    margin: 100px 0;
+    margin: 100px 0 0;
     display: block;
     height: 200px;
 }
@@ -2116,52 +2124,42 @@ section.skills {
     .resize-cont {
         text-align: center;
         position: relative;
-        top: calc(50% - 250px);
+        top: calc(50% - 214px);
         font-family: "LeagueSpartan";
     }
+    .resize-cont h2 {
+        font-size: 28px;
+    }
+    .resize-cont br {
+        line-height: 47px;
+    }
     video.res.anim {
-        max-width: 500px;
+        max-width: 432px;
     }
     img.res-arrow {
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         position: absolute;
     }
     img.res-arrow.arrow_br {
-        bottom:0;
-        right: 0;
-        animation: abr 2s ease  infinite normal ;
+        bottom: 30px;
+        right: 30px;
+        animation: abr 1.3s ease infinite normal;
     }
     img.res-arrow.arrow_bl {
-        bottom:0;
-        left: 0;
-        animation: abl 2s ease  infinite normal ;
+        bottom: 30px;
+        left: 30px;
+        animation: abl 1.3s ease infinite normal;
     }
     img.res-arrow.arrow_tl {
-        top: 0;
-        left: 0;
-        animation: atl 2s ease  infinite normal ;
+        top: 30px;
+        left: 30px;
+        animation: atl 1.3s ease infinite normal;
     }
     img.res-arrow.arrow_tr {
-        top: 0;
-        right: 0;
-        animation: atr 2s ease  infinite normal ;
-    }
-}
-
-
-@media screen and (max-width: 720px) {
-    img.res-arrow.arrow_br {
-        animation: abr 1s ease  infinite normal ;
-    }
-    img.res-arrow.arrow_bl {
-        animation: abl 1s ease  infinite normal ;
-    }
-    img.res-arrow.arrow_tl {
-        animation: atl 1s ease  infinite normal ;
-    }
-    img.res-arrow.arrow_tr {
-        animation: atr 1s ease  infinite normal ;
+        top: 30px;
+        right: 30px;
+        animation: atr 1.3s ease infinite normal;
     }
 }
 
@@ -2172,7 +2170,7 @@ section.skills {
     transform: translate(0,0) ;
   }
   50%{
-    transform: translate(75px, 75px);
+    transform: translate(55px, 55px);
   }
 
   100%{
@@ -2184,7 +2182,7 @@ section.skills {
     transform: translate(0,0) ;
   }
   50%{
-    transform: translate(-75px, 75px);
+    transform: translate(-55px, 55px);
   }
 
   100%{
@@ -2196,7 +2194,7 @@ section.skills {
     transform: translate(0,0) ;
   }
   50%{
-    transform: translate(-75px, -75px);
+    transform: translate(-55px, -55px);
   }
 
   100%{
@@ -2208,7 +2206,7 @@ section.skills {
     transform: translate(0,0) ;
   }
   50%{
-    transform: translate(75px, -75px);
+    transform: translate(55px, -55px);
   }
 
   100%{
