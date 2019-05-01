@@ -28,7 +28,11 @@
 /*ts 1 wtorek 04.16 */
 /*ts 1 czwartek 04.18 */
 
-/*total 88 - 40 = 48 */
+/*total 88 - 40 - 48 = 0 */
+
+
+/*additional*/
+/*ts 2 sroda 05.01 */
 
 
 
@@ -452,6 +456,39 @@ function fullWidth(){
     }
 
 }
+
+function hideProjectDetails() {
+
+        if ($(".detailedProject").length) {
+
+            $('.project-container').unbind('wheel');
+            var activeProjectId = $('.project-container.activeProject').data('projectid');
+            var activeProject = $('.project-container.activeProject');
+
+            $('.back').addClass('outview').removeClass('inview').fadeOut();
+
+            $(activeProject).addClass('inview').removeClass('outview');
+
+            $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
+            
+            $(activeProject).find('.pdesc').fadeIn().addClass('inview').removeClass('outview');
+            
+            $(activeProject).find('.roles').addClass('outview').removeClass('inview').fadeOut();
+        
+            $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
+
+            $(activeProject).find('.pimg').addClass('outview').removeClass('inview').fadeOut();
+
+            $('.projects-indicator').removeClass('outview').addClass('inview')  ;              
+            $('.navigation-left').removeClass('outview').addClass('inview');
+            $('.navigation-right').removeClass('outview').addClass('inview');
+
+
+            $(".activeProject").removeClass('activeProject');
+            $(".detailedProject").removeClass('detailedProject');
+
+        }
+}
 $(document).ready(function() {
 
     var angletmp = "skew(" + (angleB + 100) + "deg)";
@@ -485,9 +522,9 @@ $(document).ready(function() {
 
     pageLocal();
     fullWidth();
-    $(window).on('hashchange', function() {
+    /*$(window).on('hashchange', function() {
         pageLocal();
-    });
+    });*/
 
 
 
@@ -514,36 +551,6 @@ $(document).ready(function() {
                 viewMenu();
             }
         }
-
-        if ($(".detailedProject").length) {
-
-            $('.project-container').unbind('wheel');
-            var activeProjectId = $('.project-container.activeProject').data('projectid');
-            var activeProject = $('.project-container.activeProject');
-
-            $('.back').addClass('outview').removeClass('inview').fadeOut();
-
-            $(activeProject).addClass('inview').removeClass('outview');
-
-            $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
-            
-            $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
-            
-            $(activeProject).find('.roles').addClass('outview').removeClass('inview').delay(50000).fadeOut();
-        
-            $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
-
-            $(this).parent().find('.pimg').addClass('outview').removeClass('inview').delay(35000).fadeOut();
-
-            $('.projects-indicator').removeClass('outview').addClass('inview')  ;              
-            $('.navigation-left').removeClass('outview').addClass('inview');
-            $('.navigation-right').removeClass('outview').addClass('inview');
-
-
-            $(".activeProject").removeClass('activeProject');
-            $(".detailedProject").removeClass('detailedProject');
-
-        }
     });
 
     /* CLICK ON HOME MENU ITEM */
@@ -551,11 +558,13 @@ $(document).ready(function() {
         if ($('body').hasClass('working')) {
 
         } else {
+            hideProjectDetails()
+
             $('body').addClass('working');
             $(menubcont).data("page", "home");
             $('.navigation-right,.navigation-left').removeClass('inview').addClass('outview');
             $('.about').hide();
-
+            $('.projects-indicator').removeClass('inview').addClass('outview');
             $(pagebg).show();
             $("#menu").removeClass('is-active');
 
@@ -577,27 +586,31 @@ $(document).ready(function() {
         if ($('body').hasClass('working')) {
 
         } else {
-            $('body').addClass('working');
-            $(menubcont).data("page", "projects");
-            $('.about').hide();
+            if ( $(menubcont).data("page") == "projects") {
+                hideMenu();
+            } else {
+                $('body').addClass('working');
+                $(menubcont).data("page", "projects");
+                $('.about').hide();
 
-            changeproject(1, 1, '');
-            $('.project-container').hide();
-            $('.project-container.activeProject').hide();
-            $(pagebg).hide();
-            $("#menu").removeClass('is-active');
+                changeproject(1, 1, '');
+                $('.project-container').hide();
+                $('.project-container.activeProject').hide();
+                $(pagebg).hide();
+                $("#menu").removeClass('is-active');
 
-            hideMenu();
+                hideMenu();
 
-            $(homepage).fadeOut().removeClass('viewHome');
-            $(projects).fadeIn();
-            setTimeout(function() {
-                $('.projects-indicator').removeClass('outview').addClass('inview');
-                $('.navigation-right').removeClass('outview').addClass('inview');
-                $('.navigation-left').removeClass('outview').addClass('inview');
-                document.location.hash = "projects";
-                /*adjust delay here */
-            }, 1500);
+                $(homepage).fadeOut().removeClass('viewHome');
+                $(projects).fadeIn();
+                setTimeout(function() {
+                    $('.projects-indicator').removeClass('outview').addClass('inview');
+                    $('.navigation-right').removeClass('outview').addClass('inview');
+                    $('.navigation-left').removeClass('outview').addClass('inview');
+                    document.location.hash = "projects";
+                    /*adjust delay here */
+                }, 1500);
+            }
 
         }
     });
@@ -609,10 +622,11 @@ $(document).ready(function() {
 
         } else {
             $('body').addClass('working');
-
+            $('.projects-indicator').removeClass('inview').addClass('outview')
             $('.homepage').hide();
             $('.projects').hide();
             $('.about').show();
+
 
             $(menubcont).data("page", "about");
             $("#menu").removeClass('is-active');
