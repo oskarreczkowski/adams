@@ -549,7 +549,7 @@ video.square.anim {
     margin: 20px 0 20px 40px;
 }
 .email-info {
-    margin: 20px 0 5px 53px;
+    margin: 25px 0 5px 53px;
     font-size: 20px;
 }
 .email-info a{
@@ -1286,7 +1286,7 @@ video.menu-character3.anim {
 }
 
 br {
-    line-height: 50px;
+    line-height: 33px;
 }
 
 .portfolio-video {
