@@ -321,13 +321,22 @@ span.icon-3:after {
     border-radius: 100px;
     width: 70px;
     height: 70px;
-    background-image: url(../img/bc-ar-01.png);
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.view-more .circle-arrow-svg {
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/bc-ar-01.svg);
     background-size: 70px;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    left: 0;
-    top: calc(50% - 44px);
+    left: 8px;
+    top: calc(50% - 40px);
     cursor: pointer;
     transition: all 200ms ease;
 }
@@ -963,13 +972,22 @@ video.menu-character3.anim {
     border-radius: 100px;
     width: 76px;
     height: 76px;
-    background-image: url(../img/bc-al-01.png);
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.navigation-left .left-arrow .arrow-svg {
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-al-01.svg);
     background-size: 70px;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    left: 0;
-    top: calc(50% - 44px);
+    left: 8px;
+    top: calc(50% - 40px);
     cursor: pointer;
     transition: all 200ms ease;
 }
@@ -1077,13 +1095,22 @@ video.menu-character3.anim {
     border-radius: 100px;
     width: 76px;
     height: 76px;
-    background-image: url(../img/bc-ar-01.png);
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.navigation-right .right-arrow .arrow-svg {
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-ar-01.svg);
     background-size: 70px;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    left: 0;
-    top: calc(50% - 44px);
+    left: 8px;
+    top: calc(50% - 40px);
     cursor: pointer;
     transition: all 100ms ease;
 }
@@ -1163,13 +1190,22 @@ video.menu-character3.anim {
     border-radius: 100px;
     width: 76px;
     height: 76px;
-    background-image: url(../img/bc-top-01.png);
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.navigation-top .top-arrow .arrow-svg {
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-top-01.svg);
     background-size: 70px;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    left: 0;
-    top: calc(50% - 44px);
+    left: 8px;
+    top: calc(50% - 40px);
     cursor: pointer;
     transition: all 100ms ease;
 }
@@ -1926,13 +1962,22 @@ section.skills {
     border-radius: 100px;
     width: 76px;
     height: 76px;
-    background-image: url(../img/bc-bot-01.png);
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.dl-resume .top-arrow .arrow-svg {
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-bot-01.svg);
     background-size: 70px;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    left: 0;
-    top: calc(50% - 44px);
+    left: 8px;
+    top: calc(50% - 40px);
     cursor: pointer;
     transition: all 100ms ease;
 }
@@ -2004,13 +2049,22 @@ section.skills {
     border-radius: 100px;
     width: 76px;
     height: 76px;
-    background-image: url(../img/bc-ar-01.png);
+    position: absolute;
+    left: 0;
+    top: calc(50% - 44px);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+.view-lnp .top-arrow .arrow-svg {
+    width: 76px;
+    height: 76px;
+    background-image: url(../img/bc-ar-01.svg);
     background-size: 70px;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    left: 0;
-    top: calc(50% - 44px);
+    left: 8px;
+    top: calc(50% - 40px);
     cursor: pointer;
     transition: all 100ms ease;
 }

@@ -33,6 +33,7 @@
 
 /*additional*/
 /*ts 2 sroda 05.01 */
+/*ts 1 poniedzialek 05.06 */
 
 
 
