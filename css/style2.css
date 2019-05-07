@@ -2298,7 +2298,18 @@ section.skills {
         display: block;
         position: relative;
         z-index: 10000;
-        text-align: center;
+        width: 90%;
+        max-width: 360px;
+        margin: 0 auto;
+        left: 8px;
+        top:-30px;
+    }
+    .mobileHome img {
+        width: 100%;
+        padding-top: 28px;
+        max-width: 360px;
+        display: block;
+        margin: 0 auto;
     }
     video.homepage.anim {
         width: 100%;
@@ -2320,7 +2331,7 @@ section.skills {
         position: relative;
         top: initial;
         left: initial;
-        font-size: 28px;
+        font-size: 20px;
         letter-spacing: .3px;
         opacity: 1;
         width: 300px;
@@ -2330,22 +2341,23 @@ section.skills {
         width: 100%;
         z-index: 321;
     }
-    .title-1 {
+    .mobile-title {
         font-family: "LeagueSpartan";
         display: block;
         position: relative;
         top: initial;
         left: initial;
-        font-size: 48px;
+        font-size: 44px;
         letter-spacing: .3px;
         opacity: 1;
         width: 300px;
-        text-align: center;
+        text-align: left;
         opacity: 1;
         float: left;
         width: 100%;
         z-index: 321;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        margin-top:6px;
     }
     .container {
         top: inherit;
@@ -2358,22 +2370,26 @@ section.skills {
         position: relative;
         top: initial;
         left: initial;
-        font-size: 20px;
+        font-size: 19px;
         letter-spacing: .3px;
         opacity: 1;
-        width: 300px;
-        text-align: center;
+        text-align: left;
         opacity: 1;
         float: left;
         width: 100%;
         z-index: 321;
-        padding: 25px;
         width: 100%;
         box-sizing: border-box;
         line-height: 30px;
+        margin-bottom: 24px;
     }
-    .text-4 span.blue {
+    .mobile-link {
+        text-decoration: none;
         color: #3e91ee;
+        border-bottom: 3px solid #3e91ee
+    }
+    .text-4 br {
+        line-height: 0px;
     }
     .menu-bg {
         display: none;
