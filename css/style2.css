@@ -2180,7 +2180,7 @@ section.skills {
     .loading-cont  video.res.anim {
         max-width: 500px;
     }
-@media screen and (max-width: 1024px) {
+@media  screen and (max-width: 1024px) and (min-width: 560px)  {
     .resize {
         width: 100%;
         height: 100%;
@@ -2189,7 +2189,7 @@ section.skills {
         position: fixed;
         top: 0;
         left: 0;
-        right:0
+        right:0;
         bottom:0;
         display: block;
     }  
