@@ -721,6 +721,7 @@ $(document).ready(function() {
 
 
         $('.loading').fadeIn();
+        $('#loadinganimation')[0].play();
         $('.loading-cont').delay(500).addClass('inview');
         
         
