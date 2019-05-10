@@ -1367,6 +1367,10 @@ br {
     box-shadow: 0px 30px 70px 20px #8da0a73d;
 }
 
+#tall-carousel-img {
+    max-height: 520px;
+}
+
 #small-img {
     max-width:500px;
 }
