@@ -565,6 +565,11 @@ video.square.anim {
 .email-info a{
     color:#317bff;
     text-decoration: none;
+    transition: all .5s ease;
+}
+.email-info a:hover{
+    color:#579fff;
+    transition: all .5s ease;
 }
 
 
@@ -1318,7 +1323,7 @@ video.menu-character3.anim {
 }
 
 br {
-    line-height: 33px;
+    line-height: 40px;
 }
 
 .portfolio-video {
@@ -1618,8 +1623,19 @@ img {
     text-align: center;
     margin: 0;
 }
-
-
+.underline-link {
+    font-family: "LeagueSpartan";
+    font-size: 22px;
+    text-decoration: none;
+    color: #317bff;
+    border-bottom: 4px solid #317bff;
+    transition: all .3s;
+}
+.underline-link:hover {
+    color: #579fff;
+    border-bottom: 4px solid #579fff;
+    transition: all .3s;
+}
 .about {
     display: none;
     color: #000000;
@@ -1746,7 +1762,7 @@ button.slick-prev.slick-arrow {
     outline: none;
     transition: all .3s ease;
     background-image: url(../img/carousel-arrow-left.png);
-    background-position: 3px 6px;
+    background-position: 3px 5px;
     background-repeat: no-repeat;
     background-size: 10px 15px;
 }
@@ -1762,7 +1778,7 @@ button.slick-next.slick-arrow {
     outline: none;
     transition: all .3s ease;
     background-image: url(../img/carousel-arrow-right.png);
-    background-position: right 5px top 5px;
+    background-position: right 7px top 5px;
     background-repeat: no-repeat;
     background-size: 10px 15px;
 }
@@ -1784,7 +1800,7 @@ button.slick-disabled {
     font-size: 14px;
     color: #8b9296;
     line-height: 25px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     font-family: "SourceSansProRegular";
     opacity: 0;
     transition: opacity 1s ease;
@@ -1809,17 +1825,20 @@ section.aboutme h2.main-title {
     font-family: "LeagueSpartan";
     font-size: 45px;
     margin-bottom: 25px;
+    margin-top: 30px;
 }
 section.aboutme .left-copy {
     width: 52%;
     float: left;
     padding-right: 50px;
+    padding-left: 28px;
     box-sizing: border-box;
 }
 section.aboutme .right-img {
     width: 42%;
     float: right;
     box-sizing: border-box;
+    margin-right: 22px;
 }
 section.aboutme .right-img img {
     width: 100%;
@@ -1905,10 +1924,10 @@ section.aboutme .left-copy p {
 
 section.skills {
     display: inline-block;
-    width: 84%;
+    width: 79%;
     border-top: 5px solid #000000;
     border-bottom: 5px solid #000000;
-    margin: 100px 0 80px 22px;
+    margin: 100px 0 80px 50px;
     padding: 40px 60px;
 }
 .tskills {
@@ -2390,8 +2409,14 @@ section.skills {
     }
     .mobile-link {
         text-decoration: none;
-        color: #3e91ee;
-        border-bottom: 3px solid #3e91ee
+        color: #317bff;
+        border-bottom: 3px solid #317bff;
+        transition: all .3s;
+    }
+    .mobile-link:hover {
+        color: #579fff;
+        border-bottom: 3px solid #579fff;
+        transition: all .3s;
     }
     .text-4 br {
         line-height: 0px;

@@ -120,7 +120,7 @@ function hideMenu() {
         $('.menu-wrapper').fadeOut();
         $('.menu-bg').removeClass('showmenu');
         /* DELAY THE DIAGONAL LINE ANIMATION in miliseconds*/
-    }, 1000);
+    }, 800);
     $('body').removeClass('working');
 }
 
