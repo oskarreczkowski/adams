@@ -264,12 +264,14 @@ function changeproject(pccurrent, pcnew, openProject) {
             "display": "block",
             ease: Expo.easeInOut,
         });
+
     }
 
     updatenumber(pcnew);
     $('.indicator.active').removeClass('active');
     $('.indicator[data-projectid="' + pcnew + '"]').addClass('active');
     $('.projects').data('currentproject', pcnew);
+    $('#loadinganimation')[0].load();
 }
 
 function updatenumber(newNumber) {

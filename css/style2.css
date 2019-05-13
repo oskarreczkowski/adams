@@ -2189,10 +2189,14 @@ section.skills {
         opacity:0;
         transition-delay: 0.5s;
         transition: all 1s ease;
+        height: 300px;
     }
     .loading-cont h2{
         font-size: 36px;
         margin-top: 20px;
+        position: absolute;
+        bottom: -25px;
+        width: calc(100%);
     }
     .loading-cont.inview {
         opacity: 1;
