@@ -721,7 +721,12 @@ $(document).ready(function() {
 
 
         $('.loading').fadeIn();
-        $('#loadinganimation')[0].play();
+        //$('#loadinganimation')[0].play();
+
+        setTimeout(function() {
+            $('#loadinganimation')[0].play();
+        }, 1000);
+
         $('.loading-cont').delay(500).addClass('inview');
         
         
