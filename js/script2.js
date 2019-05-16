@@ -362,7 +362,7 @@ function viewProjectDetails(aProjectId) {
 
         $('.loading-cont').removeClass('inview');
         $('.loading').delay(1000).fadeOut();
-    }, 2000); 
+    }, 2400); 
 }
 
 function goBack(){

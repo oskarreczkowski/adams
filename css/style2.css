@@ -24,6 +24,11 @@ body {
   src: url(../fonts/SourceSansPro-Regular.ttf);
 }
 
+@font-face {
+  font-family: SourceSansProBold;
+  src: url(../fonts/SourceSansPro-Bold.ttf);
+}
+
 .homepage {
     display:none;
     z-index: 2;
@@ -1312,6 +1317,18 @@ video.menu-character3.anim {
     line-height: 26px;
     margin: 18px auto 60px;
     font-family: "SourceSansProRegular";
+}
+
+.text-link {
+    color: #317bff;
+    font-family: "SourceSansProBold";
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.text-link:hover {
+    color: #54a7ef;
+    transition: color .3s;
 }
 
 #intro-header {
