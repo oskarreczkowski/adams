@@ -2334,6 +2334,52 @@ section.skills {
     display: none;
 }
 
+@media screen and (max-width:1250px) {
+    .title-1 {
+        font-size:68px;
+    }
+    .text-1 {
+        font-size:26px;
+    }
+    .viewHome .text-1 {
+        font-size: 26px;
+        top: 148px;
+    }
+    .text-2 {
+        font-size: 22px;
+    }
+    .viewHome .text-2 {
+        top: 512px;
+    }
+    .homepage-animation {
+        top: 306px;
+    }
+    span.icon-1:after {
+        background-size: auto 33px;
+    }
+    span.icon-2:after {
+        background-size: auto 33px;
+    }
+    span.icon-3:after {
+        background-size: auto 33px;
+    }
+    .viewHome .view-more {
+        top: 604px;
+    }
+    .view-more {
+        font-size: 23px;
+    }
+    .homepage {
+        top: -20px;
+    }
+}
+
+@media screen and (max-width:1120px) {
+    video.homepage.anim {
+        width:94%;
+    }
+}
+
 @media screen and (max-width: 560px) {
     .homepage.viewHome, .projects, .about, .resize, .mb-cont.viewMenu {
         display: none !important;
