@@ -1859,7 +1859,7 @@ section.aboutme .right-img img {
     box-shadow: 10px 10px 70px #cccccc;
 }
 section.aboutme .left-copy p {
-    font-family: "Source Sans Pro";
+    font-family: SourceSansProRegular;
     font-size: 16px;
     line-height: 27px;
 }
