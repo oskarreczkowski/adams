@@ -2454,7 +2454,7 @@ section.skills {
         left: 6%;
     }
     .back {
-        right: -5px;
+        right: 1px;
     }
 }
 
@@ -2682,6 +2682,9 @@ section.skills {
 @media screen and (max-height: 720px)  {
     .viewMenu.mb-cont {
         top: 14%;
+    }
+    .back.inview {
+        top: 116px;
     }
     .title-1 {
         font-size:64px;
