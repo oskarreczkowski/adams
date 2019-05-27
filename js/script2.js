@@ -34,6 +34,9 @@
 /*additional*/
 /*ts 2 sroda 05.01 */
 /*ts 1 poniedzialek 05.06 */
+/*ts 1 poniedzialek 05.13 */
+/*ts 1 niedziela 05.26 */
+/*ts 4 poniedzialek 05.27 */
 
 
 
