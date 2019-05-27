@@ -815,7 +815,7 @@ video.menu-character3.anim {
 }
 
 .project-container.detailedProject {
-    top: 60px;
+    top: 40px;
     transition-delay: .7s;
 }
 
@@ -1831,7 +1831,7 @@ button.slick-disabled {
 }
 
 section.aboutme {
-    margin: 80px 0;
+    margin: 110px 0;
     padding: 0 22px;
 }
 section.aboutme h2.main-title {
@@ -2292,6 +2292,9 @@ section.skills {
     .ptitle {
         font-size: 35px;;
     }
+    .project-container.detailedProject {
+        top: 60px;
+    }
 
 }
 
@@ -2456,6 +2459,14 @@ section.skills {
     }
     .back {
         right: 1px;
+    }
+    section.aboutme .left-copy {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    section.aboutme .right-img {
+        margin-right: 40px;
+        margin-top: 15px;
     }
 }
 
