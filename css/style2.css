@@ -9,7 +9,7 @@ body, html {
     width: 100%;
     overflow: hidden;
 }
-body.wscroll {
+body {
     overflow-y: scroll;
 }
 
@@ -505,7 +505,8 @@ span.icon-3:after {
     transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07); /* custom */
     background: url(../img/border.png);
     background-size: 3000px 1000px;
-    background-position: right;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
 .menu-bg.showmenu {
