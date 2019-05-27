@@ -531,7 +531,7 @@ video.square.anim {
     width: 430px;
     text-align: left;
     height: 600px;
-    left: calc(50% - 226px);
+    left: calc(50% - 206px);
     top: calc(50% - 320px);
     font-family: "LeagueSpartan";
     display: none;
@@ -673,7 +673,7 @@ video.menu-character3.anim {
 }
 
 .menu-wrapper.showmenu {
-    top: calc(50% - 240px);
+    top: calc(50% - 230px);
     transition: top 0s ease;
 }
 .menu-wrapper .mitem{
@@ -815,7 +815,7 @@ video.menu-character3.anim {
 }
 
 .project-container.detailedProject {
-    top: 40px;
+    top: 60px;
     transition-delay: .7s;
 }
 
@@ -2290,8 +2290,9 @@ section.skills {
         top: 580px;
     }
     .ptitle {
-        font-size: 37px;
+        font-size: 35px;;
     }
+
 }
 
 @media  screen and (max-height: 620px) {
@@ -2684,7 +2685,7 @@ section.skills {
         top: 14%;
     }
     .back.inview {
-        top: 116px;
+        top: 121px;
     }
     .title-1 {
         font-size:64px;
@@ -2724,7 +2725,7 @@ section.skills {
         top: -13px;
     }
     video.homepage.anim {
-        width:92%;
-        top: -27px;
+        width:90%;
+        top: -22px;
     }
 }
