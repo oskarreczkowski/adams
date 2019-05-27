@@ -9,8 +9,7 @@ body, html {
     width: 100%;
     overflow: hidden;
 }
-body {
-    
+body.wscroll {
     overflow-y: scroll;
 }
 
@@ -146,11 +145,17 @@ span.icon-3:after {
     z-index: 102;
     opacity: 0;
     display: none;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 
 .viewMenu.mb-cont { 
     opacity: 1;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     top:40px;
     transition-delay: 1.2s;
@@ -167,16 +172,25 @@ span.icon-3:after {
     font-size: 22px;
     letter-spacing: 1px;
     opacity: 1;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 1.6s;
 }
 .mb-cont.is-active:after {
     opacity: 0;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 1s;
 }
 
 .mb-cont #menu {
+    -webkit-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
     /*transition-delay: 100ms;*/
     position: relative;
@@ -190,10 +204,16 @@ span.icon-3:after {
     border: 5px solid #000000;
     padding: 10px 10px;
     opacity: 1;
+    -webkit-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
 }
 .mb-cont:hover #menu {
     padding: 16px 16px;
+    -webkit-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
     top: -6px;
     left: -6px;
@@ -212,11 +232,17 @@ span.icon-3:after {
     background: -webkit-linear-gradient(left, #ffd673 0%,#ff9945 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #ffd673 0%,#ff9945 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd673', endColorstr='#ff9945',GradientType=1 ); /* IE6-9 */
+    -webkit-transition: all 200ms cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 200ms cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 200ms cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 200ms cubic-bezier(0.75, 0, 0.25, 1);
 }
 .mb-cont:hover .mb-bg {
     width: 70px;
     height: 74px;
+    -webkit-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
     top: 6px;
     left: 6px;
@@ -243,11 +269,17 @@ span.icon-3:after {
     width: 300px;
     text-align: center;
     opacity: 0;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .viewHome .text-1 {
     top: 142px;
     opacity: 1;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 0.3s;
 }
@@ -261,11 +293,17 @@ span.icon-3:after {
     width: 600px;
     text-align: center;
     opacity: 0;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .viewHome .title-1 {
     top: 195px;
     opacity: 1;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     /*transition-delay: 0.4s;*/
 }
@@ -279,11 +317,17 @@ span.icon-3:after {
     text-align: center;
     width: 700px;
     opacity: 0;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .viewHome .text-2 {
     top: 515px;
     opacity: 1;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 0.3s;
 }
@@ -301,11 +345,17 @@ span.icon-3:after {
     cursor: pointer;
     text-align: center;
     opacity: 0;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .viewHome .view-more {
     top: 620px;
     opacity: 1;
+    -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 0.6s;
 }
@@ -330,6 +380,9 @@ span.icon-3:after {
     left: 0;
     top: calc(50% - 44px);
     cursor: pointer;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
     transition: all 150ms ease;
 }
 .view-more .circle-arrow-svg {
@@ -343,6 +396,9 @@ span.icon-3:after {
     left: 7px;
     top: calc(50% - 40px);
     cursor: pointer;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
     transition: all 150ms ease;
 }
 .view-more .ca-bg{
@@ -359,6 +415,9 @@ span.icon-3:after {
     background: -webkit-linear-gradient(-45deg, #39d1ff 0%,#317bff 100%);
     background: linear-gradient(135deg, #39d1ff 0%,#317bff 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39d1ff', endColorstr='#317bff',GradientType=1 );
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
     border-radius: 100px;
     transition-delay: 150ms;
@@ -367,6 +426,9 @@ span.icon-3:after {
 .view-more:hover .circle-arrow {
     width: 78px;
     height: 78px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 220ms ease;
     left: -4px;
     top: calc(50% - 48px);
@@ -374,6 +436,9 @@ span.icon-3:after {
 .view-more:hover .ca-bg {
     width: 86px;
     height: 86px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
     left: 6px;
     top: calc(50% - 40px);
@@ -390,6 +455,9 @@ span.icon-3:after {
 .view-more:active .ca-bg {
     width: 80px;
     height: 80px;
+    -webkit-transition: all 80ms ease;
+    -moz-transition: all 80ms ease;
+    -o-transition: all 80ms ease;
     transition: all 80ms ease;
     left: 8px;
     top: calc(50% - 36px);
@@ -409,40 +477,35 @@ span.icon-3:after {
 }
 .menu-bg {
     position: fixed;
-    background: #ffffff;
+    /*background: #ffffff;
     border-right: 16px solid #000000;
     box-shadow: 0 0 400px #00000061;
-    transform: skew(-45deg);
+    transform: translate3d(0,0,0) skew(-45deg);*/
     top: 0;
 
-    left: -300%;
+    left: calc(-200%);
     width: 200%;
     height: 100%;
     display: block;
     z-index: 100;
     /*opacity: 0;*/
     -webkit-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07);
-    -moz-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07);
+    -moz-transition: left 1.2s ease;
     -o-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07); 
     transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07); /* custom */
-
-    -webkit-transition-timing-function: cubic-bezier(0.11, 0.71, 0.81,-0.07); 
-    -moz-transition-timing-function: cubic-bezier(0.11, 0.71, 0.81,-0.07); 
-    -o-transition-timing-function: cubic-bezier(0.11, 0.71, 0.81,-0.07); 
-    transition-timing-function: cubic-bezier(0.11, 0.71, 0.81,-0.07); /* custom */
+    background: url(../img/border.png);
+    background-size: 100% 100%;
+    background-position: right;
 }
 
 .menu-bg.showmenu {
-    left: -50% !important;
+    left: calc(0%) !important;
+    transform: translate3d(0,0,0);
     -webkit-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07);
-    -moz-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07);
+    -moz-transition: left 1.2s ease;
     -o-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07); 
     transition: left 1.2s cubic-bezier(0.11, 0.71, 0.81,-0.07); /* custom */
 
-    -webkit-transition-timing-function: cubic-bezier(0.11, 0.71, 0.81,-0.07); 
-    -moz-transition-timing-function: cubic-bezier(0.11, 0.71, 0.81,-0.07); 
-    -o-transition-timing-function: cubic-bezier(0.11, 0.71, 0.81,-0.07); 
-    transition-timing-function: cubic-bezier(0.11, 0.71, 0.81,-0.07); /* custom */
 }
 .orange-circle {
     display: block;
@@ -2017,6 +2080,9 @@ section.skills {
     left: 0;
     top: calc(50% - 44px);
     cursor: pointer;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
     transition: all 150ms ease;
 }
 .dl-resume .top-arrow .arrow-svg {
@@ -2030,6 +2096,9 @@ section.skills {
     left: 8px;
     top: calc(50% - 41px);
     cursor: pointer;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
     transition: all 150ms ease;
 }
 .dl-resume:hover .top-arrow .arrow {
@@ -2335,6 +2404,7 @@ section.skills {
 }
 
 @media screen and (max-width: 560px) {
+    img, video {display:none !important;}
     .homepage.viewHome, .projects, .about, .resize, .mb-cont.viewMenu {
         display: none !important;
     }    
@@ -2351,7 +2421,7 @@ section.skills {
         width: 100%;
         padding-top: 22px;
         max-width: 360px;
-        display: block;
+        display: block !important;
         margin: 0 auto;
     }
     video.homepage.anim {
