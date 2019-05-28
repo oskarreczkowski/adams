@@ -13,21 +13,6 @@ body {
     overflow-y: scroll;
 }
 
-@font-face {
-  font-family: LeagueSpartan;
-  src: url(../fonts/LeagueSpartan-Bold.otf);
-}
-
-@font-face {
-  font-family: SourceSansProRegular;
-  src: url(../fonts/SourceSansPro-Regular.ttf);
-}
-
-@font-face {
-  font-family: SourceSansProBold;
-  src: url(../fonts/SourceSansPro-Bold.ttf);
-}
-
 .homepage {
     display:none;
     z-index: 2;
@@ -497,9 +482,9 @@ span.icon-3:after {
     -moz-transition: left 1.2s ease;
     -o-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
     transition: left 1.2s cubic-bezier(0.13, 0.78, 0.82, 0); /* custom */
-    background: url(../img/border2.png);
-    background-size: 2000px 1000px;
-    background-position: left;
+    background: url(../img/border5.png);
+    background-size: 3870px 1200px;
+    background-position: right 0;
     background-repeat: no-repeat;
 }
 .menu-bg.showmenu {
@@ -1360,7 +1345,7 @@ video.menu-character3.anim {
 
 @media screen and (min-width: 1350px) {
     .menu-bg {
-        position: fixed;
+        /*position: fixed;
         top: 0;
         left: calc(-200%);
         width: 200%;
@@ -1370,26 +1355,19 @@ video.menu-character3.anim {
         -webkit-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.83, 0.04);
         -moz-transition: left 1.2s ease;
         -o-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
-        transition: left 1.2s cubic-bezier(0.13, 0.78, 0.82, 0); /* custom */
+        transition: left 1.2s cubic-bezier(0.13, 0.78, 0.82, 0); 
         background: url(../img/border3.png);
         background-size: 2920px 1390px;
         background-position: left;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat;*/
     }
     .menu-bg.showmenu {
-        left: calc(0%) !important;
-        transform: translate3d(0,0,0);
-        -webkit-transition: left 1.4s cubic-bezier(0.12, 0.63, 0.85, -0.01);
-        -moz-transition: left 1.4s ease;
-        -o-transition: left 1.4s cubic-bezier(0.12, 0.63, 0.85, -0.01); 
-        transition: left 1.4s cubic-bezier(0.12, 0.63, 0.85, -0.01);
-        transition-delay: .2s;
     }
 }
 
 @media screen and (min-width: 1800px) {
     .menu-bg {
-        position: fixed;
+        /*position: fixed;
         top: 0;
         left: calc(-200% + 400px);
         width: 200%;
@@ -1399,20 +1377,13 @@ video.menu-character3.anim {
         -webkit-transition: left 1.4s cubic-bezier(0.11, 0.71, 0.83, 0.04);
         -moz-transition: left 1.4s ease;
         -o-transition: left 1.4s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
-        transition: left 1.4s cubic-bezier(0.13, 0.78, 0.82, 0); /* custom */
+        transition: left 1.4s cubic-bezier(0.13, 0.78, 0.82, 0);
         background: url(../img/border4.png);
         background-size: 2000px 1000px;
         background-position: left;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat;*/
     }
     .menu-bg.showmenu {
-        left: calc(0% + 500px) !important;
-        transform: translate3d(0,0,0);
-        -webkit-transition: left 1.4s cubic-bezier(0.13, 0.78, 0.82, 0);
-        -moz-transition: left 1.4s ease;
-        -o-transition: left 1.4s cubic-bezier(0.13, 0.78, 0.82, 0); 
-        transition: left 1.4s cubic-bezier(0.13, 0.78, 0.82, 0);
-        transition-delay: .05s;
     }
 }
 

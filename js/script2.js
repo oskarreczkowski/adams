@@ -102,9 +102,9 @@ function set_src() {
   }
 }
 
-   set_src();
+  // set_src();
 $(document).ready(function(){
-   set_src();
+   //set_src();
 
    $(window).resize(function() {
      set_src();
@@ -469,6 +469,10 @@ function pageLocal(){
 
         $('.projects').fadeOut();
         $('.about').fadeOut();
+        var video = document.getElementById("homeMainVid");
+
+
+
 
         var window_width = $(window).width();
         if (window_width < 560) {
@@ -479,12 +483,17 @@ function pageLocal(){
                 $('body').removeClass('working').removeClass('wscroll');
             }, 2500);
         } else {
-            setTimeout(function() {
-                $('.loading').fadeOut();
-                $(homepage).fadeIn('slow').addClass('viewHome');
-                $(menubcont).fadeIn().addClass('viewMenu');
-                $('body').removeClass('working').removeClass('wscroll');
-            }, 1500);
+           video.addEventListener('loadeddata', function() {
+               // Video is loaded and can be played
+                set_src();
+                console.log('done');
+                setTimeout(function() {
+                    $('.loading').fadeOut();
+                    $(homepage).fadeIn('slow').addClass('viewHome');
+                    $(menubcont).fadeIn().addClass('viewMenu');
+                    $('body').removeClass('working').removeClass('wscroll');
+                }, 2000);
+            }, false);
         }
         $(menubcont).fadeIn().addClass('viewMenu');
     }
@@ -541,6 +550,9 @@ function hideProjectDetails() {
         }
 }
 $(document).ready(function() {
+
+
+
 
     //var angletmp = "translate3d(0,0,0) skew(" + (angleB + 100) + "deg)";
     var angletmp = "   skew(135deg)";
