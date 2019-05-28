@@ -2613,20 +2613,6 @@ section.skills {
 }
 
 @media screen and (max-width: 560px) {
-    .page-bg {
-        display: none;
-    }
-    .back {
-        display: none !important;
-    }
-    .loading { 
-    }
-    .menu-wrapper {
-        display: none !important;
-    }
-    .mb-cont {
-        display: none !important;
-    }
     img, video {display:none !important;}
     .homepage.viewHome, .projects, .about, .resize, .mb-cont.viewMenu .menu-bg{
         display: none !important;
