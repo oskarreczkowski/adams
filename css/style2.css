@@ -2614,7 +2614,7 @@ section.skills {
 
 @media screen and (max-width: 560px) {
     img, video {display:none !important;}
-    .homepage.viewHome, .projects, .about, .resize, .mb-cont.viewMenu {
+    .homepage.viewHome, .projects, .about, .resize, .mb-cont.viewMenu .menu-bg{
         display: none !important;
     }    
     .mobileHome {
