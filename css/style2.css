@@ -497,10 +497,10 @@ span.icon-3:after {
     -moz-transition: left 1.2s ease;
     -o-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
     transition: left 1.2s cubic-bezier(0.13, 0.78, 0.82, 0); /* custom */
-    /*background: url(../img/border2.png);
+    background: url(../img/border2.png);
     background-size: 2000px 1000px;
     background-position: left;
-    background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
 }
 .menu-bg.showmenu {
     left: calc(0%) !important;
@@ -1371,10 +1371,10 @@ video.menu-character3.anim {
         -moz-transition: left 1.2s ease;
         -o-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
         transition: left 1.2s cubic-bezier(0.13, 0.78, 0.82, 0); /* custom */
-        /*background: url(../img/border3.png);
+        background: url(../img/border3.png);
         background-size: 2920px 1390px;
         background-position: left;
-        background-repeat: no-repeat;*/
+        background-repeat: no-repeat;
     }
     .menu-bg.showmenu {
         left: calc(0%) !important;
@@ -1400,10 +1400,10 @@ video.menu-character3.anim {
         -moz-transition: left 1.4s ease;
         -o-transition: left 1.4s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
         transition: left 1.4s cubic-bezier(0.13, 0.78, 0.82, 0); /* custom */
-        /*ackground: url(../img/border4.png);
+        background: url(../img/border4.png);
         background-size: 2000px 1000px;
         background-position: left;
-        background-repeat: no-repeat;*/
+        background-repeat: no-repeat;
     }
     .menu-bg.showmenu {
         left: calc(0% + 500px) !important;
