@@ -37,6 +37,8 @@
 /*ts 1 poniedzialek 05.13 */
 /*ts 1 niedziela 05.26 */
 /*ts 4 poniedzialek 05.27 */
+/*ts 2 wtorek 05.28 */
+/*ts 4 sroda 05.29 */
 
 
 
@@ -239,7 +241,7 @@ function bindNextProject() {
 function viewProjectsPage() {
     $(menubcont).fadeIn().addClass('viewMenu');
 
-            $('.loading').fadeOut();
+    $('.loading').fadeOut();
     $('body').addClass('working').removeClass('wscroll');
     $(menubcont).data("page", "projects");
 
@@ -273,13 +275,46 @@ function viewProjectsPage() {
 
 
 function changeproject(pccurrent, pcnew, openProject) {
-    if (pcnew > pccurrent) {
-        var currentpc = $('.project-container[data-projectid="' + pccurrent + '"]');
-        var newpc = $('.project-container[data-projectid="' + pcnew + '"]');
+    
+    var currentpc = $('.project-container[data-projectid="' + pccurrent + '"]');
+    var newpc = $('.project-container[data-projectid="' + pcnew + '"]');
+
+    /*if (pcnew == pccurrent) {
+        $(currentpc).show().css({
+            left: "0",
+            opacity: 1,
+            'display':'block'
+          });
+
+    } else
+    */
+     if (pcnew > pccurrent) {
 
         if (openProject == 'open') {
             setTimeout(viewProjectDetails, 0, ('project' + pcnew));
         }
+
+/*
+        $(newpc).hide().css({
+            left: "400px",
+            'display':'none'
+          });
+
+
+        $(newpc).show().animate({
+            opacity: 1,
+            left: "0"
+          },  500, "easeInOutCubic" , function() {
+            // Animation complete.
+          });
+        $(currentpc).animate({
+            opacity:0,
+            left: "-400px"
+          },  500, "easeInOutCubic" , function() {
+            $(currentpc).hide();
+          });
+*/
+
         TweenLite.to(newpc, 0, {
             x: 400,
             y: 0,
@@ -321,8 +356,30 @@ function changeproject(pccurrent, pcnew, openProject) {
         if (openProject == 'open') {
             setTimeout(viewProjectDetails, 0, ('project' + pcnew));
         }
-        var currentpc = $('.project-container[data-projectid="' + pccurrent + '"]');
-        var newpc = $('.project-container[data-projectid="' + pcnew + '"]');
+
+
+/*
+
+        $(newpc).hide().css({
+            left: "-400px",
+            'display':'none'
+          });
+
+
+        $(newpc).show().animate({
+            opacity: 1,
+            left: "0"
+          },  500, "easeInOutCubic" , function() {
+            // Animation complete.
+          });
+        $(currentpc).animate({
+            opacity:0,
+            left: "400px"
+          },  500, "easeInOutCubic" , function() {
+            $(currentpc).hide();
+          }); */
+
+
 
         TweenLite.to(newpc, 0, {
             x: -400,
@@ -650,8 +707,10 @@ $(document).ready(function() {
     /*END Adjust the diagonal line angle when resize */
 
 
+        $('.loading').fadeIn();
 
     $(window).bind('load', function(){
+
         pageLocal();
         $( "#project1 .pimg" ).load( "project1.html" , function() {
             //console.log( "Load was performed." );
@@ -680,6 +739,8 @@ $(document).ready(function() {
 
         setTimeout(function() {
             bindNextProject()
+
+            fullWidth();
         }, 1500);
     });
 
