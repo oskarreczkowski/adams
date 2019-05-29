@@ -173,7 +173,69 @@ function viewAboutPage() {
     document.location.hash = "about";
 
 }
+function bindNextProject() {    
+    /* NEXT PROJECT */
+    $('.next-project').click(function() {
+        var activeProjectId = $('.project-container.activeProject').data('projectid');
+        var activeProject = $('.project-container.activeProject');
 
+        $('body').unbind('wheel');
+
+
+        $('.loading').fadeIn();
+        //$('#loadinganimation')[0].play();
+
+        setTimeout(function() {
+            $('#loadinganimation')[0].play();
+        }, 1000);
+
+        $('.loading-cont').delay(500).addClass('inview');
+        
+        
+        setTimeout(function() {
+            $("body").animate({
+                scrollTop: 0
+            });
+
+            $(activeProject).find('.pimg').delay(500).fadeOut().addClass('outview').removeClass('inview');
+
+
+
+
+
+            $(activeProject).addClass('inview').removeClass('outview');
+
+            $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
+            
+            $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
+            
+            $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
+        
+            $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
+
+
+            $('.pimg section.fade-in').removeClass('inview').addClass('outview');            
+            $('.navigation-right').removeClass('inview').addClass('outview')
+            $('.navigation-left').removeClass('inview').addClass('outview')
+            $('.projects-indicator').removeClass('inview').addClass('outview')
+
+
+            $(".activeProject").removeClass('activeProject');
+            $(".detailedProject").removeClass('detailedProject');
+
+            var currentproject = $('.projects').data('currentproject');
+
+            if (currentproject >= projectscount) {
+                newproject = 1;
+            } else {
+                newproject = currentproject + 1;
+            }
+            $('.projects').data('currentproject', newproject);
+            changeproject(currentproject, newproject, 'open');
+        }, 500);
+    });
+
+}
 function viewProjectsPage() {
     $(menubcont).fadeIn().addClass('viewMenu');
 
@@ -547,6 +609,10 @@ function hideProjectDetails() {
 
         }
 }
+
+
+
+
 $(document).ready(function() {
 
 
@@ -583,12 +649,44 @@ $(document).ready(function() {
     });
     /*END Adjust the diagonal line angle when resize */
 
-    pageLocal();
+
+
+    $(window).bind('load', function(){
+        pageLocal();
+        $( "#project1 .pimg" ).load( "project1.html" , function() {
+            //console.log( "Load was performed." );
+        });
+        $( "#project2 .pimg" ).load( "project2.html" , function() {
+            //console.log( "Load was performed." );
+        });
+        $( "#project3 .pimg" ).load( "project3.html" , function() {
+            //console.log( "Load was performed." );
+        });
+        $( "#project4 .pimg" ).load( "project4.html" , function() {
+            //console.log( "Load was performed." );
+        });
+        $( "#project5 .pimg" ).load( "project5.html" , function() {
+            //console.log( "Load was performed." );
+        });
+        $( "#project6 .pimg" ).load( "project6.html" , function() {
+            //console.log( "Load was performed." );
+        });
+        $( "#project7 .pimg" ).load( "project7.html" , function() {
+            //console.log( "Load was performed." );
+        });
+        $( "#project8 .pimg" ).load( "project8.html" , function() {
+            //console.log( "Load was performed." );
+        });
+
+        setTimeout(function() {
+            bindNextProject()
+        }, 1500);
+    });
+
     fullWidth();
     /*$(window).on('hashchange', function() {
         pageLocal();
     });*/
-
 
 
     /*  MENU CLICK */
@@ -717,6 +815,8 @@ $(document).ready(function() {
         if ($('body').hasClass('working')) {
 
         } else {
+
+
             setTimeout(function() {
                 viewProjectsPage();
                 document.location.hash = "projects";
@@ -775,67 +875,6 @@ $(document).ready(function() {
 
 
     });
-    /* NEXT PROJECT */
-    $('.next-project').click(function() {
-        var activeProjectId = $('.project-container.activeProject').data('projectid');
-        var activeProject = $('.project-container.activeProject');
-
-        $('body').unbind('wheel');
-
-
-        $('.loading').fadeIn();
-        //$('#loadinganimation')[0].play();
-
-        setTimeout(function() {
-            $('#loadinganimation')[0].play();
-        }, 1000);
-
-        $('.loading-cont').delay(500).addClass('inview');
-        
-        
-        setTimeout(function() {
-            $("body").animate({
-                scrollTop: 0
-            });
-
-            $(activeProject).find('.pimg').delay(500).fadeOut().addClass('outview').removeClass('inview');
-
-
-
-
-
-            $(activeProject).addClass('inview').removeClass('outview');
-
-            $(activeProject).find('.vbc').fadeIn().addClass('inview').removeClass('outview');
-            
-            $(activeProject).find('.pdesc').fadeIn().delay(200).addClass('inview').removeClass('outview');
-            
-            $(activeProject).find('.roles').fadeOut().delay(500).addClass('outview').removeClass('inview');
-        
-            $('.projects-indicator').fadeIn().addClass('inview').removeClass('outview');
-
-
-            $('.pimg section.fade-in').removeClass('inview').addClass('outview');            
-            $('.navigation-right').removeClass('inview').addClass('outview')
-            $('.navigation-left').removeClass('inview').addClass('outview')
-            $('.projects-indicator').removeClass('inview').addClass('outview')
-
-
-            $(".activeProject").removeClass('activeProject');
-            $(".detailedProject").removeClass('detailedProject');
-
-            var currentproject = $('.projects').data('currentproject');
-
-            if (currentproject >= projectscount) {
-                newproject = 1;
-            } else {
-                newproject = currentproject + 1;
-            }
-            $('.projects').data('currentproject', newproject);
-            changeproject(currentproject, newproject, 'open');
-        }, 500);
-    });
-
 
 
     /* END ON LOAD */

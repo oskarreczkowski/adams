@@ -890,7 +890,7 @@ video.menu-character3.anim {
     margin: 0 auto;
     font-size: 15px;
     font-weight: 200;
-    font-family: SourceSansProRegular;
+    font-family: 'SourceSansProRegular';
     line-height: 24px;
     margin-bottom: 32px;
     top: 290px;
@@ -1957,7 +1957,7 @@ section.aboutme .right-img img {
     box-shadow: 10px 10px 70px #cccccc;
 }
 section.aboutme .left-copy p {
-    font-family: SourceSansProRegular;
+    font-family: 'SourceSansProRegular';
     font-size: 16px;
     line-height: 27px;
 }
