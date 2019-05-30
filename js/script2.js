@@ -710,38 +710,41 @@ $(document).ready(function() {
         $('.loading').fadeIn();
 
     $(window).bind('load', function(){
+        if ( $(window).width() > 570   ) {
+            pageLocal();
+            $( "#project1 .pimg" ).load( "project1.html" , function() {
+                //console.log( "Load was performed." );
+            });
+            $( "#project2 .pimg" ).load( "project2.html" , function() {
+                //console.log( "Load was performed." );
+            });
+            $( "#project3 .pimg" ).load( "project3.html" , function() {
+                //console.log( "Load was performed." );
+            });
+            $( "#project4 .pimg" ).load( "project4.html" , function() {
+                //console.log( "Load was performed." );
+            });
+            $( "#project5 .pimg" ).load( "project5.html" , function() {
+                //console.log( "Load was performed." );
+            });
+            $( "#project6 .pimg" ).load( "project6.html" , function() {
+                //console.log( "Load was performed." );
+            });
+            $( "#project7 .pimg" ).load( "project7.html" , function() {
+                //console.log( "Load was performed." );
+            });
+            $( "#project8 .pimg" ).load( "project8.html" , function() {
+                //console.log( "Load was performed." );
+            });
 
-        pageLocal();
-        $( "#project1 .pimg" ).load( "project1.html" , function() {
-            //console.log( "Load was performed." );
-        });
-        $( "#project2 .pimg" ).load( "project2.html" , function() {
-            //console.log( "Load was performed." );
-        });
-        $( "#project3 .pimg" ).load( "project3.html" , function() {
-            //console.log( "Load was performed." );
-        });
-        $( "#project4 .pimg" ).load( "project4.html" , function() {
-            //console.log( "Load was performed." );
-        });
-        $( "#project5 .pimg" ).load( "project5.html" , function() {
-            //console.log( "Load was performed." );
-        });
-        $( "#project6 .pimg" ).load( "project6.html" , function() {
-            //console.log( "Load was performed." );
-        });
-        $( "#project7 .pimg" ).load( "project7.html" , function() {
-            //console.log( "Load was performed." );
-        });
-        $( "#project8 .pimg" ).load( "project8.html" , function() {
-            //console.log( "Load was performed." );
-        });
+            setTimeout(function() {
+                bindNextProject()
 
-        setTimeout(function() {
-            bindNextProject()
-
-            fullWidth();
-        }, 1500);
+                fullWidth();
+            }, 1500);
+        } else {
+            $('.loading').hide();
+        }
     });
 
     fullWidth();
