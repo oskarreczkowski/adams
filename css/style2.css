@@ -36,7 +36,7 @@ span.icon-1:after {
     background-repeat: no-repeat;
     background-size: auto 34px;
     background-position: right 1px;
-    animation: jump 6s ease 2.6s infinite normal ;
+    /*animation: jump 6s ease 2.6s infinite normal ;*/
 }
 .icon-2 {
     padding-right: 45px !important;
@@ -55,7 +55,7 @@ span.icon-2:after {
     background-repeat: no-repeat;
     background-size: auto 34px;
     background-position: right 1px;
-    animation: jump 6s ease 2.8s infinite normal ;
+    /*animation: jump 6s ease 2.8s infinite normal ;*/
 }
 .icon-3 {
     padding: 4px 0 10px 0;
@@ -74,7 +74,7 @@ span.icon-3:after {
     background-repeat: no-repeat;
     background-size: auto 34px;
     background-position: right 1px;
-    animation: jump 6s ease 3s infinite normal ;
+    /*animation: jump 6s ease 3s infinite normal ;*/
 }
 
 @keyframes jump {
