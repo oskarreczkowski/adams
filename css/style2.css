@@ -2589,6 +2589,7 @@ section.skills {
         display: none !important;
     }
     .loading { 
+        display: none;
     }
     .menu-wrapper {
         display: none !important;
