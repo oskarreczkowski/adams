@@ -482,11 +482,12 @@ span.icon-3:after {
     -moz-transition: left 1.2s ease;
     -o-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
     transition: left 1.2s cubic-bezier(0.13, 0.78, 0.82, 0); /* custom */
-    background: url(../img/border5.png);
-    background-size: 3870px 1200px;
+    background: url(../img/border7.png);
+    background-size: 6000px 1600px;
     background-position: right 0;
     background-repeat: no-repeat;
 }
+
 .menu-bg.showmenu {
     left: calc(0%) !important;
     transform: translate3d(0,0,0);
@@ -1340,50 +1341,6 @@ video.menu-character3.anim {
     }
     .navigation-right .line-right {
         display:none;
-    }
-}
-
-@media screen and (min-width: 1350px) {
-    .menu-bg {
-        /*position: fixed;
-        top: 0;
-        left: calc(-200%);
-        width: 200%;
-        height: 100%;
-        display: block;
-        z-index: 100;
-        -webkit-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.83, 0.04);
-        -moz-transition: left 1.2s ease;
-        -o-transition: left 1.2s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
-        transition: left 1.2s cubic-bezier(0.13, 0.78, 0.82, 0); 
-        background: url(../img/border3.png);
-        background-size: 2920px 1390px;
-        background-position: left;
-        background-repeat: no-repeat;*/
-    }
-    .menu-bg.showmenu {
-    }
-}
-
-@media screen and (min-width: 1800px) {
-    .menu-bg {
-        /*position: fixed;
-        top: 0;
-        left: calc(-200% + 400px);
-        width: 200%;
-        height: 100%;
-        display: block;
-        z-index: 100;
-        -webkit-transition: left 1.4s cubic-bezier(0.11, 0.71, 0.83, 0.04);
-        -moz-transition: left 1.4s ease;
-        -o-transition: left 1.4s cubic-bezier(0.11, 0.71, 0.83, 0.04); 
-        transition: left 1.4s cubic-bezier(0.13, 0.78, 0.82, 0);
-        background: url(../img/border4.png);
-        background-size: 2000px 1000px;
-        background-position: left;
-        background-repeat: no-repeat;*/
-    }
-    .menu-bg.showmenu {
     }
 }
 
@@ -2385,6 +2342,8 @@ section.skills {
         animation: atr 1.3s ease infinite normal;
     }
 }
+
+
 
 @media  screen and (max-height: 690px) {
     .pn-cont {
