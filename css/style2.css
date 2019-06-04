@@ -158,7 +158,7 @@ span.icon-3:after {
 .mb-cont:after {
     position: absolute;
     right: -100px;
-    top: 29px;
+    top: 27px;
     display: block;
     content: "Menu";
     text-transform: capitalize;
@@ -2779,6 +2779,37 @@ section.skills {
 
 
 @media screen and (max-height: 720px)  {
+
+    .menu-button {
+        padding: 8px 8px;
+    }
+    .mb-cont .mb-bg {
+        width: 53px;
+        height: 57px;
+    }
+    .mb-cont:hover #menu {
+        padding: 12px 12px;
+        top: -4px;
+        left: -4px;
+        -webkit-transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+        -moz-transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+        -o-transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+        transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+    }
+    .mb-cont:hover .mb-bg {
+        width: 61px;
+        height: 65px;
+        -webkit-transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+        -moz-transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+        -o-transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+        transition: all 250ms cubic-bezier(0.75, 0, 0.25, 1);
+        transition-delay: 200ms;
+    }
+    .mb-cont:after {
+        right: -94px;
+        top: 25px;
+    }
+
     .viewMenu.mb-cont {
         top: 14%;
     }
@@ -2825,5 +2856,136 @@ section.skills {
     video.homepage.anim {
         width:90%;
         top: -22px;
+    }
+}
+
+@media screen and (min-width: 1900px)  {
+
+    .menu-button {
+        padding: 14px 14px;
+    }
+    .mb-cont .mb-bg {
+        width: 64px;
+        height: 68px;
+        top: 10px;
+        left: 10px;
+    }
+    .mb-cont:hover #menu {
+        padding: 18px 18px;
+        top: -4px;
+        left: -4px;
+    }
+    .mb-cont:hover .mb-bg {
+        width: 72px;
+        height: 76px;
+        top: 7px;
+        left: 7px;
+    }
+
+
+    .homepage-animation {
+        left: calc(50% - 552px);
+        top: 425px;
+        width: 1100px;
+    }
+
+    .homepage {
+        top: -30px;
+    }
+
+    .lockup-cont {
+        max-width: 62%;
+    }
+    .container {
+        top: calc(50% - 480px);
+        /*height: 1880px;*/
+    }
+    .viewMenu.mb-cont {
+        top: 46px;
+    }
+
+    .mb-cont:after {
+        right: -120px;
+        top: 30px;
+        font-size: 28px;
+    }
+    .viewHome .text-1 {
+        top: 182px;
+        width: 440px;
+    }
+    .text-1 {
+        top: 50px;
+        left: calc(50% - 226px);
+        font-size: 45px;
+        width: 440px;
+    }
+    .viewHome .title-1 {
+        top: 272px;
+    }
+    .title-1 {
+        top: 100px;
+        left: calc(50% - 603px);
+        font-size: 92px;
+        width: 1200px;
+    }
+    .viewHome .text-2 {
+        top: 720px;
+    }
+    .text-2 {
+        top: 580px;
+        left: calc(50% - 400px);
+        font-size: 32px;
+        width: 850px;
+    }
+    .text-2 span {
+        margin-right: 44px;
+    }
+
+    .viewHome .view-more {
+        top: 830px;
+        padding-left: 130px;
+        padding-top: 6px;
+    }
+    .view-more {
+        font-size: 32px;
+        left: calc(50% - 185px);
+    }
+    .view-more .circle-arrow {
+        width: 80px;
+        height: 80px;
+    }
+    .view-more:hover .circle-arrow {
+        width: 88px;
+        height: 88px;
+    }
+    .view-more .circle-arrow-svg {
+        width: 80px;
+        height: 80px;
+    }
+    .view-more .ca-bg {
+        width: 88px;
+        height: 88px;
+    }
+    .view-more:hover .ca-bg {
+        width: 96px;
+        height: 96px;
+    }
+    span.icon-1:after {
+        width: 70px;
+        height: 40px;
+        right: -10px;
+        background-size: auto 39px;
+    }
+    span.icon-2:after {
+        width: 70px;
+        height: 40px;
+        right: -10px;
+        background-size: auto 39px;
+    }
+    span.icon-3:after {
+        width: 70px;
+        height: 40px;
+        right: -10px;
+        background-size: auto 39px;
     }
 }
