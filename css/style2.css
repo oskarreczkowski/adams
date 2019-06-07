@@ -136,7 +136,7 @@ span.icon-3:after {
 
 .mb-cont { 
     position: absolute;
-    top: -90px;
+    top: calc(-4rem + 3vh);
     left: 20px;
     z-index: 102;
     opacity: 0;
@@ -153,7 +153,7 @@ span.icon-3:after {
     -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
-    top:56px;
+    top: calc(5rem + 3vh);
     transition-delay: 1.2s;
 }
 .mb-cont:after {
@@ -534,13 +534,13 @@ video.square.anim {
     position: absolute;
 }
 .roles.inview {
-    top:230px;
+    top: calc(12rem + 5.7vh);
     opacity: 1;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 1.2s;
 }
 .roles.outview {
-    top: 280px;
+    top: calc(15.2rem + 5.7vh);
     opacity: 0;
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: .5s;
@@ -803,7 +803,7 @@ video.menu-character3.anim {
 }
 .projects-indicator.inview {
     opacity: 1;
-    top: 600px;
+    top: calc(29.8rem + 17vh);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     
 }
@@ -835,7 +835,7 @@ video.menu-character3.anim {
 }
 .project-container {
     position: absolute;
-    top: 80px;
+    top: calc(4.1rem + 2vh);
     text-align: center;
     font-family: "LeagueSpartan";
     width: 100%;
@@ -845,8 +845,8 @@ video.menu-character3.anim {
     min-height:400px;
 }
 .pn-cont {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: calc(1.5rem + 1vh);
+    margin-bottom: calc(0.5rem + .8vh);
     font-family: "LeagueSpartan";
     position: relative;
 }
@@ -858,7 +858,6 @@ video.menu-character3.anim {
     width: 50px;
     text-align: right;
     padding-right: 5px;
-    margin-left: 4px;
 }
 .pn-cont .pnumber.inactive {
     display: none;
@@ -867,7 +866,7 @@ video.menu-character3.anim {
 }
 
 .project-container.detailedProject {
-    top: 40px;
+    top: calc(5.8rem - 5vh);
     transition-delay: .7s;
 }
 
@@ -875,21 +874,21 @@ video.menu-character3.anim {
     color: #c1c1c1;
 }
 .picon img {
-    max-width: 410px;
+    max-width: calc(23rem + 7vh);
 }
 .ptitle {
-    font-size: 38px;
-    margin: 12px 0 22px 0;
+    font-size: calc(1.72rem + 1.1vh);;
+    margin: calc(.5rem + .7vh) 0 calc(.95rem + .7vh) 0;
 }
 .pdesc {
     max-width: 520px;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: .94rem;
     font-weight: 200;
     font-family: 'SourceSansProRegular';
     line-height: 24px;
     margin-bottom: 32px;
-    top: 290px;
+    top: calc(15.5rem + 6vh);
     position: absolute;
     left: calc(50% - 260px);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
@@ -914,8 +913,8 @@ video.menu-character3.anim {
     min-height: 66px;
     float: none;
     transition: all 1s ease  ;
-    top: 390px;
-    left: calc(50% - 96px);
+    top: calc(21.7rem + 6.4vh);
+    left: calc(50% - 102px);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .vbc.inview {
@@ -1007,7 +1006,7 @@ video.menu-character3.anim {
 .navigation-left {
     position: absolute;
     opacity:0;
-    top: 330px;
+    top: calc(18rem + 6vh);
     left: -200px;
     cursor:pointer;
     z-index: 10;
@@ -1122,7 +1121,7 @@ video.menu-character3.anim {
 
 .navigation-right {
     position: absolute;
-    top: 330px;
+    top: calc(18rem + 6vh);
     right: -112px;
     opacity:0;
     cursor:pointer;
@@ -1324,11 +1323,11 @@ video.menu-character3.anim {
 @media screen and (min-width: 1600px) {
     .navigation-right.inview {
         right: 158px;
-        /*top: 360px;*/
+        top: calc(18rem + 6vh);
     }
     .navigation-left.inview {
-        left:94px;
-        /*top:360px;*/
+        left: 74px;
+        top: calc(18rem + 6vh);
     }
     .navigation-left .line-left {
         display:none;
@@ -1584,7 +1583,7 @@ img {
 }
 .back {
     position: absolute;
-    top: -80px;
+    top: calc(-4rem + 3vh);
     right: -45px;
     cursor:pointer;
     z-index: 10;
@@ -1592,13 +1591,13 @@ img {
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);  
 }
 .back.inview {
-    top: 97px;
+    top: calc(7.2rem + 3vh);
     opacity:1;
     transition: all 1.2s cubic-bezier(0.75, 0, 0.25, 1);
     transition-delay: 1.35s;
 }
 .back.outview {
-    top: -80px;
+    top: calc(-4rem + 3vh);
     transition: all 1.2s cubic-bezier(0.75, 0, 0.25, 1);
     opacity: 0;
 }
@@ -1688,7 +1687,7 @@ img {
     font-family: "LeagueSpartan";
     font-size: 22px;
     text-decoration: none;
-    color: #317bff;
+    color: #000000;
     border-bottom: 4px solid #317bff;
     transition: all .3s;
 }
@@ -2275,7 +2274,7 @@ section.skills {
 }
 .loading-cont.inview {
     opacity: 1;
-    transition: all 1s ease;
+    transition: all .8s ease;
     transition-delay: 0.5s;
 }
 
@@ -2479,6 +2478,9 @@ section.skills {
 
 @media screen and (max-width:1100px) {
     .viewMenu.mb-cont {
+        left: 6%;
+    }
+    .mb-cont {
         left: 6%;
     }
     .back {
@@ -2731,6 +2733,21 @@ section.skills {
     }
 }
 
+@media screen and (min-height: 670px)  {
+    .viewMenu.mb-cont {
+        top: calc(6rem - 3vh);
+    }
+    .back.inview {
+        top: calc(8.4rem - 3vh);
+    }
+}
+
+@media screen and (min-height: 710px)  {
+    .project-container.detailedProject {
+        top: calc(5rem - 6vh);
+    }
+}
+
 @media screen and (min-height: 800px)  {
     .text-1 {
         font-size: calc(1rem + 1.3vh);
@@ -2745,6 +2762,22 @@ section.skills {
     }
     .viewHome .title-1 {
         top: calc(13rem + 1vh);
+    }
+
+    .project-container {
+        top: calc(3.2rem + 1.5vh);
+    }
+}
+
+@media screen and (min-height: 900px)  {
+    .pdesc {
+        font-size: 1rem;
+        max-width: 550px;
+        left: calc(50% - 275px);
+    }
+    .portfolio-body {
+        max-width: 540px;
+        font-size: 1rem;
     }
 }
 
@@ -2880,10 +2913,4 @@ section.skills {
         top: 25px;
     }
 
-    .viewMenu.mb-cont {
-        top: 14%;
-    }
-    .back.inview {
-        top: 121px;
-    }
 }
