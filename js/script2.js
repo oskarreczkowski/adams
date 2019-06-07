@@ -39,6 +39,7 @@
 /*ts 4 poniedzialek 05.27 */
 /*ts 2 wtorek 05.28 */
 /*ts 4 sroda 05.29 */
+/*ts 1 piatek 06.07 */
 
 
 
@@ -90,18 +91,24 @@ var projects = $('.projects');
 var projectscount = 8;
 
 function set_src() {
-  var window_width = $(window).width();
-  if (window_width < 560) {
-      $("img").attr('src', 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D');
-      $('.mobileHome img').attr('src', 'img/mobile@2x.png');
-  } else {
-    $("img").each(function(){
-        $(this).attr( 'src', $(this).data('src') );
-    });
-    $("source").each(function(){
-        $(this).attr( 'src', $(this).data('src') );
-    });
-  }
+    var window_width = $(window).width();
+    if (window_width < 560) {
+        $("img").each(function(){
+            $(this).data( 'src', $(this).attr('src') );
+            $(this).attr('src', 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D');
+        });
+        $("source").each(function(){
+            $(this).data( 'src', $(this).attr('src') );
+        });
+        $('.mobileHome img').attr('src', 'img/mobile@2x.png');
+    } else {
+        $("img").each(function(){
+            $(this).attr( 'src', $(this).data('src') );
+        });
+        $("source").each(function(){
+            $(this).attr( 'src', $(this).data('src') );
+        });
+    }
 }
 
    set_src();
