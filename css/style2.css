@@ -8,6 +8,7 @@ body, html {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    font-size:16px;
 }
 body {
     overflow-y: scroll;
@@ -27,14 +28,14 @@ body {
 span.icon-1:after {
     content: "";
     position: absolute;
-    width: 60px;
+    width: 65px;
     height: 40px;
     right: 0;
     display: block;
     top: 0px;
     background-image: url(../img/designer@2x.png);
     background-repeat: no-repeat;
-    background-size: auto 34px;
+    background-size: auto calc(30px + 0.4vh);
     background-position: right 1px;
     animation: jump 6s ease 2.6s infinite normal ;
 }
@@ -46,14 +47,14 @@ span.icon-1:after {
 span.icon-2:after {
     content: "";
     position: absolute;
-    width: 60px;
+    width: 65px;
     height: 40px;
     right: 0;
     display: block;
     top: 0px;
     background-image: url(../img/illustrator@2x.png);
     background-repeat: no-repeat;
-    background-size: auto 34px;
+    background-size: auto calc(30px + 0.4vh);
     background-position: right 1px;
     animation: jump 6s ease 2.8s infinite normal ;
 }
@@ -65,14 +66,14 @@ span.icon-2:after {
 span.icon-3:after {
     content: "";
     position: absolute;
-    width: 60px;
+    width: 65px;
     height: 40px;
     right: 0;
     display: block;
     top: 0px;
     background-image: url(../img/rebel-scum@2x.png);
     background-repeat: no-repeat;
-    background-size: auto 34px;
+    background-size: auto calc(30px + 0.4vh);
     background-position: right 1px;
     animation: jump 6s ease 3s infinite normal ;
 }
@@ -257,11 +258,11 @@ span.icon-3:after {
     display: block;
     position: absolute;
     top: 50px;
-    left: calc(50% - 150px);
-    font-size: 28px;
+    left: calc(50% - 399px);
+    font-size: calc(1.1rem + 1.3vh);
     letter-spacing: .3px;
     opacity: 1;
-    width: 300px;
+    width: 800px;
     text-align: center;
     opacity: 0;
     -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
@@ -270,7 +271,7 @@ span.icon-3:after {
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .viewHome .text-1 {
-    top: 142px;
+    top: calc(10rem + 2vh);    
     opacity: 1;
     -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
@@ -283,34 +284,35 @@ span.icon-3:after {
     display: block;
     position: absolute;
     top: 100px;
-    left: calc(50% - 300px);
-    font-size: 72px;
-    width: 600px;
+    left: calc(50% - 442px);
+    font-size: calc(3.2rem + 2vh);
+    width: 900px;
     text-align: center;
     opacity: 0;
     -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
+    z-index: 3;
 }
 .viewHome .title-1 {
-    top: 195px;
+    top: calc(13rem + 1.5vh);
     opacity: 1;
     -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
-    /*transition-delay: 0.4s;*/
+    z-index: 3;
 }
 .text-2 {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
     top: 580px;
-    left: calc(50% - 330px);
-    font-size: 24px;
+    left: calc(50% - 422px);
+    font-size: calc(.9rem + 1.1vh);
     text-align: center;
-    width: 700px;
+    width: 900px;
     opacity: 0;
     -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
@@ -318,7 +320,7 @@ span.icon-3:after {
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .viewHome .text-2 {
-    top: 515px;
+    top: calc(27.9rem + 7vh);
     opacity: 1;
     -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
@@ -336,7 +338,7 @@ span.icon-3:after {
     left: calc(50% - 145px);
     font-family: "LeagueSpartan";
     padding-left: 115px;
-    font-size: 24px;
+    font-size: calc(.9rem + 1.1vh);
     cursor: pointer;
     text-align: center;
     opacity: 0;
@@ -346,8 +348,9 @@ span.icon-3:after {
     transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
 }
 .viewHome .view-more {
-    top: 620px;
+    top: calc(32rem + 10vh);
     opacity: 1;
+    left: calc(38% - 3vh);
     -webkit-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -moz-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
     -o-transition: all 1s cubic-bezier(0.75, 0, 0.25, 1);
@@ -439,14 +442,6 @@ span.icon-3:after {
     top: calc(50% - 40px);
     transition-delay: 150ms;
 }
-/*
-.view-more:active .circle-arrow {
-    width: 70px;
-    height: 70px;
-    transition: all 50ms ease;
-    left: 0;
-    top: calc(50% - 44px);
-}*/
 .view-more:active .ca-bg {
     width: 80px;
     height: 80px;
@@ -468,7 +463,6 @@ span.icon-3:after {
     left: -250%;
     display: block;
     z-index: 1;
-    /*opacity: 0;*/
 }
 .menu-bg {
     position: fixed;
@@ -508,9 +502,9 @@ video.circle.anim {
 
 .homepage-animation {
     position: absolute;
-    top: 310px;
-    left: calc(50% - 388px);
-    width: 770px;
+    top: 314px;
+    left: calc(50% - 449px);
+    width: 910px;
     text-align: center;
     opacity: 0;
     transition: all .8s ease;
@@ -521,7 +515,7 @@ video.circle.anim {
     transition-delay: 1.1s;
 }
 video.homepage.anim {
-    width: 100%;
+    width: calc(30rem + 30vh);
 }
 .blue-square {
     position: absolute;
@@ -2345,7 +2339,7 @@ section.skills {
 
 
 
-@media  screen and (max-height: 690px) {
+/*@media  screen and (max-height: 690px) {
     .pn-cont {
         font-size: 30px;
         margin-bottom: 14px;
@@ -2366,7 +2360,7 @@ section.skills {
         top: 60px;
     }
 
-}
+}*/
 
 @media  screen and (max-height: 620px) {
     .resize {
@@ -2477,51 +2471,11 @@ section.skills {
     display: none;
 }
 
-@media screen and (max-width:1250px) {
-    .title-1 {
-        font-size:68px;
-    }
-    .text-1 {
-        font-size:26px;
-    }
-    .viewHome .text-1 {
-        font-size: 26px;
-        top: 148px;
-    }
-    .text-2 {
-        font-size: 22px;
-    }
-    .viewHome .text-2 {
-        top: 509px;
-    }
-    .homepage-animation {
-        top: 306px;
-    }
-    span.icon-1:after {
-        background-size: auto 33px;
-    }
-    span.icon-2:after {
-        background-size: auto 33px;
-    }
-    span.icon-3:after {
-        background-size: auto 33px;
-    }
-    .viewHome .view-more {
-        top: 600px;
-    }
-    .view-more {
-        font-size: 23px;
-    }
-    .homepage {
-        top: -20px;
-    }
-}
-
-@media screen and (max-width:1120px) {
+/*@media screen and (max-width:1120px) {
     video.homepage.anim {
         width:94%;
     }
-}
+}*/
 
 @media screen and (max-width:1100px) {
     .viewMenu.mb-cont {
@@ -2777,6 +2731,82 @@ section.skills {
     }
 }
 
+@media screen and (min-height: 800px)  {
+    .viewHome .text-1 {
+        font-size: calc(1rem + 1.3vh);
+        top: calc(10rem + 1.3vh);
+    }
+    .viewHome .title-1 {
+        font-size: calc(3.1rem + 2vh);
+        top: calc(13rem + 1vh);
+    }
+}
+
+@media screen and (min-height: 1000px)  {
+    .viewHome .text-1 {
+        top: calc(8.6rem + 1.5vh);
+    }
+    .viewHome .title-1 {
+        top: calc(12.6rem + .8vh);
+    }
+    .viewHome .text-2 {
+        top: calc(29.5rem + 5vh);
+    }
+}
+
+@media screen and (min-height: 1200px)  {
+    .viewHome .text-1 {
+        top: calc(8.9rem + .5vh);
+        font-size: calc(1.3rem + 1vh);
+    }
+    .viewHome .title-1 {
+        top: calc(12.3rem + .8vh);
+        font-size: calc(3.3rem + 2vh);
+    }
+    .viewHome .text-2 {
+        top: calc(32.9rem + 1.5vh);
+    }
+    .viewHome .view-more {
+        top: calc(36rem + 5vh);
+    }
+}
+
+@media screen and (min-height: 1300px)  {
+    video.homepage.anim {
+        width: 97%;
+    }
+    span.icon-1:after {
+        right: -4px;
+    }
+    span.icon-2:after {
+        right: -4px;
+    }
+    span.icon-3:after {
+        right: -4px;
+    }    
+}
+
+@media screen and (min-height: 1380px)  {
+    .viewHome .text-1 {
+        top: 9.5rem;
+        font-size: 2.15rem;
+    }
+    .viewHome .title-1 {
+        top: 13rem;
+        font-size: 5rem;
+    }
+    .viewHome .text-2 {
+        top: 34.2rem;
+        font-size: 1.85rem;
+    }
+    .viewHome .view-more {
+        top: 40.2rem;
+        left: 34%;
+        font-size: 1.85rem;
+    }
+}
+
+/*
 
 @media screen and (max-height: 720px)  {
 
@@ -2858,7 +2888,10 @@ section.skills {
         top: -22px;
     }
 }
+*/
 
+
+/*
 @media screen and (min-width: 1900px)  {
 
     .menu-button {
@@ -2898,7 +2931,6 @@ section.skills {
     }
     .container {
         top: calc(50% - 480px);
-        /*height: 1880px;*/
     }
     .viewMenu.mb-cont {
         top: 46px;
@@ -2989,3 +3021,5 @@ section.skills {
         background-size: auto 39px;
     }
 }
+
+*/
