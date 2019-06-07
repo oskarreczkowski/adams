@@ -257,7 +257,7 @@ span.icon-3:after {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 50px;
+    top: calc(5.5rem + 2vh); 
     left: calc(50% - 399px);
     font-size: calc(1.1rem + 1.3vh);
     letter-spacing: .3px;
@@ -283,7 +283,7 @@ span.icon-3:after {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 100px;
+    top: calc(7rem + 1.5vh);
     left: calc(50% - 442px);
     font-size: calc(3.2rem + 2vh);
     width: 900px;
@@ -308,7 +308,7 @@ span.icon-3:after {
     font-family: "LeagueSpartan";
     display: block;
     position: absolute;
-    top: 580px;
+    top: calc(32rem + 7vh);
     left: calc(50% - 422px);
     font-size: calc(.9rem + 1.1vh);
     text-align: center;
@@ -334,8 +334,8 @@ span.icon-3:after {
 }
 .view-more {
     position: absolute;
-    top: 680px;
-    left: calc(50% - 145px);
+    top: calc(36rem + 10vh);
+    left: calc(38% - 3vh);
     font-family: "LeagueSpartan";
     padding-left: 115px;
     font-size: calc(.9rem + 1.1vh);
@@ -2732,22 +2732,37 @@ section.skills {
 }
 
 @media screen and (min-height: 800px)  {
-    .viewHome .text-1 {
+    .text-1 {
         font-size: calc(1rem + 1.3vh);
+        top: calc(5rem + 1.3vh);
+    }
+    .viewHome .text-1 {
         top: calc(10rem + 1.3vh);
     }
-    .viewHome .title-1 {
+    .title-1 {
         font-size: calc(3.1rem + 2vh);
+        top: calc(7rem + 1vh);
+    }
+    .viewHome .title-1 {
         top: calc(13rem + 1vh);
     }
 }
 
 @media screen and (min-height: 1000px)  {
+    .text-1 {
+        top: calc(3.6rem + 1.5vh);
+    }
     .viewHome .text-1 {
         top: calc(8.6rem + 1.5vh);
     }
+    .title-1 {
+        top: calc(6.6rem + .8vh);
+    }
     .viewHome .title-1 {
         top: calc(12.6rem + .8vh);
+    }
+    .text-2 {
+        top: calc(34rem + 5vh);
     }
     .viewHome .text-2 {
         top: calc(29.5rem + 5vh);
@@ -2755,16 +2770,28 @@ section.skills {
 }
 
 @media screen and (min-height: 1200px)  {
+    .text-1 {
+        top: calc(3.9rem + .5vh);
+        font-size: calc(1.3rem + 1vh);
+    }
     .viewHome .text-1 {
         top: calc(8.9rem + .5vh);
-        font-size: calc(1.3rem + 1vh);
+    }
+    .title-1 {
+        top: calc(6.3rem + .8vh);
+        font-size: calc(3.3rem + 2vh);
     }
     .viewHome .title-1 {
         top: calc(12.3rem + .8vh);
-        font-size: calc(3.3rem + 2vh);
+    }
+    .text-2 {
+        top: calc(36.9rem + 1.5vh);
     }
     .viewHome .text-2 {
         top: calc(32.9rem + 1.5vh);
+    }
+    .view-more {
+        top: calc(40rem + 5vh);
     }
     .viewHome .view-more {
         top: calc(36rem + 5vh);
@@ -2787,26 +2814,39 @@ section.skills {
 }
 
 @media screen and (min-height: 1380px)  {
+    .text-1 {
+        top: 4.5rem;
+        font-size: 2.15rem;
+    }
     .viewHome .text-1 {
         top: 9.5rem;
-        font-size: 2.15rem;
+    }
+    .title-1 {
+        top: 6rem;
+        font-size: 5rem;
     }
     .viewHome .title-1 {
         top: 13rem;
-        font-size: 5rem;
+    }
+    .text-2 {
+        top: 38.2rem;
+        font-size: 1.85rem;
     }
     .viewHome .text-2 {
         top: 34.2rem;
+    }
+    .view-more {
+        top: 44.2rem;
+        left: 34%;
         font-size: 1.85rem;
     }
     .viewHome .view-more {
         top: 40.2rem;
         left: 34%;
-        font-size: 1.85rem;
     }
 }
 
-/*
+
 
 @media screen and (max-height: 720px)  {
 
@@ -2846,180 +2886,4 @@ section.skills {
     .back.inview {
         top: 121px;
     }
-    .title-1 {
-        font-size:64px;
-    }
-    .text-1 {
-        font-size:24px;
-    }
-    .viewHome .text-1 {
-        font-size: 26px;
-        top: 148px;
-    }
-    .text-2 {
-        font-size: 21px;
-    }
-    .viewHome .text-2 {
-        top: 498px;
-    }
-    .homepage-animation {
-        top: 306px;
-    }
-    span.icon-1:after {
-        background-size: auto 33px;
-    }
-    span.icon-2:after {
-        background-size: auto 33px;
-    }
-    span.icon-3:after {
-        background-size: auto 33px;
-    }
-    .viewHome .view-more {
-        top: 584px;
-    }
-    .view-more {
-        font-size: 21px;
-    }
-    .homepage {
-        top: -13px;
-    }
-    video.homepage.anim {
-        width:90%;
-        top: -22px;
-    }
 }
-*/
-
-
-/*
-@media screen and (min-width: 1900px)  {
-
-    .menu-button {
-        padding: 14px 14px;
-    }
-    .mb-cont .mb-bg {
-        width: 64px;
-        height: 68px;
-        top: 10px;
-        left: 10px;
-    }
-    .mb-cont:hover #menu {
-        padding: 18px 18px;
-        top: -4px;
-        left: -4px;
-    }
-    .mb-cont:hover .mb-bg {
-        width: 72px;
-        height: 76px;
-        top: 7px;
-        left: 7px;
-    }
-
-
-    .homepage-animation {
-        left: calc(50% - 552px);
-        top: 425px;
-        width: 1100px;
-    }
-
-    .homepage {
-        top: -30px;
-    }
-
-    .lockup-cont {
-        max-width: 62%;
-    }
-    .container {
-        top: calc(50% - 480px);
-    }
-    .viewMenu.mb-cont {
-        top: 46px;
-    }
-
-    .mb-cont:after {
-        right: -120px;
-        top: 30px;
-        font-size: 28px;
-    }
-    .viewHome .text-1 {
-        top: 182px;
-        width: 440px;
-    }
-    .text-1 {
-        top: 50px;
-        left: calc(50% - 226px);
-        font-size: 45px;
-        width: 440px;
-    }
-    .viewHome .title-1 {
-        top: 272px;
-    }
-    .title-1 {
-        top: 100px;
-        left: calc(50% - 603px);
-        font-size: 92px;
-        width: 1200px;
-    }
-    .viewHome .text-2 {
-        top: 720px;
-    }
-    .text-2 {
-        top: 580px;
-        left: calc(50% - 400px);
-        font-size: 32px;
-        width: 850px;
-    }
-    .text-2 span {
-        margin-right: 44px;
-    }
-
-    .viewHome .view-more {
-        top: 830px;
-        padding-left: 130px;
-        padding-top: 6px;
-    }
-    .view-more {
-        font-size: 32px;
-        left: calc(50% - 185px);
-    }
-    .view-more .circle-arrow {
-        width: 80px;
-        height: 80px;
-    }
-    .view-more:hover .circle-arrow {
-        width: 88px;
-        height: 88px;
-    }
-    .view-more .circle-arrow-svg {
-        width: 80px;
-        height: 80px;
-    }
-    .view-more .ca-bg {
-        width: 88px;
-        height: 88px;
-    }
-    .view-more:hover .ca-bg {
-        width: 96px;
-        height: 96px;
-    }
-    span.icon-1:after {
-        width: 70px;
-        height: 40px;
-        right: -10px;
-        background-size: auto 39px;
-    }
-    span.icon-2:after {
-        width: 70px;
-        height: 40px;
-        right: -10px;
-        background-size: auto 39px;
-    }
-    span.icon-3:after {
-        width: 70px;
-        height: 40px;
-        right: -10px;
-        background-size: auto 39px;
-    }
-}
-
-*/
