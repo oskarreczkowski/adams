@@ -92,10 +92,14 @@ var projectscount = 8;
 
 function set_src() {
     var window_width = $(window).width();
+
+    $("img").each(function(){
+        $(this).data( 'src', $(this).attr('src') );
+    });
     if (window_width < 560) {
         $("img").each(function(){
             $(this).data( 'src', $(this).attr('src') );
-            $(this).attr('src', 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D');
+            //$(this).attr('src', 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D');
         });
         $("source").each(function(){
             $(this).data( 'src', $(this).attr('src') );
